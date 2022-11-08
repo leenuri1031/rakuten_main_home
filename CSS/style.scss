@@ -7,14 +7,99 @@
   @include mixin.container-style(100vw, 600vh, space-between, center, column );
 } 
 
+//---header-----------------------------------
 header{
-  @include mixin.container-style(1080px, 3.8%, space-around, center, column);
-  background-color: antiquewhite;
+  @include mixin.container-style(1080px, 3.8%, flex-end, center, column);
+  background-color: white;
   position: sticky;
   top: 0;
   // z-index: 2;
 }
 
+// header-top------------------------------
+.header-top{
+  @include mixin.container-style(100%,40%, space-between, center);
+  // border: #2c2c2c solid 2px;
+
+  &>a{
+    @include mixin.size(35%, 100%);
+    // border: rebeccapurple solid 3px;
+
+    &>img{   
+      @include mixin.size(100%, 100%);
+    }
+  }
+}
+
+.site-menu{
+  @include mixin.container-style(50%,80%, space-around, flex-start);
+
+  &>div{
+    @include mixin.container-style(25%,30%, center, center);
+    // border: #2c2c2c solid 1px;
+    
+    &>a{
+      @include mixin.container-style(100%,100%, center, center);
+      font-size: 0.8rem
+    }
+  }
+
+  @for $i from 1 through 3 {
+    &>div:nth-child(#{$i}){
+      border-right: 2px solid var.$col-3;
+    }
+  }
+}
+// header-top------------------------------
+
+// header-bottom------------------------------
+.header-bottom{
+  @include mixin.container-style(100%,50%, space-between, flex-end);
+  // background-color: aliceblue;
+  &>div:first-child{
+    @include mixin.container-style(70%,50%, space-around, center);
+    // background-color: antiquewhite
+  }
+}
+// header-bottom------------------------------
+
+.drdwon-menu{
+  @include mixin.container-style(100%,100%, space-around, center);
+  &>div{
+    @include mixin.container-style(20%,100%, space-evenly, center);
+    // border: #2c2c2c solid 1px;
+    // padding-left: 1vw;
+
+    &>img{
+      @include mixin.size(20px,20px);
+    }
+  }
+}
+
+// search-box-class-setting------------------------------
+  .search-box{
+    @include mixin.container-style(30%,50%, center, center);
+    // background-color: #2c2c2c;
+  }
+
+  .text-area{
+    width: 300px;
+    height: 30px;
+    // background-color: #ff7c7c;
+    border-radius: 20px;
+    // background-color: #ff7c7c;
+    padding-left: 10px;
+    @include mixin.font(0.8rem, 500, #2c2c2c);
+  }
+
+  .search-btn{
+    @include mixin.container-style(20px,20px, center, center);
+    @include mixin.posi(absolute, 83%, 96%);
+    // border: #222 solid 1px;
+  }
+// search-box-class-setting------------------------------
+
+//---main-----------------------------------
 main{
   @include mixin.container-style(1080px, 86.2%, space-around, center, column);
   background-color: cadetblue;
