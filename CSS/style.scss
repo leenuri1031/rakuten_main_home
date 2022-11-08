@@ -1,0 +1,74 @@
+@use './var'as var;
+@use './mixin' as mixin;
+@use './basic';
+// -------------------------------------------
+
+#root{
+  @include mixin.container-style(100vw, 600vh, space-between, center, column );
+} 
+
+header{
+  @include mixin.container-style(1080px, 3.8%, space-around, center, column);
+  background-color: antiquewhite;
+  position: sticky;
+  top: 0;
+  // z-index: 2;
+}
+
+main{
+  @include mixin.container-style(1080px, 86.2%, space-around, center, column);
+  background-color: cadetblue;
+}
+
+//---footer-----------------------------------
+footer{
+  @include mixin.container-style(1080px, 10%, space-between, center, column);
+  color: var.$col-3;
+
+  &>div:first-child{
+    @include mixin.container-style(30%, 13%, center, center, column);
+    margin-top: 2vh;
+    // border: solid black 1px;
+
+    &>h2{
+      @include mixin.container-style(100%, 40%, center, center);
+    }
+    &>h4{
+      @include mixin.container-style(100%, 40%, center, center);
+    }
+  }
+  &>div:last-child{
+    @include mixin.container-style(100%, 7%, center, center, column);
+    background-color: var.$col-1;
+  }
+}
+
+#guid-menu{
+  @include mixin.container-style(100%, 70%, space-around, center, column);
+  // background-color: burlywood;
+
+  &>div{
+    @include mixin.container-style(100%, 40%, space-around, center);
+    // border: solid black 1px;
+
+    &>a{
+      @include mixin.container-style(30%, 35%, space-between, center);
+      background-color: var.$col-1;
+      border: solid 1px var.$col-2;
+      
+      &>div:first-child{
+        @include mixin.container-style(70%, 100%, flex-start, center);
+        padding-left: 2vw;
+      }
+
+      &>div:last-child{
+        @include mixin.container-style(20%,100%, center,center);
+        // border: solid 2px black;
+
+        &>img{
+          @include mixin.size(20px, 20px);
+        }
+      }
+    }
+  }
+}

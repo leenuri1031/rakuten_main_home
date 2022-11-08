@@ -1,0 +1,569 @@
+@use './var'as var;
+@use './mixin' as mixin;
+@use './basic';
+// -------------------------------------------
+
+@media(min-width:1024px){
+  #root{
+    height: 350vh;
+    // height: 100vh;
+  }
+  header{
+    @include mixin.container-style(65%, 20%, space-around, center);
+    // background-color: salmon;
+    position: relative;
+    z-index: 1;
+  
+    &>section:first-child{
+      display: none;
+    }
+  
+    &>section:last-child{
+      @include mixin.container-style(100%, 90%, flex-start, center, column);
+      // border: 1px solid black;
+
+      &>div:nth-child(1){
+        @include mixin.container-style(100%, 40%, flex-start, center);
+        // background-color: thistle;
+
+      // header-top-part-------------------------------------------
+
+        &>div:first-child{
+          @include mixin.container-style(30%, 100%, flex-start, center);
+          // border: 1px solid black;
+          margin-right: 18%;
+          padding-left: 2vw;
+
+          &>a{
+            @include mixin.container-style(100%, 100%, flex-start, center);
+  
+            &>img{
+              @include mixin.container-style(80%, 100%, center, center);
+              @include mixin.font(2rem, 500, #2c2c2c);
+            }
+          }
+
+
+        }
+        // logo&title ---------------------------------
+        
+        &>div:last-child{
+          @include mixin.container-style(55%, 80%, space-around, flex-start);
+          // padding-top: 1vh;
+          // border: 1px solid black;
+        }
+        // site-menu-class-setting ---------------------------------
+
+      }
+
+      // header-bottom-part-------------------------------------------
+
+      &>div:nth-child(2){
+        @include mixin.container-style(100%, 23%, space-between, center);
+        margin-top: 3vh;
+        border-top: #2c2c2c 1px solid;
+        border-bottom: #2c2c2c 1px solid;
+        // background-color: salmon;
+
+        &>div:first-child{
+          @include mixin.container-style(65%, 90%, space-around, center);
+          // border: solid black 1px;
+        }
+
+        &>div:last-child{
+          @include mixin.container-style(35%, 90%, space-around, center);
+          // border: solid black 1px;
+          position: relative;
+        }
+      }
+    }
+  }
+  // site-menu-class-setting------------------------------
+  .site-menu{
+    @include mixin.font(0.8rem, 450, #2c2c2c);
+  }
+  // site-menu-class-setting------------------------------
+
+  // drop-down-menu-class-setting------------------------------
+  .dropdown{
+    @include mixin.container-style(20%, 100%, center, center,column);
+    position: relative;
+    // border: #222 solid 1px;
+  }
+
+  .dropdown:hover .item{
+    @include mixin.container-style(100%, 350px, space-around, center,column);
+    @include mixin.posi(absolute, 100%);
+  }
+
+  .dropdown-btn{
+    @include mixin.container-style(100%,100% ,center,center);
+    background: none;
+    border: none;
+    cursor: pointer;
+    @include mixin.font(1rem, 550, #2c2c2c);
+  }
+
+  .item{
+    // width: 100%;
+    // height: 500px;
+    // font-size: 0.8rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.192);
+    background-color: rgba(255, 255, 255, 1);
+    @include mixin.font(1rem, 550, #2c2c2c);
+    display: none;
+
+    &>a{
+      @include mixin.container-style(100%,10% ,center,center);
+    // border: #2c2c2c solid 1px;
+    }
+
+    &>a:hover{
+      @include mixin.font(1rem, 600, #ff7c7c);
+    }
+  }
+  // drop-down-menu-class-setting------------------------------
+  // search-box-class-setting------------------------------
+  .search-box{
+    @include mixin.container-style(100%,90%, flex-start, center);
+    // border: #222 solid 1px;
+  }
+
+  .text-area{
+    width: 320px;
+    height: 30px;
+    // background-color: #ff7c7c;
+    @include mixin.font(0.8rem, 500, #2c2c2c);
+  }
+
+  .search-btn{
+    @include mixin.container-style(30px,30px, center, center);
+    @include mixin.posi(absolute, 15%, 75%);
+    // border: #222 solid 1px;
+  }
+  // search-box-class-setting------------------------------
+
+  // slide-----------------------------------
+  #slide{
+    @include mixin.container-style(100%, 35%, center, center);
+    position: relative;
+    top: 0%;
+  }
+  
+  .slider{
+    @include mixin.container-style(3715px, 100%, center, center);
+    top: -5%;
+  }
+  
+  .slide-track {
+    @include mixin.size(1248px, 100%);
+  }
+  
+  .btn{
+    @include mixin.container-style(100%, 100%, space-between, center);
+    position: absolute;
+    top: -8%;
+  
+    &>span{
+      // @include mixin.container-style(20%, 100%, center, center);
+      @include mixin.size(25%,100%);
+      // background: none;
+      opacity: 0.2;
+      border-radius: 0%;
+      &>img{
+        @include mixin.size(50px, 50px);
+      }
+    }
+    &>span:hover{
+      opacity: 0.5;
+    }
+  
+    #prevArrow {
+      left: 0%;
+      top: 0%;
+      &>img{
+        position: relative;
+        left: 40%;
+      }
+    }
+    
+    #nextArrow {
+      right: 0%;
+      top: 0%;
+      &>img{
+        position: relative;
+        right:40%;
+      }
+    }
+  }
+  
+// slide-----------------------------------
+main{
+  @include mixin.container-style(65%, 60, center, flex-start);
+  // border: 5px solid black;
+}
+
+
+#main-left{
+  @include mixin.container-style(30%, 60%, space-around, flex-start, column);
+  // background-color: aliceblue;
+  position: sticky;
+  top: 30%;
+  left: 10%;
+
+  &>h2{
+    @include mixin.container-style(100%, 10%, flex-start, center);
+    border-bottom: 2px solid var.$col-5;
+    padding-top: 1vw;
+    // background-color: #ff7c7c;;
+  }
+}
+
+// side-menu-----------------------------------
+.chck {
+  position: absolute;
+  opacity: 0;
+}
+
+/* Accordion styles */
+.tabs {
+  @include mixin.size(100%, 90%);
+  overflow: hidden;
+  // background-color: #ff7c7c;
+  // box-shadow: 0 4px 4px -2px rgba(0,0,0,0.5);
+}
+
+.tab {
+  width: 100%;
+  overflow: hidden;
+  &-label {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    border-bottom: 1px solid var.$col-2;
+    /* Icon */
+
+    &::after {
+      content: "\276F";
+      width: 1em;
+      height: 1em;
+      text-align: center;
+      transition: all .35s;
+    }
+  }
+  &-content {
+    max-height: 0;
+    padding: 0 1em;
+    transition: all .35s;
+  }
+  &-close {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em;
+    font-size: 0.75em;
+    cursor: pointer;
+  }
+}
+
+.tab-label:hover{
+  color: #ff7c7c;
+}
+
+.tab-content{
+  &>div{
+    &>a:hover{
+      color: #ff7c7c;
+    }
+  }
+}
+
+
+// :checked
+input:checked {
+  + .tab-label {
+    // background: darken(#2c3e50, 10%);
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+  ~ .tab-content {
+    max-height: 100vh;
+    padding: 1em;
+
+    &>div{
+      margin-top: 1vw;
+    }
+    
+  }
+}
+
+// side-menu-----------------------------------
+#main-right{
+  @include mixin.container-style(100%, 100%, space-between, center, column);
+  display: block;
+  // border: 2px solid black;
+}
+
+// footer--------------------------------------------------
+  footer{
+    @include mixin.size(92%,78%);
+
+    &>div:nth-child(1){
+      @include mixin.container-style(100%, 8%, center, center);
+    }
+
+    &>div:nth-child(2){
+      display: none;
+    }
+
+    &>div:nth-child(3){
+      @include mixin.container-style(100%, 88%, space-around, center, column);
+      // border: #ff7c7c solid 1px;
+    }
+  }
+
+  .foot-manual{
+    @include mixin.container-style(100%, 85%, space-around, center);
+    &>div{
+      @include mixin.container-style(33%, 100%, space-around, center, column);
+    }
+  }
+
+  .foot-left{
+    // background-color: burlywood;
+    border-left: var.$col-dark-gray 1px solid;
+    padding-left: 1vw;
+
+    &>div:nth-child(1){
+      @include mixin.container-style(100%, 15%, space-around, flex-start,column);
+      // border: #2c2c2c 2px solid;
+      &>div:nth-child(1){
+        @include mixin.container-style(100%, 50%, flex-start, center);
+        @include mixin.font(1.2rem, 600, #222);
+
+        &>img{
+          margin-right: 10px;
+        }
+      }
+
+      &>div:nth-child(2){
+      @include mixin.container-style(100%, 50%, flex-start, center);
+      @include mixin.font(1rem, 550, #222);
+      padding: 2px;
+      }
+    }
+
+    &>div:nth-child(2){
+      @include mixin.container-style(95%, 35%, flex-start, flex-start,column);
+      border-left: var.$col-dark-gray 1px solid;
+      @include mixin.font(0.9rem, 500, var.$col-dark-gray);
+      line-height: 2;
+      padding-left: 0.4vw;
+      // border: #2c2c2c 2px solid;
+
+    }
+
+    &>div:nth-child(3){
+      @include mixin.container-style(100%, 42%, space-around, flex-start,column);
+      // border: #2c2c2c 2px solid;
+      
+      &>div:nth-child(1){
+        @include mixin.container-style(100%, 10%, flex-start, center);
+        @include mixin.font(1.2rem, 600, #222);
+        // border: #2c2c2c 2px solid;
+        &>img{
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  .payment{
+    // background-color: aliceblue;
+    &>div:nth-child(2){
+      @include mixin.container-style(95%, 30%, space-around, flex-start, column);
+      margin-left: 0.5vw;
+      &>div:nth-child(1){
+        // border: #2c2c2c 2px solid;
+        letter-spacing: 1.5px;
+        @include mixin.container-style(80%, 50%, flex-start, center);
+        @include mixin.font(0.9rem, 500, var.$col-dark-gray);
+      }
+      &>img{
+      margin-left: 0.4vw;
+      }
+      // border:solid 3px coral; 
+    }
+    &>div:nth-child(3){
+      margin-left: 0.5vw;
+      // border:solid 3px coral; 
+      @include mixin.container-style(95%, 30%, space-around, flex-start, column);
+      &>div:nth-child(1){
+        // border: #2c2c2c 2px solid;
+        letter-spacing: 1.5px;
+        @include mixin.container-style(80%, 50%, flex-start, center);
+        @include mixin.font(0.9rem, 500, var.$col-dark-gray);
+      }
+      &>img{
+        margin-left: 0.4vw;
+        }
+    }
+
+    &>div:nth-child(4){
+        margin-left: 0.5vw;
+      @include mixin.container-style(95%, 25%, flex-start, flex-start, column);
+      
+      &>div:nth-child(1){
+        @include mixin.container-style(95%, 35%, flex-start, center);
+        @include mixin.font(0.9rem, 500, var.$col-dark-gray);
+      }
+      &>div:nth-child(2){
+        @include mixin.container-style(95%, 35%, flex-start, center);
+        @include mixin.font(0.8rem, 500, var.$col-dark-gray);
+        padding-left: 0.7vw;
+        margin-top: 0.2vh;
+      }
+    }
+  }
+
+  // refun-txt-style-calss----------------------------
+  .bold{
+    @include mixin.font(0.9rem, 580, var.$col-dark-gray);
+  }
+  .bold-red{
+    @include mixin.font(0.9rem, 550, red);
+  }
+  .mid-txt{
+    @include mixin.font(0.9rem, 500, var.$col-dark-gray);
+    padding-left: 0.8vw;
+  }
+
+  // refun-txt-style-calss----------------------------
+  .foot-mid{
+    // background-color: #ff7c7c;
+    border-left: var.$col-dark-gray 1px solid;
+    border-right: var.$col-dark-gray 1px solid;
+
+    &>div:nth-child(1){
+      @include mixin.container-style(100%, 8%, flex-start, center);
+      @include mixin.font(1.2rem, 600, #222);
+      padding-left: 0.5vw;
+
+      &>img{
+        margin-right: 10px;
+      }
+      // border: #222 solid 1px;
+    }
+
+    &>div:nth-child(2){
+      @include mixin.container-style(90%, 90%, flex-start, center, column);
+      // border: #222 solid 1px;
+
+      &>div{
+        @include mixin.container-style(98%, auto, flex-start, center);
+        margin-top: 0.5vh;
+        line-height: 1.8;
+      }
+    }
+  }
+
+  .foot-right{
+    // background-color: cornflowerblue;
+    border-right: var.$col-dark-gray 1px solid;
+
+    &>div:nth-child(1){
+      @include mixin.container-style(100%, 8%, flex-start, center);
+      @include mixin.font(1rem, 600, #222);
+      padding-left: 0.5vw;
+
+      &>img{
+        margin-right: 10px;
+      }
+    }
+
+    &>div:nth-child(2){
+      @include mixin.container-style(100%, 45%, flex-start, center, column);
+      // border: #222 solid 1px;
+
+      &>div:nth-child(1){
+        @include mixin.container-style(95%, 30%, flex-start, center);
+      // border: #222 solid 1px;
+
+        &>a{
+          @include mixin.container-style(40%, 100%, space-around, center);
+      // border: #222 solid 1px;
+          &>img{
+            @include mixin.container-style(124px, 19px, flex-start, center);
+          }
+        }
+      }
+
+      &>div:nth-child(2){
+        @include mixin.container-style(95%, 70%, flex-start, center, column);
+        margin-top: 0.5vw;
+        border-bottom: var.$col-gray 1px dotted;
+        // border: #222 solid 1px;
+
+        &>div:nth-child(1){
+          @include mixin.container-style(90%, 60%, flex-start, center);
+          @include mixin.font(0.9rem, 500, var.$col-dark-gray);
+          line-height: 2;
+          // border: #222 solid 1px;
+        }
+
+        &>span{
+          @include mixin.container-style(90%, 30%, flex-start, center);
+          @include mixin.font(0.9rem, 500, red);
+          line-height: 2;
+        };
+      }
+    }
+
+    &>div:nth-child(3){
+      @include mixin.container-style(90%, 35%, flex-start, center, column);
+      // border: #222 solid 1px;
+
+      &>img{
+        @include mixin.container-style(134px, 19px, flex-start, center);
+        position: relative;
+        left: -35%;
+      }
+
+      &>div{
+        @include mixin.container-style(95%, 95%, flex-start, center);
+        @include mixin.font(0.9rem, 500, var.$col-dark-gray);
+        line-height: 2;
+      }
+    }
+  }
+  
+  .foot-menu{
+    @include mixin.container-style(100%, 5%, center, center);
+    background-color: var.$col-bright-gray;
+    border-top: var.$col-mid-gray 1px solid;
+    border-bottom: var.$col-mid-gray 1px solid;
+
+    &>a{
+      @include mixin.container-style(10%, 80%, center, center); 
+      @include mixin.font(0.9rem, 400, var.$col-dark-gray);
+      border-right: var.$col-mid-gray 1px solid;
+    }
+  }
+  .copyright{
+    @include mixin.container-style(100%, 5%, center, center);
+    @include mixin.font(0.7rem, 400, var.$col-mid-gray);
+  }
+
+
+
+
+
+
+
+
+
+
+
+}

@@ -1,0 +1,754 @@
+@use './var'as var;
+@use './mixin' as mixin;
+@use './basic';
+// -------------------------------------------
+
+@media(min-width:600px){
+  #root{
+    height: 950vh;
+    // height: 100vh;
+  }
+
+  header{
+    @include mixin.container-style(66.1%, 21.6vh, center, center,column);
+    background-color: #fff;
+    // border: solid 1px black;
+    position: sticky;
+    top: 0;
+    &>section:first-child{
+      display: none;
+    }
+
+    &>section:last-child{
+      @include mixin.container-style(100%, 90%, flex-start, center, column);
+      // border: 1px solid black;
+
+      &>div:nth-child(1){
+        @include mixin.container-style(100%, 50%, flex-start, center);
+        // background-color: thistle;
+
+      // header-top-part-------------------------------------------
+
+        &>div:first-child{
+          @include mixin.container-style(30%, 100%, flex-start, center);
+          // border: 1px solid black;
+          margin-right: 18%;
+          padding-left: 2vw;
+
+          &>a{
+            @include mixin.container-style(100%, 100%, flex-start, center);
+  
+            &>img{
+              @include mixin.container-style(80%, 100%, center, center);
+              @include mixin.font(2rem, 500, #2c2c2c);
+            }
+          }
+
+
+        }
+        // logo&title ---------------------------------
+        
+        &>div:last-child{
+          @include mixin.container-style(670px, 80%, space-around, flex-start);
+          // border: 1px solid black;
+        }
+        // site-menu-class-setting ---------------------------------
+
+      }
+
+      // header-bottom-part-------------------------------------------
+
+      &>div:nth-child(2){
+        @include mixin.container-style(100%, 30%, space-between, center);
+        margin-top: 2vh;
+        border-top: var.$col-5 2px solid;
+        border-bottom: var.$col-5 2px solid;
+        // background-color: salmon;
+
+        &>div:first-child{
+          @include mixin.container-style(65%, 90%, space-around, center);
+          // border: solid black 1px;
+        }
+
+        &>div:last-child{
+          @include mixin.container-style(35%, 90%, space-around, center);
+          // border: solid black 1px;
+          position: relative;
+        }
+      }
+    }
+  }
+  // site-menu-class-setting------------------------------
+  .site-menu{
+    @include mixin.font(0.8rem, 450, #2c2c2c);
+  }
+  // site-menu-class-setting------------------------------
+
+  // drop-down-menu-class-setting------------------------------
+  .dropdown{
+    @include mixin.container-style(20%, 100%, center, center,column);
+    position: relative;
+    // border: #222 solid 1px;
+  }
+
+  .dropdown:hover .item{
+    @include mixin.container-style(100%, 350px, space-around, center,column);
+    @include mixin.posi(absolute, 100%);
+  }
+
+  .dropdown-btn{
+    @include mixin.container-style(100%,100% ,center,center);
+    background: none;
+    border: none;
+    cursor: pointer;
+    @include mixin.font(1rem, 500, #2c2c2c);
+    letter-spacing: 3px;
+  }
+
+  .item{
+    // width: 100%;
+    // height: 500px;
+    // font-size: 0.8rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.192);
+    background-color: rgba(255, 255, 255, 1);
+    @include mixin.font(0.9rem, 500, #2c2c2c);
+    display: none;
+    letter-spacing: 1px;
+
+    &>a{
+      @include mixin.container-style(100%,10% ,center,center);
+    // border: #2c2c2c solid 1px;
+    }
+
+    &>a:hover{
+      @include mixin.font(0.95rem, 600, var.$col-2);
+    }
+  }
+  // drop-down-menu-class-setting------------------------------
+  // search-box-class-setting------------------------------
+  .search-box{
+    @include mixin.container-style(100%,90%, flex-start, center);
+
+  }
+
+  .text-area{
+    width: 150%;
+    height: 30px;
+    // background-color: #ff7c7c;
+    border-radius: 20px;
+    // background-color: #ff7c7c;
+    padding-left: 10px;
+    @include mixin.font(0.8rem, 500, #2c2c2c);
+  }
+
+  .search-btn{
+    @include mixin.container-style(30px,30px, center, center);
+    @include mixin.posi(absolute, 15%, 75%);
+    // border: #222 solid 1px;
+  }
+  // search-box-class-setting------------------------------
+
+// slide-----------------------------------
+#slide{
+  @include mixin.container-style(1200px, 468px, center, center);
+}
+
+.slider{
+  @include mixin.container-style(100%, 100%, space-around, center);
+  position: relative;
+}
+
+.slide-track {
+  @include mixin.size(100%, 100%);
+  // border: #ff7c7c 4px solid;
+}
+
+.slide-item {
+  @include mixin.size(100%, 100%);
+  // z-index: 10;
+  cursor: pointer;
+  &>a{
+    @include mixin.container-style(100%, 100%, center, center);
+    &>img{
+      @include mixin.size(100%, 100%);
+    }
+  }
+}
+
+.slick-arrow{
+  @include mixin.container-style(5%, 10%, center, center);
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+}
+
+.slick-prev {
+  left: -3%;
+}
+
+.slick-next {
+  right: -3%;
+}
+.slick-prev:before, .slick-next:before {
+  font-size: 40px;
+  line-height: 1;
+  opacity: 0.7;
+  color:rgb(48, 48, 48);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev:before{
+  left: 0%;
+}
+.slick-next:before{
+  right: 0%;
+}
+
+
+// slide-----------------------------------
+
+main{
+  @include mixin.container-style(66.1%, 800vh, center, flex-start);
+  // position: relative;
+  // border: 5px solid black;
+}
+
+
+#main-right{
+  @include mixin.container-style(100%, 100%, space-around, center, column);
+  // border: 2px solid black;
+}
+
+// brand-top-----------------------------------
+.brand-top{
+  @include mixin.container-style(80%, 110vh, space-around, center, column);
+  // background-color: cornsilk;
+
+    &>div:nth-child(1){
+      @include mixin.container-style(100%, 45%, space-evenly, center, column);
+      // border: #000 solid 1px;
+      &>div:nth-child(1){
+        @include mixin.container-style(85%, 20%, center, center);
+        @include mixin.font(1.2rem, 500, #222);
+        // border: #000 solid 1px;
+      }
+
+      &>div:nth-child(2){
+        @include mixin.container-style(90%, 70%, center, center,column);
+        // border: #000 solid 1px;
+        &>img{
+          @include mixin.container-style(80%, 80%, center, center);
+        // border: #000 solid 1px;
+        }
+        &>div{
+          @include mixin.container-style(90%, 20%, space-around, center);
+
+          &>div{
+            @include mixin.font(1.2rem, 500, var.$col-3);
+            // border: solid black 1px;
+          }
+          &>div:nth-child(1){left: 6%;}
+          &>div:nth-child(2){left: 25%;}
+        }
+      }
+
+    }
+
+    &>div:nth-child(2){
+      // border: solid black 1px;
+        &>div:first-child{
+          line-height: 2.5;
+          @include mixin.font(1.1rem, 500, #222);
+          // border: solid black 1px;
+        }
+        &>div:last-child{
+          @include mixin.size(0%,30%);
+          bottom: 0%;
+        }
+    }
+
+    &>div:nth-child(3){
+      @include mixin.container-style(85%, 25%, space-between, center);
+      // border: solid black 1px;
+      &>img{
+        @include mixin.container-style(45%, 100%, center, center);
+      }
+    }
+
+}
+// brand-top-----------------------------------
+
+// brand-media-----------------------------------
+.brand-media{
+  @include mixin.container-style(80%, 165vh, space-around, center, column);
+  position: relative;
+  // background-color: burlywood;
+
+  &>iframe{
+    @include mixin.container-style(55%, 25%, center, center);
+    // margin-bottom: 5vh;
+  }
+
+  &>img:nth-child(2){
+    @include mixin.container-style(85%, 20%, center, center);
+    // margin-bottom: 5vh;
+    // border: solid 1px black;
+  }
+
+  &>div:nth-child(3){
+    @include mixin.container-style(40%, 20%, center, center);
+    // border: solid 1px black;
+    @include mixin.posi(absolute, 35%, 50%);
+    @include mixin.font(1.1rem, 500, #222);
+    line-height: 3;
+  }
+
+  &>img:nth-child(4){
+    @include mixin.container-style(85%, 15%, center, center);
+    // margin-bottom: 5vh;
+    // border: solid 1px black;
+  }
+
+  &>div:last-child{
+    @include mixin.container-style(90%, 15%, center, center);
+    // border: #000 solid 1px;          
+    border-top: solid 2px var.$col-3;
+    border-bottom: solid 2px var.$col-3;
+    @include mixin.font(1.1rem, 400, #222);
+  }
+}
+// brand-media-----------------------------------
+
+// brand-patent-----------------------------------
+.brand-patent{
+  @include mixin.container-style(80%, 125vh, space-around, center, column);
+  // border: #000 solid 1px;
+}
+
+.patent-top{
+  @include mixin.container-style(100%, 45%, space-between, center, column);
+  // border: #000 solid 1px;
+  &>div:nth-child(1){
+    
+    // margin-bottom: 3vh;
+    &>div{
+      @include mixin.font(1.3rem, 500, var.$col-3);
+    }
+    &>img{
+      @include mixin.size(70%,100%);
+    }
+  }
+
+  &>div:nth-child(2){
+    @include mixin.container-style(80%, 85%, space-around, center, column);
+    // border: #000 solid 1px;
+
+    &>img{
+      @include mixin.size(85%,40%);
+      
+    }
+  }
+}
+
+.patent-bottom{
+  // border: solid violet 2px;
+
+  &>div:nth-child(1){
+    &>div{
+      @include mixin.font(1.3rem, 500, var.$col-3);
+    }
+    &>img{
+      @include mixin.size(70%,100%);
+    }
+  }
+
+  &>div:nth-child(2){
+    @include mixin.container-style(80%, 80%, center, center);
+    // border: #000 solid 1px;
+    &>img{
+      @include mixin.size(85%,100%);
+    }
+  }
+}
+// brand-patent-----------------------------------
+
+// brand-lap-----------------------------------
+.brand-lap{
+  @include mixin.container-style(50%, 40vh, center, center, column);
+  // background-color: cadetblue;
+  &>div{
+    &>div{
+      @include mixin.container-style(45%, 100%, center, center);
+    }
+  }
+
+  &>div:first-child{
+    &>div:last-child{
+      @include mixin.font(1rem, 400, #222);
+      text-align: center;
+    }
+  }
+
+  &>div:last-child{
+    &>div:first-child{
+      @include mixin.font(1rem, 400, #222);
+      text-align: center;
+    }
+  }
+}
+// brand-lap-----------------------------------
+
+// brand-promiss-----------------------------------
+.brand-promiss{
+  @include mixin.container-style(80%, 100vh, space-evenly, center, column);
+  // background-color: chartreuse;
+  &>div:first-child{
+    @include mixin.container-style(100%, 5.5%, space-around, center, column);
+    &>div{
+      @include mixin.font(1.3rem, 500, var.$col-3);
+    }
+    &>img{
+      @include mixin.size(70%,100%);
+    }
+  }
+
+  @for $i from 2 through 4{
+    &>div:nth-child(#{$i}){
+      @include mixin.container-style(90%, 22%, space-around, center);
+
+      &>img{
+        @include mixin.container-style(45%, 100%, center, center);
+      }
+      &>div{
+        @include mixin.container-style(55%, 100%, space-around, center, column);
+        // border: solid black 1px;
+        
+        &>div:first-child{
+          @include mixin.font(1.3rem, 500, #222);
+          // border: solid black 1px;
+        }
+        &>div:last-child{
+          @include mixin.container-style(95%, 60%, center, center);
+          // border: solid black 1px;
+          @include mixin.font(1rem, 400, #222);
+        }
+      }
+    }
+  }
+}
+// brand-promiss-----------------------------------
+
+// brand-history-----------------------------------
+.brand-history{
+  @include mixin.container-style(80%, 180vh, space-around, center, column);
+  // background-color: cornflowerblue;
+  &>div:nth-child(1){
+    @include mixin.container-style(90%, 5%, center, center);
+    // border: solid black 1px;
+    @include mixin.font(1.5rem, 520, #222);
+    letter-spacing: 0.5rem;
+  }
+  &>div:nth-child(2){
+    @include mixin.container-style(80%, 55%, center, center);
+    // border: solid black 1px;
+  }
+
+  &>div:nth-child(3){
+    @include mixin.container-style(80%, 26%, center, center);
+    // border: solid black 1px;
+  }
+}
+// brand-history-----------------------------------
+
+// brand-bottom-----------------------------------
+.brand-bottom{
+  @include mixin.container-style(80%, 65vh, center, center, column);
+  // background-color: darksalmon;
+  &>div:first-child{
+    @include mixin.container-style(100%, 60%, space-around, flex-start, column);
+    border-top: solid 2px var.$col-3;
+    border-bottom: solid 2px var.$col-3;
+    padding: 1vw;
+    // border: solid black 1px;
+    &>h4{
+      @include mixin.container-style(50%, 12%, flex-start, center);
+      padding-left: 1vw;
+    }
+
+    @for $i from 2 through 3{
+      &>div:nth-child(#{$i}){
+        @include mixin.container-style(80%, 8%, flex-start, center);
+        @include mixin.font(1rem, 400, #222);
+        // background-color: antiquewhite;
+        padding-left: 2vw;
+      }
+    }
+
+    div:nth-child(4){
+      @include mixin.container-style(89%, 20%, flex-start, center);
+      @include mixin.font(1rem, 400, #222);
+      padding-left: 2vw;
+      line-height: 2;
+    }
+
+    div:nth-child(5){
+      @include mixin.container-style(89%, 25%, flex-start, center);
+      @include mixin.font(1rem, 400, #222);
+      padding-left: 2vw;
+      line-height: 2;
+    }
+
+  }
+
+  &>div:last-child{
+    @include mixin.container-style(55%, 20%, center, flex-start, column);
+    margin-top: 5vh;
+  }
+}
+// brand-bottom-----------------------------------
+
+
+// footer--------------------------------------------------
+  footer{
+    @include mixin.size(66.1%,72vh);
+
+    &>div:nth-child(1){
+      @include mixin.container-style(100%, 8%, center, center);
+    }
+
+    &>div:nth-child(2){
+      display: none;
+    }
+
+    &>div:nth-child(3){
+      @include mixin.container-style(100%, 88%, space-around, center, column);
+      // border: #ff7c7c solid 1px;
+    }
+  }
+
+  .foot-manual{
+    @include mixin.container-style(100%, 85%, space-around, center);
+
+    &>div{
+      @include mixin.container-style(33%, 100%, space-around, center, column);
+    }
+  }
+
+  .foot-left{
+    // background-color: burlywood;
+    border-left: var.$col-5 1px solid;
+    padding-left: 1vw;
+
+    &>div:nth-child(1){
+      @include mixin.container-style(100%, 15%, space-around, flex-start,column);
+      // border: #2c2c2c 2px solid;
+      position: relative;
+      top: -1%;
+      &>div:nth-child(1){
+        @include mixin.container-style(100%, 50%, flex-start, center);
+        @include mixin.font(1rem, 600, #222);
+
+        &>img{
+          margin-right: 10px;
+        }
+      }
+
+      &>div:nth-child(2){
+      @include mixin.container-style(100%, 50%, flex-start, center);
+      @include mixin.font(0.9rem, 550, #222);
+      padding: 2px;
+      }
+    }
+
+    &>div:nth-child(2){
+      @include mixin.container-style(95%, 35%, flex-start, flex-start,column);
+      border-left: var.$col-5 1px solid;
+      @include mixin.font(0.8rem, 500, var.$col-dark-gray);
+      line-height: 2;
+      padding-left: 0.4vw;
+    }
+
+    &>div:nth-child(3){
+      @include mixin.container-style(100%, 42%, space-around, flex-start,column);
+      
+      &>div:nth-child(1){
+        @include mixin.container-style(100%, 10%, flex-start, center);
+        @include mixin.font(1rem, 600, #222);
+
+        &>img{
+          margin-right: 10px;
+        }
+      }
+      
+      &>img{
+        @include mixin.container-style(55%, 12%, flex-start, center);
+        margin-left: 0.5vw;
+      }
+
+    }
+  }
+
+  .payment{
+    
+    &>div:nth-child(3){
+      margin-left: 0.5vw;
+      @include mixin.container-style(95%, 25%, space-around, flex-start, column);
+      
+      &>div:nth-child(1){
+        @include mixin.container-style(80%, 50%, flex-start, center);
+        @include mixin.font(0.8rem, 500, var.$col-dark-gray);
+      }
+      &>img{
+        @include mixin.size(14%, 30%);
+        margin-left: 0.5vw;
+      }
+    }
+
+    &>div:nth-child(4){
+      margin-left: 0.5vw;
+      @include mixin.container-style(95%, 35%, flex-start, flex-start, column);
+      @include mixin.font(0.8rem, 500, var.$col-dark-gray);
+
+      &>div:nth-child(1){
+        @include mixin.container-style(95%, 35%, flex-start, center);
+      }
+      &>div:nth-child(2){
+        @include mixin.container-style(95%, 35%, flex-start, center);
+        padding-left: 0.5vw;
+      }
+    }
+  }
+
+  // refun-txt-style-calss----------------------------
+  .bold{
+    @include mixin.font(0.8rem, 580, var.$col-dark-gray);
+  }
+
+  .bold-red{
+    @include mixin.font(0.8rem, 550, red);
+  }
+
+  .mid-txt{
+    @include mixin.font(0.8rem, 500, var.$col-dark-gray);
+    padding-left: 0.8vw;
+  }
+
+  // refun-txt-style-calss----------------------------
+  .foot-mid{
+    // background-color: #ff7c7c;
+    border-left: var.$col-5 1px solid;
+    border-right: var.$col-5 1px solid;
+
+    &>div:nth-child(1){
+      @include mixin.container-style(100%, 8%, flex-start, center);
+      @include mixin.font(1rem, 600, #222);
+      padding-left: 0.5vw;
+
+      &>img{
+        margin-right: 10px;
+      }
+      // border: #222 solid 1px;
+    }
+
+    &>div:nth-child(2){
+      @include mixin.container-style(90%, 90%, flex-start, center, column);
+      // border: #222 solid 1px;
+
+      &>div{
+        @include mixin.container-style(98%, auto, flex-start, center);
+        // margin-top: 0.5vw;
+        line-height: 1.8;
+      }
+    }
+  }
+
+  .foot-right{
+    // background-color: cornflowerblue;
+    border-right: var.$col-5 1px solid;
+
+    &>div:nth-child(1){
+      @include mixin.container-style(100%, 8%, flex-start, center);
+      @include mixin.font(1rem, 600, #222);
+      padding-left: 0.5vw;
+
+      &>img{
+        margin-right: 10px;
+      }
+    }
+
+    &>div:nth-child(2){
+      @include mixin.container-style(100%, 48%, flex-start, center, column);
+
+
+      &>div:nth-child(1){
+        @include mixin.container-style(95%, 20%, flex-start, center);
+      // border: #222 solid 1px;
+
+        &>a{
+          @include mixin.container-style(40%, 100%, space-around, center);
+      // border: #222 solid 1px;
+
+
+          &>img{
+            @include mixin.container-style(124px, 19px, flex-start, center);
+          }
+        }
+      }
+
+      &>div:nth-child(2){
+        @include mixin.container-style(95%, 70%, flex-start, center, column);
+        margin-top: 0.5vw;
+        border-bottom: var.$col-5 1px dotted;
+        // border: #222 solid 1px;
+
+        &>div:nth-child(1){
+          @include mixin.container-style(90%, 60%, flex-start, center);
+          @include mixin.font(0.8rem, 500, var.$col-dark-gray);
+          line-height: 2;
+          // border: #222 solid 1px;
+        }
+
+        &>span{
+          @include mixin.container-style(90%, 30%, flex-start, center);
+          @include mixin.font(0.8rem, 500, red);
+          line-height: 2;
+        };
+      }
+    }
+
+    &>div:nth-child(3){
+      @include mixin.container-style(90%, 43%, flex-start, center, column);
+
+      &>img{
+        @include mixin.container-style(134px, 19px, flex-start, center);
+        position: relative;
+        left: -35%;
+      }
+
+      &>div{
+        @include mixin.container-style(95%, 95%, flex-start, center);
+        @include mixin.font(0.8rem, 500, var.$col-dark-gray);
+        line-height: 2;
+      }
+    }
+  }
+  
+  .foot-menu{
+    @include mixin.container-style(100%, 5%, center, center);
+    background-color: var.$col-2;
+    border-top: var.$col-5 1px solid;
+    border-bottom: var.$col-5 1px solid;
+
+    &>a{
+      @include mixin.container-style(10%, 80%, center, center); 
+      @include mixin.font(0.9rem, 400, white);
+      border-right: var.$col-5 1px solid;
+    }
+  }
+  .copyright{
+    @include mixin.container-style(100%, 5%, center, center);
+    @include mixin.font(0.7rem, 400, var.$col-mid-gray);
+  }
+
+}

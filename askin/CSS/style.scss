@@ -1,0 +1,264 @@
+@use './var'as var;
+@use './mixin' as mixin;
+@use './basic';
+// -------------------------------------------
+
+// hamberger-menu---------------------------------------
+#menu__toggle {
+  opacity: 0;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  left: 0;
+}
+
+.menu__btn {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 4%;
+  left: 5%;
+  width: 26px;
+  height: 26px;
+
+  cursor: pointer;
+  z-index: 1;
+}
+
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  transition-duration: .25s;
+  background-color: rgb(47, 47, 47);
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+
+.menu__box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -100%;
+
+  @include mixin.container-style(40%, 90%, space-around, center, column);
+
+  width: 80%;
+  height: 90%;
+
+  margin: 0;
+  padding: 80px 0;
+
+  list-style: none;
+
+  background-color: rgba(143, 43, 95,0.8);
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+
+  transition-duration: .25s;
+}
+
+.menu__item {
+  // border: solid black 1px;
+  // padding: 12px 24px;
+  @include mixin.container-style(200px,50px, center, center);
+  @include mixin.font(1.2rem, 600, rgb(255, 255, 255));
+  text-decoration: none;
+  transition-duration: .25s;
+}
+.menu__item:hover {
+  background-color: #ffffff;
+  border-radius: 40px;
+  color: rgb(47, 47, 47);
+}
+// hamberger-menu---------------------------------------
+
+
+#root{
+  @include mixin.container-style(100vw, 100vh, flex-start, center, column );
+
+}
+
+header{
+  @include mixin.container-style(100%, 10%, space-around, center);
+  // background-color: salmon;
+  position: relative;
+  z-index: 1;
+
+  &>section:first-child{
+    @include mixin.container-style(100%, 100%, center, center);
+
+    &>div:last-child{
+      @include mixin.container-style(70%, 100%, center, center);
+      // border: solid black 1px;
+
+      &>div:first-child{
+        @include mixin.container-style(50%, 80%, center, flex-end);
+        @include mixin.font(2rem, 500, #000);
+        // border: solid red 1px;
+      }
+    }
+  }
+
+  &>section:last-child{
+    display: none;
+  }
+  
+
+}
+
+
+
+// slide-----------------------------------
+#slide{
+  @include mixin.container-style(100%, 25%, center, center);
+  position: relative;
+}
+
+.slider{
+  @include mixin.container-style(100%, 100%, center, center);
+  position: absolute;
+  top: 2%;
+}
+
+.slick-list{
+  @include mixin.size(100%, 100%);
+}
+
+.slick-track {
+  @include mixin.size(100%, 100%);
+}
+
+
+.slide-item {
+  @include mixin.size(100%, 100%);
+  &>a{
+    @include mixin.container-style(100%, 100%, center, center);
+    &>img{
+      @include mixin.size(100%, 100%);
+    }
+  }
+}
+
+.btn{
+  @include mixin.container-style(100%, 100%, space-between, center);
+  position: absolute;
+
+  &>span{
+    @include mixin.container-style(25px, 25px, center, center);
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.7;
+    cursor: pointer;
+
+    &>img{
+      @include mixin.size(100%, 100%);
+    }
+  }
+
+  &>span:hover{
+    opacity: 1;
+    background-color: rgb(222, 222, 222);
+  }
+
+}
+#prevArrow{position: relative; left: 1%;  top: 5%;}
+#nextArrow{position: relative; right: 1%; top: 5%;}
+
+.slick-dots{
+  @include mixin.container-style(100%, 5%, center, center);
+  position: absolute;
+  top: 95%;
+}
+
+// slide-----------------------------------
+main{
+  @include mixin.container-style(100%, 67%, space-around, center);
+  position: relative;
+  // border: solid 3px black;
+}
+// left_navi-----------------------------------
+#main-left{
+  display: none;
+}
+// left_navi-----------------------------------
+
+footer{
+  @include mixin.container-style(100%, 55%, center, center, column);
+  // background-color: var.$col-dark-gray;
+  // border: #000 solid 1px;
+
+  &>div:nth-child(1){
+    @include mixin.container-style(100%, 10%, center, center);
+    @include mixin.font(1.2rem, 550, var.$col-white);
+    background-color: var.$col-dark-gray;
+    border-bottom: var.$col-mid-gray 1px solid;
+    // border: #000 solid 1px;
+  }
+  // shopping-guid-part
+
+  &>div:nth-child(3){
+    display: none;
+  }
+}
+
+.mobile-footer{
+  @include mixin.container-style(100%, 90%, space-around, center, column);
+  background-color:var.$col-dark-gray;
+
+  &>div:nth-child(2){
+    @include mixin.container-style(90%, 55%, space-around, center,
+    column);
+    // border: #ffffff solid 1px;
+    
+    &>div{
+    @include mixin.container-style(100%, 100%, flex-start,center);
+    @include mixin.font(0.8rem, 500, var.$col-white);
+    line-height: 1.5;
+    }
+  }
+
+  &>div:last-child{
+    @include mixin.container-style(100%, 10%, center, center);
+    @include mixin.font(0.8rem, 500, var.$col-white);
+  }
+}
+
+.footer-menu{
+  @include mixin.container-style(100%, 30%, space-around, center);
+  // border: #ffffff solid 1px;
+
+  &>div{
+    @include mixin.container-style(40%, 90%, space-around, center, column);
+
+    &>div{
+      @include mixin.container-style(80%, 20%, flex-start, center);
+      &>a{
+        @include mixin.size(100%,100%);
+        @include mixin.font(0.8rem, 500, var.$col-white);
+      }
+    }
+  }
+}

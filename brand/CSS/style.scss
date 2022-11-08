@@ -1,0 +1,620 @@
+@use './var'as var;
+@use './mixin' as mixin;
+@use './basic';
+// -------------------------------------------
+
+// hamberger-menu---------------------------------------
+#menu__toggle {
+  opacity: 0;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  left: 0;
+}
+
+.menu__btn {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 3.5%;
+  left: 5%;
+  width: 26px;
+  height: 26px;
+
+  cursor: pointer;
+  z-index: 1;
+}
+
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  transition-duration: .25s;
+  background-color: rgb(47, 47, 47);
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+
+.menu__box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -100%;
+
+  @include mixin.container-style(40%, 90%, space-around, center, column);
+
+  width: 80%;
+  height: 90%;
+
+  margin: 0;
+  padding: 80px 0;
+
+  list-style: none;
+
+  background-color: rgba(143, 43, 95,0.8);
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+
+  transition-duration: .25s;
+}
+
+.menu__item {
+  // border: solid black 1px;
+  // padding: 12px 24px;
+  @include mixin.container-style(200px,50px, center, center);
+  @include mixin.font(1.2rem, 600, rgb(255, 255, 255));
+  text-decoration: none;
+  transition-duration: .25s;
+}
+.menu__item:hover {
+  background-color: #ffffff;
+  border-radius: 40px;
+  color: rgb(47, 47, 47);
+}
+
+// slide---------------------------------------
+
+// class-setting-----------------------------------------
+
+#root{
+  @include mixin.container-style(100vw, 880vh, space-between, center, column );
+
+}
+
+header{
+  @include mixin.container-style(100%, 8vh, space-around, center);
+  // background-color: salmon;
+  position: relative;
+  z-index: 2;
+
+  &>section:first-child{
+    @include mixin.container-style(100%, 100%, center, center);
+
+    &>div:last-child{
+      @include mixin.container-style(70%, 100%, center, center);
+      // border: solid black 1px;
+
+      &>div:first-child{
+        @include mixin.container-style(80%, 80%, center, flex-end);
+        @include mixin.font(1.5rem, 500, #000);
+        letter-spacing: 10px;
+        // border: solid red 1px;
+      }
+    }
+  }
+
+  &>section:last-child{
+    display: none;
+  }
+  
+
+}
+
+
+
+
+// slide-----------------------------------
+#slide{
+  @include mixin.container-style(100%, 30vh, center, center);
+  position: relative;
+}
+
+.slider{
+  @include mixin.container-style(100%, 100%, center, center);
+  position: absolute;
+  top: 2%;
+  // z-index: 6;
+}
+
+.slick-list{
+  @include mixin.size(100%, 100%);
+}
+
+.slick-track {
+  @include mixin.size(100%, 100%);
+}
+
+
+.slide-item {
+  @include mixin.size(100%, 100%);
+  // z-index: 10;
+  cursor: pointer;
+  &>a{
+    @include mixin.container-style(100%, 100%, center, center);
+    &>img{
+      @include mixin.size(100%, 100%);
+    }
+  }
+}
+
+.slick-arrow{
+  @include mixin.container-style(40px, 100%, center, center);
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+}
+
+.slick-prev {
+  left: 0%;
+}
+
+
+.slick-next {
+  right: 0%;
+}
+.slick-prev:before, .slick-next:before {
+  font-size: 30px;
+  line-height: 1;
+  opacity: 0.7;
+  color:rgb(48, 48, 48);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.slick-dots{
+  @include mixin.container-style(100%, 5%, center, center);
+  position: absolute;
+  top: 95%;
+  z-index: 10;
+}
+
+// slide-----------------------------------
+
+main{
+  @include mixin.container-style(100%, 774vh, space-around, center);
+  position: relative;
+  // border: solid 3px black;
+}
+
+#main-right{
+  @include mixin.container-style(100%, 100%, space-around, center, column);
+  // background-color: violet;
+  // border: solid violet 2px;
+}
+
+.brand-top{
+  @include mixin.container-style(100%, 100vh, space-evenly, center, column);
+  // background-color: cornsilk;
+
+    &>div:nth-child(1){
+      @include mixin.container-style(100%, 50%, space-around, center, column);
+      // border: #000 solid 1px;
+      &>div:nth-child(1){
+        @include mixin.container-style(100%, 30%, center, center);
+        background-color: var.$col-4;
+        text-align: center;
+        @include mixin.font(0.8rem, 550, #222);
+        line-height: 2;
+      }
+
+      &>div:nth-child(2){
+        @include mixin.container-style(90%, 70%, center, center,column);
+        // background-color: var.$col-4;
+        // border: #000 solid 1px;
+        &>img{
+          @include mixin.container-style(90%, 55%, center, center);
+        // border: #000 solid 1px;
+        }
+        &>div{
+          @include mixin.container-style(90%, 25%, space-around, center);
+          position: relative;
+          &>div{
+            @include mixin.container-style(23%, 100%, center, center);
+            text-align: center;
+            @include mixin.font(0.7rem, 500, var.$col-3);
+            // border: solid black 1px;
+            position: absolute;
+          }
+          &>div:nth-child(1){left: 2%;}
+          &>div:nth-child(2){left: 22%;}
+          &>div:nth-child(3){left: 42%;}
+        }
+      }
+    }
+
+    &>div:nth-child(2){
+      @include mixin.container-style(100%, 20%, space-evenly, center, column);
+      position: relative;
+      // border: #000 solid 1px;
+        &>div:first-child{
+          @include mixin.container-style(90%, 60%, center, center);
+          border-top: solid 2px var.$col-3;
+          border-bottom: solid 2px var.$col-3;
+          text-align: center;
+          position: absolute;
+          top: 0;
+          @include mixin.font(0.8rem, 500, #222);
+          line-height: 2.5;
+        }
+
+        &>div:last-child{
+          @include mixin.size(0%,30%);
+          border: solid 1px var.$col-3;
+          // border-left: #000 solid 1px;
+          position: absolute;
+          bottom: 1%;
+        }
+    }
+
+    &>div:nth-child(3){
+      @include mixin.container-style(100%, 20%, space-evenly, center);
+      &>img{
+        @include mixin.container-style(45%, 100%, center, center);
+      }
+    }
+}
+
+.brand-media{
+  @include mixin.container-style(100%, 135vh, space-around, center, column);
+  position: relative;
+  // background-color: burlywood;
+
+  &>iframe{
+    @include mixin.container-style(90%, 20%, center, center);
+  }
+
+  &>img:nth-child(2){
+    @include mixin.container-style(100%, 20%, center, center);
+    // border: solid 1px black;
+  }
+
+  &>div{
+    line-height: 2.5;
+  }
+  
+  &>div:nth-child(3){
+    @include mixin.container-style(60%, 20%, flex-end, center);
+    @include mixin.posi(absolute, 30%, 35%);
+    @include mixin.font(0.8rem, 500, #222);
+    text-align: right;
+    // background-color: #ffffff;
+    // border: solid 1px black;
+  }
+  
+  &>img:nth-child(4){
+    @include mixin.container-style(100%, 15%, center, center);
+    // border: solid 1px black;
+  }
+  
+  &>div:nth-child(5){
+    @include mixin.container-style(100%, 20%, center, center);
+    text-align: center;
+    @include mixin.font(0.7rem, 500, #222);
+    // background-color: #ffffff;
+  }
+
+
+}
+
+.brand-patent{
+  @include mixin.container-style(100%, 120vh, space-evenly, center, column);
+  // background-color: aquamarine;
+  // border: #000 solid 1px;
+}
+
+.patent-top{
+  @include mixin.container-style(100%, 45%, space-around, center, column);
+  // border: solid violet 2px;
+  &>div:nth-child(1){
+    @include mixin.container-style(90%, 10%, center, center);
+    // border: #000 solid 1px;
+    position: relative;
+    &>div{
+      @include mixin.container-style(70%, 100%, center, center);
+      position: absolute;
+      @include mixin.font(0.9rem, 500, var.$col-3);
+      // background-color: antiquewhite
+    }
+    &>img{
+      @include mixin.size(100%,80%);
+      // border: #000 solid 1px;
+    }
+  }
+
+  &>div:nth-child(2){
+    @include mixin.container-style(100%, 80%, space-around, center, column);
+    // border: #000 solid 1px;
+    &>img{
+      @include mixin.size(100%,45%);
+    }
+  }
+}
+
+.patent-bottom{
+  @include mixin.container-style(100%, 50%, space-around, center, column);
+  // border: solid violet 2px;
+
+  &>div:nth-child(1){
+    @include mixin.container-style(90%, 10%, center, center);
+    // border: #000 solid 1px;
+    position: relative;
+    &>div{
+      @include mixin.container-style(70%, 100%, center, center);
+      position: absolute;
+      @include mixin.font(0.9rem, 500, var.$col-3);
+      // background-color: antiquewhite
+    }
+    &>img{
+      @include mixin.size(100%,80%);
+      // border: #000 solid 1px;
+    }
+  }
+
+  &>div:nth-child(2){
+    @include mixin.container-style(100%, 80%, center, center);
+    // border: #000 solid 1px;
+    &>img{
+      @include mixin.size(100%,100%);
+    }
+  }
+}
+
+
+.brand-lap{
+  @include mixin.container-style(100%, 40vh, center, center, column);
+  // background-color: cadetblue;
+  &>div{
+    @include mixin.container-style(100%, 50%, center, center);
+    // border: solid black 1px;
+    &>div{
+      @include mixin.container-style(50%, 100%, center, center);
+      // border: solid black 1px;
+    }
+  }
+
+  &>div:first-child{
+    &>div:first-child{
+      &>img{
+        @include mixin.size(100%,100%);
+      }
+    }
+
+    &>div:last-child{
+      @include mixin.font(0.75rem, 400, #222);
+      line-height: 2;
+      background-color: var.$col-4;
+    }
+  }
+
+  &>div:last-child{
+    &>div:first-child{
+      @include mixin.font(0.75rem, 400, #222);
+      line-height: 2;
+      background-color: var.$col-4;
+    }
+    &>div:last-child{
+      &>img{
+        @include mixin.size(100%,100%);
+      }
+    }
+  }
+}
+
+.brand-promiss{
+  @include mixin.container-style(100%, 90vh, space-evenly, center, column);
+  // background-color: chartreuse;
+  &>div:nth-child(1){
+    @include mixin.container-style(90%, 8%, center, center);
+    // border: #000 solid 1px;
+    position: relative;
+    &>div{
+      @include mixin.container-style(70%, 100%, center, center);
+      position: absolute;
+      @include mixin.font(0.9rem, 500, var.$col-3);
+      letter-spacing: 1px;
+      // background-color: antiquewhite
+    }
+    &>img{
+      @include mixin.size(100%,80%);
+      // border: #000 solid 1px;
+    }
+  }
+
+  @for $i from 2 through 4{
+    &>div:nth-child(#{$i}){
+      @include mixin.container-style(100%, 24%, space-around, center);
+      // border: solid black 1px;
+      box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, .2);
+      &>img{
+        @include mixin.container-style(40%, 100%, center, center);
+        border-right: 1px solid rgba(2, 2, 2, .2);
+        // box-shadow: 1px 1px 2px 1px rgba(2, 2, 2, .2);
+      }
+      &>div{
+        @include mixin.container-style(60%, 100%, space-around, center, column);
+        
+        &>div:first-child{
+          @include mixin.container-style(100%, 20%, center, flex-end);
+          @include mixin.font(0.9rem, 500, #222);
+          letter-spacing: 5px;
+          // border: solid black 1px;
+        }
+        &>div:last-child{
+          @include mixin.container-style(100%, 70%, center, center);
+          @include mixin.font(0.7rem, 400, #222);
+          text-align: center;
+          line-height: 2;
+        }
+      }
+    }
+  }
+}
+
+.brand-history{
+  @include mixin.container-style(100%, 160vh, space-around, center, column);
+  // background-color: cornflowerblue;
+  &>div:nth-child(1){
+    @include mixin.container-style(100%, 4%, center, center);
+    // border: solid black 1px;
+    @include mixin.font(1rem, 540, #222);
+    letter-spacing: 0.3rem;
+    background-color: var.$col-4;
+  }
+  &>div:nth-child(2){
+    @include mixin.container-style(90%, 60%, center, center);
+    // border: solid black 1px;
+    &>img{
+      @include mixin.size(100%,100%);
+    }
+  }
+
+  &>div:nth-child(3){
+    @include mixin.container-style(95%, 24%, center, center);
+    // border: solid black 1px;
+    &>img{
+      @include mixin.size(100%,100%);
+    }
+  }
+}
+
+.brand-bottom{
+  @include mixin.container-style(100%, 100vh, space-evenly, center, column);
+  // background-color: darksalmon;
+  &>div:first-child{
+    @include mixin.container-style(95%, 65%, space-evenly, center, column);
+    border-top: solid 2px var.$col-3;
+    border-bottom: solid 2px var.$col-3;
+    // border: solid black 1px;
+    &>h4{
+      @include mixin.container-style(100%, 10%, flex-start, center);
+      // background-color: antiquewhite;
+      // border: solid black 1px;
+    }
+
+    @for $i from 2 through 3{
+      &>div:nth-child(#{$i}){
+        @include mixin.container-style(98%, 10%, flex-start, center);
+        @include mixin.font(0.85rem, 400, #222);
+      }
+    }
+
+    div:nth-child(4){
+      @include mixin.container-style(98%, 25%, flex-start, center);
+      // border: solid black 1px;
+      @include mixin.font(0.85rem, 400, #222);
+      line-height: 1.8;
+
+    }
+
+    div:nth-child(5){
+      @include mixin.container-style(98%, 35%, flex-start, center);
+      // border: solid black 1px;
+      @include mixin.font(0.85rem, 400, #222);
+      line-height: 1.8;
+    }
+  }
+
+  &>div:last-child{
+    @include mixin.container-style(90%, 20%, center, flex-start, column);
+    // border: solid black 1px;
+    &>img{
+      @include mixin.size(100%,100%);
+    }
+  }
+}
+
+
+
+
+footer{
+  @include mixin.container-style(100%, 80vh, center, center, column);
+  // background-color: var.$col-dark-gray;
+  // border: #000 solid 1px;
+  // &>iframe{
+  //   @include mixin.size(100%,100%);
+  // }
+
+  &>div:nth-child(1){
+    @include mixin.container-style(100%, 10%, center, center);
+    @include mixin.font(1.1rem, 550, var.$col-white);
+    letter-spacing: 5px;
+    background-color: var.$col-2;
+    border-bottom: var.$col-5 1px solid;
+  }
+  // shopping-guid-part
+}
+
+.mobile-footer{
+  @include mixin.container-style(100%, 90%, space-around, center, column);
+  background-color:var.$col-2;
+
+  &>div:nth-child(2){
+    @include mixin.container-style(90%, 55%, space-around, center,
+    column);
+    
+    &>div{
+    @include mixin.container-style(100%, 100%, flex-start,center);
+    @include mixin.font(0.7rem, 400, var.$col-white);
+    line-height: 1.5;
+    }
+  }
+
+  &>div:last-child{
+    @include mixin.container-style(100%, 10%, center, center);
+    @include mixin.font(0.8rem, 400, var.$col-white);
+  }
+}
+
+.desktop-footer{
+  display: none;
+}
+
+.footer-menu{
+  @include mixin.container-style(100%, 30%, space-around, center);
+  // border: #000 solid 1px;
+
+  &>div{
+    @include mixin.container-style(45%, 90%, space-around, center, column);
+
+    &>div{
+      @include mixin.container-style(90%, 20%, flex-start, center);
+      &>a{
+        @include mixin.size(100%,100%);
+        @include mixin.font(0.8rem, 400, var.$col-white);
+      }
+    }
+  }
+}
