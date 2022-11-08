@@ -34,23 +34,25 @@
     </div>
     <div class="header-bottom">
       <div class="drdwon-menu">
-        <div>
+        <div id="menu-1">
           <div>製品別</div>
-          <img src="./IMG/arrow-tri-down.jpg">
+          <img src="./IMG/arrow-tri-down.jpg" class="menu-btn">
         </div>
-        <div>
+        <div id="menu-2">
           <div>肌のタイプ</div>
-          <img src="./IMG/arrow-tri-down.jpg">
+          <img src="./IMG/arrow-tri-down.jpg" class="menu-btn">
         </div>
-        <div>
+        <div id="menu-3">
           <div>セット商品</div>
-          <img src="./IMG/arrow-tri-down.jpg">
+          <img src="./IMG/arrow-tri-down.jpg" class="menu-btn">
+        </div>
+        <div id="menu-4">
+          <div>イベント商品</div>
+          <img src="./IMG/arrow-tri-down.jpg" class="menu-btn">
         </div>
         <div>
-          <div>イベント商品</div>
-          <img src="./IMG/arrow-tri-down.jpg">
+        <a href="">About A-SKIN</a>
         </div>
-        <div>About A-SKIN</div>
       </div>
       <div class="search-box">
         <form accept-charset="euc-jp" method="get" action="http://esearch.rakuten.co.jp/rms/sd/esearch/vc" target="_top" onclick="document.charset='EUC-JP'; document.rakutenSubmit.submit();">
@@ -68,14 +70,286 @@
   </header>
 
   <main>
-    <section id="slide"></section>
-    <section></section>
-    <section></section>
-    <section></section>
-    <section></section>
-    <section></section>
-    <section></section>
-    <section></section>
+    <section id="slide">
+      <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09452582/coupon_banner.jpg">
+    </section>
+
+    <section id="banner-top">
+      <img src="https://image.rakuten.co.jp/smartforyou/cabinet/truck.jpg">
+      <div>
+        <div>全商品送料無料</div>
+        <div>
+          ＊通常国内配送となっておりますが国内の在庫が切れる場合国際配送になります。国際配送の場合平均お届け日数２～３日遅れる恐れがございますのでご遠慮お願います。
+        </div>
+      </div>
+      <div>
+        全国一律<br>
+        ０円
+      </div>
+    </section>
+
+    <section id="best">
+      <div>
+        <div>BEST ITEM</div>
+        <div>ベスト商品</div>
+      </div>
+      <div class="product-part">
+        <div class="best-1">
+          <a href="https://item.rakuten.co.jp/smartforyou/skin_booster/">
+            <img src="https://image.rakuten.co.jp/smartforyou/cabinet/skin-booster/skin_new_thum.jpg">
+            <div>
+              SKIN BOOSTER<br>スキンブースター
+            </div>
+            <div>3、490円</div>
+          </a>
+        </div>
+        <div class="best-2">
+          <a href="https://item.rakuten.co.jp/smartforyou/synergy_repair_ampoule/">
+            <img src="https://image.rakuten.co.jp/smartforyou/cabinet/repair-ampolue/repair_new_thum.jpg">
+            <div>
+              Repair Ampoule<br>リペアアンプル
+            </div>
+            <div>9、990円</div>
+          </a>
+        </div>
+        <div class="best-3">
+          <a href="https://item.rakuten.co.jp/smartforyou/synergy_azulen_ampoule/">
+            <img src="https://image.rakuten.co.jp/smartforyou/cabinet/azulen-ampolue/azulen_new_thum.jpg">
+            <div>
+              Azulen Ampoule<br>アズレンアンプル
+            </div>
+            <div>9、390円</div>
+          </a>
+        </div>
+        <div class="best-4">
+          <a href="https://item.rakuten.co.jp/smartforyou/mgf_plus_cream/">
+            <img src="https://image.rakuten.co.jp/smartforyou/cabinet/mgf-pleu-cream/plus_new_thum.jpg">
+            <div>
+              mgfPlus Cream<br>mgfプラスクリーム
+            </div>
+            <div>7、790円</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="banner-mid">
+      <a href=""><img src="https://image.rakuten.co.jp/smartforyou/cabinet/09452582/banner_bottom.jpg"></a>
+      <a href="https://rshop.rms.rakuten.co.jp/rms/mall/rsf/shop/vc?__event=WL01_001_001"><img src="https://image.rakuten.co.jp/smartforyou/cabinet/09452582/r_mail_banner.jpg"></a>
+    </section>
+
+    <section id="recommend">
+      <div>
+        <div>RECOMMENDED ITEM</div>
+        <div>おすすめ商品</div>
+      </div>
+      <div class="recommend-item">
+        <div>
+          <a href="https://item.rakuten.co.jp/smartforyou/synergy_soothing_ampoule/">
+            <img src="https://image.rakuten.co.jp/smartforyou/cabinet/soothing-ampolue/soothing-amp_1.jpg">
+            <div>
+              Soothing Ampoule<br>
+              スージングアンプル
+            </div>
+            <div>9、990円</div>
+            <div>
+              脂性・混合肌のための<br>
+              水分たっぷりのセラム<br>
+              べたつきないタイプが<br>
+              好みの方へおすすめ
+            </div>
+          </a>
+        </div>
+        <div>
+          <a href="https://item.rakuten.co.jp/smartforyou/mgf_repair_cream/">
+            <img src="https://image.rakuten.co.jp/smartforyou/cabinet/mgf-repair-cream/mgf_repair_3.jpg">
+            <div>
+              mgf Repair Cream<br>
+              mgfリペアクリーム
+            </div>
+            <div>2、990円</div>
+            <div>
+              高濃縮スポットケア<br>
+              損なった肌のための<br>
+              集中ケアが必要な方へ<br>
+              おすすめ
+            </div>
+          </a>
+        </div>
+        <div>
+          <a href="https://item.rakuten.co.jp/smartforyou/intensive_humid_cream/">
+            <img src="https://image.rakuten.co.jp/smartforyou/cabinet/humid-cream/h_c_1.jpg">
+            <div>
+              Humid Cream<br>
+              ヒュミドクリーム
+            </div>
+            <div>3、890円</div>
+            <div>
+              乾燥した肌に一日中、<br>
+              潤いを与える保湿<br>
+              クリームで敏感肌・<br>
+              乾燥肌の方へおすすめ
+            </div>
+          </a>
+        </div>
+        <div>
+          <a href="https://item.rakuten.co.jp/smartforyou/intensive_humid_lotion/">
+            <img src="https://image.rakuten.co.jp/smartforyou/cabinet/humid-lotion/h_lotion_1.jpg">
+            <div>
+              Humid Lotion<br>
+              ヒュミドローション
+            </div>
+            <div>2、990円</div>
+            <div>
+              肌バリア強化で潤いを<br>
+              与える低刺激保湿<br>
+              ローションで肌に優し<br>
+              い製品のお探しの方へ<br>
+              おすすめ
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="banner-bot">
+      <a href="">
+        <img src="https://image.rakuten.co.jp/smartforyou/cabinet/event/imgrc0087549591.jpg">
+      </a>
+      <a href="">
+        <img src="https://image.rakuten.co.jp/smartforyou/cabinet/event/mask_sale_new.jpg">
+      </a>
+    </section>
+
+    <section id="special">
+      <div>
+        <div>SPECIAL ITEM</div>
+        <div>スペシャル商品</div>
+      </div>
+      <div class="product-part">
+        <div>
+          <a href="https://item.rakuten.co.jp/smartforyou/regeneration_set/">
+            <img src="https://image.rakuten.co.jp/smartforyou/cabinet/set-products/09491333/repair_set.jpg">
+            <div>
+              Regeneration Set<br>リーゼネレーションセット
+            </div>
+            <div>17、990円</div>
+          </a>
+        </div>
+        <div>
+          <a href="https://item.rakuten.co.jp/smartforyou/soothing_collagen_mask/">
+            <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09487237/mask_10.jpg">
+            <div>
+              Collagen Mask 10<br>コラーゲンマスク10枚
+            </div>
+            <div>5、590円</div>
+          </a>
+        </div>
+        <div>
+          <a href="https://item.rakuten.co.jp/smartforyou/soothing_collagen_mask_20/">
+            <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09487237/mask_20.jpg">
+            <div>
+              Collagen Mask 20<br>コラーゲンマスク20枚
+            </div>
+            <div>10、090円</div>
+          </a>
+        </div>
+        <div>
+          <a href="https://item.rakuten.co.jp/smartforyou/soothing_collagen_mask_30/">
+            <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09487237/mask_30.jpg">
+            <div>
+              Collagen Mask 30<br>コラーゲンマスク30枚
+            </div>
+            <div>15、090円</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="category">
+      <div>
+        <div>CATEGORY</div>
+        <div>カテゴリ</div>
+      </div>
+
+      <div class="product-cg">
+        <div>製品別</div>
+
+        <div>
+          <div class="cg-contents">
+            <div>
+              <a href="https://item.rakuten.co.jp/smartforyou/c/0000001286/">
+                <img src="https://image.rakuten.co.jp/smartforyou/cabinet/skin_120.jpg">
+                <div>
+                  <div>SKIN&TONER</div>
+                  <div>スキン＆トナー</div>
+                </div>
+              </a>
+            </div>
+            <div>
+              <a href="https://item.rakuten.co.jp/smartforyou/c/0000001288/">
+                <img src="https://image.rakuten.co.jp/smartforyou/cabinet/ampoule_120.jpg">
+                <div>
+                  <div>SERUM & AMPOULE</div>
+                  <div>セラム＆アンプル</div>
+                </div>
+              </a>
+            </div>
+            <div>
+              <a href="https://item.rakuten.co.jp/smartforyou/c/0000001287/">
+                <img src="https://image.rakuten.co.jp/smartforyou/cabinet/cream_120.jpg">
+                <div>
+                  <div>LOTION & CREAM</div>
+                  <div>ローション＆クリーム</div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="cg-contents">
+            <div>
+              <a href="https://item.rakuten.co.jp/smartforyou/c/0000001313/">
+                <img src="https://image.rakuten.co.jp/smartforyou/cabinet/cleanser_120.jpg">
+                <div>
+                  <div>CLEANSER</div>
+                  <div>クレンザー</div>
+                </div>
+              </a>
+            </div>
+            <div>
+              <a href="https://item.rakuten.co.jp/smartforyou/c/0000001308/">
+                <img src="https://image.rakuten.co.jp/smartforyou/cabinet/suncream_120.jpg">
+                <div>
+                  <div>SUN CARE</div>
+                  <div>サンケア</div>
+                </div>
+              </a>
+            </div>
+            <div>
+              <a href="https://item.rakuten.co.jp/smartforyou/c/0000001309/">
+                <img src="https://image.rakuten.co.jp/smartforyou/cabinet/shampoo_120.jpg">
+                <div>
+                  <div>HAIR CARE</div>
+                  <div>ヘアケア</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skin-type-cg">
+        <div>肌のタイプ</div>
+        <div>
+          <div><a href="https://item.rakuten.co.jp/smartforyou/c/0000001290/">乾燥肌</a></div>
+          <div><a href="https://item.rakuten.co.jp/smartforyou/c/0000001289/">敏感肌</a></div>
+          <div><a href="https://item.rakuten.co.jp/smartforyou/c/0000001290/">脂性肌</a></div>
+          <div><a href="https://item.rakuten.co.jp/smartforyou/c/0000001290/">混合肌</a></div>
+          <div><a href="https://item.rakuten.co.jp/smartforyou/c/0000001291/">スペシャル</a></div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer>
@@ -121,5 +395,114 @@
   </footer>
 </div>
 
+<script>
+  // function------------------------------------
+  function flex(target, justi, ali, flexDirection = "row") {
+    target.style.display = "flex";
+    target.style.justifyContent = justi;
+    target.style.alignItems = ali;
+    target.style.flexDirection = flexDirection;
+  }
+
+  function posi(
+    target,
+    posi,
+    left = 0,
+    top = 0,
+    zIndex = 0
+  ) {
+    target.style.position = posi;
+    target.style.left = left;
+    target.style.top = top;
+    target.style.zIndex = zIndex;
+  }
+
+  function size(target, w, h) {
+    target.style.width = w;
+    target.style.height = h;
+  }
+
+  function fontstyle(target, rem, bold) {
+    target.style.fontSize = rem;
+    target.style.fontWeight = bold;
+  }
+
+  function createElement(tag, parent) {
+    const objName = document.createElement(tag);
+    parent.appendChild(objName);
+  }
+
+  function createBefore(newTag, parent, tag) {
+    const tagName = document.createElement(newTag);
+    parent.insertBefore(tagName, tag);
+  }
+
+
+  function text(target, col, rem = "1rem", bold) {
+    target.style.color = col;
+    target.style.fontSize = rem;
+    target.style.fontWeight = bold;
+    // target.style.textAlign = "justify";
+    // target.style.lineHeight = "200%";
+  }
+
+  function menuStyle(target, direction){
+    target.style.width = '100vw';
+    target.style.height = '240px';
+    target.style.display = 'flex';
+    target.style.justifyContent = 'space-around';
+    target.style.alignItems = "center";
+    target.style.flexDirection = direction;
+    target.style.backgroundColor = 'white';
+    target.style.borderBottom = '3px solid #c2c2c2';
+  }
+  // function------------------------------------\
+  const menu1 = document.getElementById('menu-1');
+  const menu2 = document.getElementById('menu-2');
+  const menu3 = document.getElementById('menu-3');
+  const menu4 = document.getElementById('menu-4');
+  const menu5 = document.getElementById('menu-5');
+  const menuButtons = document.getElementsByClassName('menu-btn');
+  console.log(menuButtons);
+  console.dir(menu3);
+
+  let boolean = true;
+
+  menuButtons[0].addEventListener('click', function(){
+    // console.log('click');
+    if(boolean === true){
+      createElement('div', menu1);
+      const openMenu1 = menu1.children[2];
+      // console.log('open menu');
+      // console.log(openMenu1);
+      menuButtons[0].style.transform='rotate(180deg)';
+      menuButtons[0].style.transition='ease-out 0.2s';
+      menuStyle(openMenu1, 'column');
+      posi(openMenu1, 'absolute',0,'223px',0);
+      boolean = false;
+      
+    } else{
+      menu1.removeChild(menu1.children[2]);
+      menuButtons[0].style.transform='rotate(0deg)';
+      menuButtons[0].style.transition='ease-out 0.2s';
+      console.log('close menu');
+      boolean =true;
+    }
+  });
+
+  // menuButtons[0].addEventListener('mouseover', function(){
+  //   console.log('open menu');
+  //   createElement('div', menu1);
+  //     const openMenu1 = menu1.children[2];
+  // });
+
+  // menuButtons[0].addEventListener('mouseout', function(){
+  //   console.log('close menu');
+  //   menu1.removeChild(menu1.children[2]);
+  // });
+
+
+
+</script>
 </body>
 </html>

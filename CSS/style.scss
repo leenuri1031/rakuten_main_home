@@ -13,7 +13,7 @@ header{
   background-color: white;
   position: sticky;
   top: 0;
-  // z-index: 2;
+  z-index: 2;
 }
 
 // header-top------------------------------
@@ -72,7 +72,17 @@ header{
 
     &>img{
       @include mixin.size(20px,20px);
+      cursor: pointer;
     }
+
+    &>img:hover{
+      @include mixin.size(22px,22px);
+    }
+  }
+
+  &>div:hover{
+    cursor: pointer;
+    font-size: 1.1rem;
   }
 }
 
@@ -89,7 +99,7 @@ header{
     border-radius: 20px;
     // background-color: #ff7c7c;
     padding-left: 10px;
-    @include mixin.font(0.8rem, 500, #2c2c2c);
+    @include mixin.font(0.8rem, 500, var.$col-3);
   }
 
   .search-btn{
@@ -99,13 +109,280 @@ header{
   }
 // search-box-class-setting------------------------------
 
-//---main-----------------------------------
+//main-----------------------------------------------------
 main{
   @include mixin.container-style(1080px, 86.2%, space-around, center, column);
-  background-color: cadetblue;
+  // background-color: cadetblue;
+  // border: 5px solid red;
 }
 
-//---footer-----------------------------------
+//slide-----------------------------------------------------
+#slide{
+  @include mixin.size(100%,10%);
+  &>img{
+    @include mixin.size(100%,100%);
+  }
+}
+//slide-----------------------------------------------------
+
+//banner-top------------------------------------------------
+#banner-top{
+  @include mixin.container-style(90.8%, 5%, space-around, center);
+  // background-color: antiquewhite;
+  border: dotted 5px var.$col-6;
+
+  // &>img{
+  //   width: 10%;
+  // }
+
+  &>div:nth-child(2){
+    @include mixin.container-style(50%, 100%, center, center, column);
+
+    &>div:first-child{
+      @include mixin.container-style(100%, 50%, center, center);
+      @include mixin.font(3rem, 700, var.$col-6);
+      letter-spacing: 1rem;
+    }
+
+    &>div:last-child{
+      @include mixin.container-style(100%, 30%, center, center);
+      @include mixin.font(1rem, 450, var.$col-3);
+      // background-color: antiquewhite;
+    }
+  }
+
+  &>div:last-child{
+    @include mixin.container-style(20%, 100%, center, center);
+    text-align: center;
+    @include mixin.font(2.5rem, 600, var.$col-3);
+  }
+}
+//banner-top------------------------------------------------
+
+//best------------------------------------------------------
+#best{
+  @include mixin.container-style(100%, 10%, space-around, center, column);
+
+  &>div:first-child{
+    @include mixin.container-style(100%, 15%, space-around, center, column);
+    // border: #2c2c2c solid 2px;
+
+    &>div:nth-child(1){
+    @include mixin.container-style(95%, 60%, flex-start, center);
+    @include mixin.font(1.5rem, 500, var.$col-3);
+
+    }
+    &>div:nth-child(2){
+    @include mixin.container-style(95%, 40%, flex-start, center);
+    }
+  }
+}
+
+.product-part{
+  @include mixin.container-style(100%, 70%, space-around, center);
+
+  &>div{
+    @include mixin.container-style(20%, 100%, space-around, center, column);
+    &>a{
+      @include mixin.container-style(100%, 100%, space-around, center, column);
+
+      &>img{
+        @include mixin.size(180px,180px);
+      }
+      &>div:nth-child(2){
+        @include mixin.container-style(90%, 20%, center, center);
+        text-align: center;
+      }
+      &>div:nth-child(3){
+        @include mixin.container-style(90%, 10%, center, center);
+        color: var.$col-7;
+      }
+    }
+  }
+}
+//best------------------------------------------------------
+
+//banner-mid------------------------------------------------
+#banner-mid{
+  @include mixin.container-style(100%, 10%, space-between, center, column);
+  // background-color: chartreuse;
+}
+//banner-mid------------------------------------------------
+
+//recommend-------------------------------------------------
+#recommend{
+  @include mixin.container-style(100vw, 12%, space-around, center, column);
+  background-color: var.$col-1;
+
+  &>div:first-child{
+    @include mixin.container-style(1080px, 10%, space-around, center, column);
+    // border: #2c2c2c solid 2px;
+
+    &>div:nth-child(1){
+    @include mixin.container-style(95%, 60%, flex-start, center);
+    @include mixin.font(1.5rem, 500, var.$col-3);
+
+    }
+    &>div:nth-child(2){
+    @include mixin.container-style(95%, 40%, flex-start, center);
+    }
+  }
+}
+
+.recommend-item{
+  @include mixin.container-style(1080px, 70%, space-around, center);
+
+  &>div{
+    @include mixin.container-style(180px, 100%, space-between, center, column);
+    background-color: white;
+
+    &>a{
+      @include mixin.container-style(100%, 100%, space-around, center, column);
+
+      &>img{
+        @include mixin.size(180px,180px);
+        @include mixin.posi(relative, -2%);
+        z-index: 0;
+      }
+
+      &>div:nth-child(2){
+        @include mixin.container-style(100%, 10%, center, center);
+        text-align: center;
+      }
+
+      &>div:nth-child(3){
+        @include mixin.container-style(100%, 10%, center, center);
+        color: var.$col-7;
+      }
+
+      &>div:nth-child(4){
+        @include mixin.container-style(90%, 30%, center, center);
+        // border: solid black 1px;
+        font-size: 0.9rem;
+        text-align: center;
+      }
+    }
+  }
+}
+//recommend-------------------------------------------------
+
+//banner-bot------------------------------------------------
+#banner-bot{
+  @include mixin.container-style(100%, 10%, space-around, center, column);
+}
+//banner-bot------------------------------------------------
+
+//special---------------------------------------------------
+#special{
+  @include mixin.container-style(100%, 10%, space-around, center, column);
+
+  &>div:first-child{
+    @include mixin.container-style(100%, 15%, space-around, center, column);
+    // border: #2c2c2c solid 2px;
+
+    &>div:nth-child(1){
+    @include mixin.container-style(95%, 60%, flex-start, center);
+    @include mixin.font(1.5rem, 500, var.$col-3);
+
+    }
+    &>div:nth-child(2){
+    @include mixin.container-style(95%, 40%, flex-start, center);
+    }
+  }
+}
+//special---------------------------------------------------
+
+//category--------------------------------------------------
+#category{
+  @include mixin.container-style(100vw, 15%, space-around, center, column);
+  background-color: var.$col-1;
+
+  &>div:first-child{
+    @include mixin.container-style(1080px, 10%, space-around, center, column);
+    // border: #2c2c2c solid 2px;
+
+    &>div:nth-child(1){
+    @include mixin.container-style(95%, 60%, flex-start, center);
+    @include mixin.font(1.5rem, 500, var.$col-3);
+
+    }
+    &>div:nth-child(2){
+    @include mixin.container-style(95%, 40%, flex-start, center);
+    }
+  }
+}
+
+.product-cg{
+  @include mixin.container-style(1080px, 60%, space-around, center, column);
+
+  &>div:first-child{
+    @include mixin.container-style(95%, 10%, flex-start, center);
+  }
+
+  &>div:last-child{
+    @include mixin.container-style(95%, 85%, space-between, center);
+  }
+}
+
+.cg-contents{
+  @include mixin.container-style(48%, 100%, space-around, center,column);
+  
+  &>div{
+    @include mixin.container-style(100%, 33.3%, space-around, center);
+    &>a{
+      @include mixin.container-style(100%, 100%, flex-start, center);
+      // border: solid 1px black;
+      &>img{
+        @include mixin.size(125px,125px);
+        margin-right: 2vw;
+      }
+      &>div{
+        @include mixin.container-style(70%, 50%, space-around, flex-start, column);
+
+        &>div:first-child{
+          font-size: 1.2rem;
+        }
+
+        &>div:last-child{
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+
+  &>div:nth-child(1){
+    border-top: 2px solid var.$col-2;
+    border-bottom: 2px solid var.$col-2;
+  }
+  &>div:nth-child(2){
+    border-bottom: 2px solid var.$col-2;
+  }
+  &>div:nth-child(3){
+    border-bottom: 2px solid var.$col-2;
+  }
+
+}
+
+.skin-type-cg{
+  @include mixin.container-style(1080px, 15%, space-around, center, column);
+
+  &>div:first-child{
+    @include mixin.container-style(95%, 10%, flex-start, center);
+  }
+
+  &>div:last-child{
+    @include mixin.container-style(95%, 85%, space-between, center);
+    &>div{
+      @include mixin.container-style(15%, 45%, center, center);
+      background-color: white;
+      border: 1px solid var.$col-2;
+    }
+  }
+}
+
+//category--------------------------------------------------
+
+//footer-----------------------------------------------------
 footer{
   @include mixin.container-style(1080px, 10%, space-between, center, column);
   color: var.$col-3;
