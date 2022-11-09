@@ -30,7 +30,7 @@
 }
 
 header {
-  width: 1080px;
+  width: 100%;
   height: 3.8%;
   display: flex;
   justify-content: flex-end;
@@ -43,7 +43,7 @@ header {
 }
 
 .header-top {
-  width: 100%;
+  width: 1080px;
   height: 40%;
   display: flex;
   justify-content: space-between;
@@ -95,7 +95,7 @@ header {
 }
 
 .header-bottom {
-  width: 100%;
+  width: 1080px;
   height: 50%;
   display: flex;
   justify-content: space-between;
@@ -103,7 +103,7 @@ header {
   flex-direction: row;
 }
 .header-bottom > div:first-child {
-  width: 70%;
+  width: 75%;
   height: 50%;
   display: flex;
   justify-content: space-around;
@@ -111,34 +111,104 @@ header {
   flex-direction: row;
 }
 
-.drdwon-menu {
-  width: 100%;
+.dropdown {
+  width: 20%;
   height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.dropdown:hover .item {
+  width: 100%;
+  height: 240px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  border-bottom: 3px solid #c2c2c2;
+  position: absolute;
+  top: 222px;
+  left: 0;
+  z-index: 100;
+}
+.dropdown:hover .item > div {
+  width: 1080px;
+  height: 45%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
 }
-.drdwon-menu > div {
-  width: 20%;
-  height: 100%;
+.dropdown:hover .item > div > div {
+  width: 250px;
+  height: 60px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: row;
 }
-.drdwon-menu > div > img {
+.dropdown:hover .item > div > div > a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+.dropdown:hover .item > div > div > a:hover {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #B8648E;
+}
+
+.dropdown-btn {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.dropdown-btn > a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.dropdown-btn:hover {
+  color: #B8648E;
+}
+.dropdown-btn:hover > a:hover {
+  color: #B8648E;
+}
+
+.item {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #2c2c2c;
+  display: none;
+  letter-spacing: 1px;
+}
+
+.menu-btn {
   width: 20px;
   height: 20px;
-  cursor: pointer;
+  margin-left: 2vw;
 }
-.drdwon-menu > div > img:hover {
+
+.menu-btn:hover {
   width: 22px;
   height: 22px;
-}
-.drdwon-menu > div:hover {
-  cursor: pointer;
-  font-size: 1.1rem;
 }
 
 .search-box {
@@ -148,10 +218,11 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  position: relative;
 }
 
 .text-area {
-  width: 300px;
+  width: 280px;
   height: 30px;
   border-radius: 20px;
   padding-left: 10px;
@@ -168,8 +239,8 @@ header {
   align-items: center;
   flex-direction: row;
   position: absolute;
-  top: 83%;
-  left: 96%;
+  top: 31%;
+  left: 85%;
   z-index: 100;
 }
 
@@ -185,10 +256,86 @@ main {
 #slide {
   width: 100%;
   height: 10%;
+  border-top: 3px solid #c2c2c2;
+  border-bottom: 3px solid #c2c2c2;
+  position: relative;
 }
-#slide > img {
+
+.slick-list {
   width: 100%;
   height: 100%;
+}
+
+.slick-track {
+  width: 100%;
+  height: 100%;
+}
+
+.slide-item {
+  width: 100%;
+  height: 100%;
+}
+.slide-item > a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.slide-item > a > img {
+  width: 100%;
+  height: 100%;
+}
+
+.slick-arrow {
+  width: 5%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  background: none;
+}
+
+.slick-prev {
+  left: 0%;
+}
+
+.slick-next {
+  right: 0%;
+}
+
+.slick-prev:before, .slick-next:before {
+  font-size: 40px;
+  line-height: 1;
+  opacity: 0.7;
+  color: #fffdfd;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+
+.slick-prev:before {
+  left: 0%;
+}
+
+.slick-next:before {
+  right: 0%;
+}
+
+.slick-dots {
+  width: 100%;
+  height: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: absolute;
+  top: 100%;
 }
 
 #banner-top {
