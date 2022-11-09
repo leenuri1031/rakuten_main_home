@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
 
   <meta name="description"
   content="A-SKIN a-skin スキンケア 化粧品 韓国コスメ スキン アンプル クリーム ローション COSMETIC コスメブランド human ヒューマンコスメ">
@@ -11,22 +11,412 @@
   content="楽天市場,通信販売,通販,ショッピング,オンラインショッピング,買い物,プレゼント,ギフト,贈り物,贈答品,お中元,お歳暮,お買い得,A-SKIN, a-skin, スキンケア, 化粧品, 韓国コスメ, スキン, アンプル, クリーム, ローション, mask, cream, skin, lotion, ampoule, soothing, repair, azulen, mgf-cream, dermatology, 皮膚科, カンナン, gangnam, 基礎化粧品, 敏感肌, 肌管理, 化粧品研究, トラブル性, 脂性, 水分補充, 保湿ケア,肌ハリ , コラーゲン, スキンブースター, リペアアンプル, 水分アンプル, アズレンアンプル, MGFプラスクリーム, MGFリペアクリーム, ヒュミドクリーム, ヒュミドローション, ヒューマンコスメ, コラーゲンマスクパック, 乾燥肌, マデカソサイド, ツボクサ, ハマカンギクエキス, ハナスゲ根, 潤い, 肌つや, 復活草エキス, ダマスクバラ, カモミール, ヒアルロン酸, 弱酸性化粧水, 肌鎮静, 外部刺激保護, オリーブオイル, アロエベラ, ウィッチヘーゼル, スクアレン, ライムオイル, ラベンダーオイル, イランイラン花オイル, ローズマリーオイルs, 松葉オイル, タイムオイル, ワイルドジェラニウムオイル, 天然成分, 刺激テスト完了, 肌栄養, 肌バリア, 肌ストレス緩和, 肌バランス, セルフケア, 低刺激化粧品">
 
   <title>【楽天市場】A-SKIN 敏感な肌のための初めてのソリューション：エースキン[トップページ]</title>
-
-  <!-- <link rel="stylesheet" href="./CSS/style.css">
-  <link rel="stylesheet" href="./CSS/desktop_ver.css"> -->
-  
-  <style>
-
-  </style>
-
 </head>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100;200;300;400;500;600;700;800;900&family=Sawarabi+Gothic&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
 
-<body oncontextmenu='return false' 
-onselectstart='return false' ondragstart='return false'>
-<div id="root">
+* {
+  scroll-behavior: smooth;
+}
 
-</div>
+* a {
+  color: #444444;
+  text-decoration: none;
+  cursor: pointer;
+}
 
+* {
+  font-family: "Sawarabi Gothic", "M PLUS 1", sans-serif;
+}
 
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+header {
+  width: 100%;
+  height: 222.3px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.header-top {
+  width: 1080px;
+  height: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.header-top > a {
+  width: 35%;
+  height: 100%;
+}
+.header-top > a > img {
+  width: 100%;
+  height: 100%;
+}
+
+.site-menu {
+  width: 50%;
+  height: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: row;
+}
+.site-menu > div {
+  width: 25%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.site-menu > div > a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 0.8rem;
+}
+.site-menu > div:nth-child(1) {
+  border-right: 2px solid #444444;
+}
+.site-menu > div:nth-child(2) {
+  border-right: 2px solid #444444;
+}
+.site-menu > div:nth-child(3) {
+  border-right: 2px solid #444444;
+}
+
+.header-bottom {
+  width: 1080px;
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: row;
+}
+.header-bottom > div:first-child {
+  width: 75%;
+  height: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+
+.dropdown {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.dropdown:hover .item {
+  width: 100%;
+  height: 240px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  border-bottom: 3px solid #c2c2c2;
+  position: absolute;
+  top: 222px;
+  left: 0;
+  z-index: 100;
+}
+.dropdown:hover .item > div {
+  width: 1080px;
+  height: 45%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+.dropdown:hover .item > div > div {
+  width: 250px;
+  height: 60px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+.dropdown:hover .item > div > div > a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+.dropdown:hover .item > div > div > a:hover {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #B8648E;
+}
+
+.dropdown-btn {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.dropdown-btn > a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.dropdown-btn:hover {
+  color: #B8648E;
+}
+.dropdown-btn:hover > a:hover {
+  color: #B8648E;
+}
+
+.item {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #2c2c2c;
+  display: none;
+  letter-spacing: 1px;
+}
+
+.menu-btn {
+  width: 20px;
+  height: 20px;
+  margin-left: 2vw;
+}
+
+.menu-btn:hover {
+  width: 22px;
+  height: 22px;
+}
+
+.search-box {
+  width: 30%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+}
+
+.text-area {
+  width: 280px;
+  height: 30px;
+  border-radius: 20px;
+  padding-left: 10px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #444444;
+}
+
+.search-btn {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: absolute;
+  top: 31%;
+  left: 85%;
+  z-index: 100;
+}
+</style>
+<body>
+  <div id="root">
+    <header>
+      <div class="header-top">
+        <a href="https://www.rakuten.ne.jp/gold/smartforyou/" target="_blank"><img src="https://image.rakuten.co.jp/smartforyou/cabinet/askin/askin-logo/brand_logo_4.jpg"></a>
+        <div class="site-menu">
+          <div><a href="#">COMPANY INFO</a></div>
+          <div><a href="/shopping_guid/shopping_page.html">SHOPPING GUID</a></div>
+          <div><a href="https://basket.step.rakuten.co.jp/rms/mall/bs/cartall/?shop_bid=280427&l2-id=shop_header_cart" target="_blank">SHOPPING CART</a></div>
+          <div><a href="https://www.rakuten.co.jp/" target="_blank">RAKUTEN HOME</a></div>
+        </div>
+      </div>
+  
+      <div class="header-bottom">
+        <div>
+          <div class="dropdown">
+            <button class="dropdown-btn">
+              製品別
+              <img src="./IMG/arrow-tri-down.jpg" class="menu-btn">
+            </button>
+            <div class="item">
+              <div>
+                <div>
+                  <a href="https://item.rakuten.co.jp/smartforyou/c/0000001288/" >SERUM & AMPOULE<br>セラム＆アンプル</a>
+                </div>
+                <div>
+                  <a href="https://item.rakuten.co.jp/smartforyou/c/0000001286/">SKIN & TONER<br>スキン＆トナー</a>
+                </div>
+                <div>
+                  <a href="https://item.rakuten.co.jp/smartforyou/c/0000001286/">LOTION & CREAM<br>ローション＆クリーム</a>
+                </div>
+              </div>
+            
+              <div>
+                <div>
+                  <a href="https://item.rakuten.co.jp/smartforyou/c/0000001313/">CLEANSER<br>クレンザー</a>
+                </div>
+                <div>
+                  <a href="https://item.rakuten.co.jp/smartforyou/c/0000001308/">SUN CARE<br>サンケア</a>
+                </div>
+                <div>
+                  <a href="https://item.rakuten.co.jp/smartforyou/c/0000001309/" >HAIR CARE<br>ヘアケア</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropdown-btn">
+              肌のタイプ
+              <img src="./IMG/arrow-tri-down.jpg" class="menu-btn">
+            </button>
+            <div class="item">
+              <div>
+                <div>
+                  <a href="https://item.rakuten.co.jp/smartforyou/c/0000001289/" >SENSITIVE SKIN<br>敏感肌</a>
+                </div>
+                <div>
+                  <a href="https://item.rakuten.co.jp/smartforyou/c/0000001290/">OILY SKIN<br>脂性肌</a>
+                </div>
+                <div>
+                  <a href="https://item.rakuten.co.jp/smartforyou/c/0000001290/">DRY SKIN<br>乾燥肌</a>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <a href="https://item.rakuten.co.jp/smartforyou/c/0000001291/">SPECIAL<br>スペシャル</a>
+                </div>
+                <div>
+                  <a href="https://item.rakuten.co.jp/smartforyou/c/0000001308/">SUN CARE<br>サンケア</a>
+                </div>
+                <div>
+                  <a href="https://item.rakuten.co.jp/smartforyou/c/0000001309/" >HAIR CARE<br>ヘアケア</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropdown-btn">
+              セット商品
+              <img src="./IMG/arrow-tri-down.jpg" class="menu-btn">
+            </button>
+            <div class="item">
+              <div>
+                <div>
+                  <a href="https://item.rakuten.co.jp/smartforyou/c/0000001297/"> REGENERATION SET<br>りゼネレーションセット</a>
+                </div>
+                <div>
+                  <a href="https://item.rakuten.co.jp/smartforyou/c/0000001298/">SOOTHING SETN<br>スージングセット</a>
+                </div>
+                <div>
+                  <a href="https://item.rakuten.co.jp/smartforyou/c/0000001299/">TROUBLE SET<br>トラブルセット</a>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <a></a>
+                </div>
+                <div>
+                  <a></a>
+                </div>
+                <div>
+                  <a></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropdown-btn">
+              イベント商品
+              <img src="./IMG/arrow-tri-down.jpg" class="menu-btn">
+            </button>
+            <div class="item">
+              <div>
+                <div>
+                  <a href="https://item.rakuten.co.jp/smartforyou/c/0000001317/" >OPEN EVENT<br>オープンイベント</a>
+                </div>
+                <div>
+                  <a href="https://item.rakuten.co.jp/smartforyou/c/0000001318/">BLACK FRIDAY<br>ブラックフライデー</a>
+                </div>
+                <div>
+                  <a href="https://item.rakuten.co.jp/smartforyou/c/0000001319/">SUPER SALE<br>12月スーパーセール</a>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <a href="https://item.rakuten.co.jp/smartforyou/c/0000001320/">CHRISTMAS EVENT<br>クリスマスイベント</a>
+                </div>
+                <div>
+                  <a></a>
+                </div>
+                <div>
+                  <a></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropdown-btn">
+              <a href="./brand/brand_page.html" target="_blank">About A-skin</a>
+            </button>
+          </div>
+        </div>
+  
+        <div class="search-box">
+          <form accept-charset="euc-jp" method="get" action="http://esearch.rakuten.co.jp/rms/sd/esearch/vc" target="_top" onclick="document.charset='EUC-JP'; document.rakutenSubmit.submit();">
+            <input type="hidden" name="sv" value="6">
+            <input type="hidden" name="sid" value="280427">
+            <input type="hidden" name="su" value="smartforyou">
+            <input type="hidden" name="sn" value="smartforyou">
+            <input type="hidden" name="f" value="A">
+            <input name="v" value="3" type="hidden">
+            <input type="text" name="sitem" class="text-area" value="キーワードを入力してください" onFocus="if( this.value == 'キーワードを入力してください' ) { this.value = ''; } " onBlur="if( this.value == '' ) { this.value = 'キーワードを入力してください'; } ">
+            <input type="image" src="./IMG/search.jpg" class="search-btn" value="検索" alt="検索">
+          </form>	
+        </div>
+      </div>
+    </header>
+  </div>
 </body>
 </html>

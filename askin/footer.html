@@ -20,17 +20,174 @@
   <!-- <link rel="stylesheet" href="./CSS/style.css">
   <link rel="stylesheet" href="./CSS/desktop_ver.css"> -->
   <style>
-   
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100;200;300;400;500;600;700;800;900&family=Sawarabi+Gothic&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+* a {
+  color: #444444;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+* {
+  font-family: "Sawarabi Gothic", "M PLUS 1", sans-serif;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer {
+  width: 1080px;
+  height: 585px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  color: #444444;
+}
+footer > div:first-child {
+  width: 30%;
+  height: 13%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2vh;
+}
+footer > div:first-child > h2 {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+footer > div:first-child > h4 {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+footer > div:last-child {
+  width: 100%;
+  height: 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #FAFAFA;
+}
+
+#guid-menu {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+#guid-menu > div {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+#guid-menu > div > a {
+  width: 30%;
+  height: 35%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background-color: #FAFAFA;
+  border: solid 1px #c2c2c2;
+}
+#guid-menu > div > a > div:first-child {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  padding-left: 2vw;
+}
+#guid-menu > div > a > div:last-child {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+#guid-menu > div > a > div:last-child > img {
+  width: 20px;
+  height: 20px;
+}/*# sourceMappingURL=style.css.map */
   </style>
 </head>
 
-<body oncontextmenu='return false' 
-onselectstart='return false' ondragstart='return false'>
+<body>
 <div id="root">
     
   <footer>
-  </footer>
+    <div>
+      <h2>SHOPPING GUID</h2>
+      <h4>ショッピングガイド</h4>
+    </div>
 
+    <div id="guid-menu">
+      <div class="guid-top">
+        <a href="#" target="_parent">
+          <div>会社概要</div>
+          <div><img src="./IMG/arrow-tri.jpg"></div>
+        </a>
+        <a href="#" target="_parent">
+          <div>配送</div>
+          <div><img src="./IMG/arrow-tri.jpg"></div>
+        </a>
+        <a href="#" target="_parent">
+          <div>よくある質問</div>
+          <div><img src="./IMG/arrow-tri.jpg"></div>
+        </a>
+      </div>
+      <div class="guid-bottom">
+        <a href="#" target="_parent">
+          <div>お支払い</div>
+          <div><img src="./IMG/arrow-tri.jpg"></div>
+        </a>
+        <a href="#" target="_parent">
+          <div>返品・交換</div>
+          <div><img src="./IMG/arrow-tri.jpg"></div>
+        </a>
+        <a href="#" target="_blank">
+          <div>お問い合わせ</div>
+          <div><img src="./IMG/arrow-tri.jpg"></div>
+        </a>
+      </div>
+    </div>
+    <div>
+      Copyright © 2022 A-skin Co.,Ltd. All rights reserved.
+    </div>
+  </footer>
 </div>
 
 </body>
