@@ -47,9 +47,8 @@
   display: flex;
   align-items: center;
   position: fixed;
-  top: 3.5%;
-  left: 6%;
-  top: 6%;
+  top: 3%;
+  left: 5%;
   width: 26px;
   height: 26px;
   cursor: pointer;
@@ -119,244 +118,50 @@
   color: #2f2f2f;
 }
 
-#shopping-guid-root {
+#root {
   width: 100vw;
-  height: 100vh;
+  height: 120vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
 }
 
-.shopping-header {
+#mobile-area {
   width: 100%;
-  height: 15vh;
+  height: 8%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
   position: relative;
-  z-index: 2;
 }
-.shopping-header > section:first-child {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-.shopping-header > section:first-child > div:last-child {
-  width: 70%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-.shopping-header > section:first-child > div:last-child > div:first-child {
+#mobile-area .logo {
   width: 80%;
-  height: 80%;
+  height: 40%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: row;
   font-size: 1.5rem;
   font-weight: 500;
   color: #000;
   letter-spacing: 10px;
 }
-.shopping-header > section:last-child {
+
+#desktop-area {
   display: none;
 }
 
-.shopping-footer {
+main {
   width: 100%;
-  height: 85vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  color: #444444;
-  font-size: 0.9rem;
-}
-.shopping-footer > div:first-child {
-  width: 80%;
-  height: 10%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 2vh;
-}
-.shopping-footer > div:first-child > h2 {
-  width: 100%;
-  height: 40%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-.shopping-footer > div:first-child > h4 {
-  width: 100%;
-  height: 40%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-.shopping-footer > div:last-child {
-  width: 100%;
-  height: 5%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: #FAFAFA;
-  font-size: 0.8rem;
-}
-
-#mobile-guid-menu {
-  width: 100%;
-  height: 40%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: row;
-  background-color: #FAFAFA;
-  flex-wrap: wrap;
-}
-#mobile-guid-menu > a {
-  width: 45%;
-  height: 16%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  background-color: white;
-  border: solid 1px #c2c2c2;
-}
-#mobile-guid-menu > a > div:first-child {
-  width: 70%;
-  height: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: row;
-  padding-left: 2vw;
-}
-#mobile-guid-menu > a > div:last-child {
-  width: 20%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-#mobile-guid-menu > a > div:last-child > img {
-  width: 20px;
-  height: 20px;
-}
-
-#mail-banner {
-  width: 100%;
-  height: 35%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-}
-#mail-banner > a {
-  width: 100%;
-  height: 120px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-#mail-banner > a > img {
-  width: 90%;
-  height: 90%;
-}
-#mail-banner > div {
-  width: 80%;
-  height: 35%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  line-height: 2;
-  color: #ACB5D4;
-}
-
-#guid-menu {
-  display: none;
-}
-
-.banner {
-  display: none;
-}
-
-#company-root {
-  width: 100vw;
-  height: 200vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-}
-
-.company-header {
-  width: 100%;
-  height: 15vh;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: row;
-  position: relative;
-  z-index: 2;
-}
-.company-header > section:first-child {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-.company-header > section:first-child > div:last-child {
-  width: 70%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-.company-header > section:first-child > div:last-child > div:first-child {
-  width: 80%;
-  height: 80%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: #000;
-  letter-spacing: 10px;
-}
-.company-header > section:last-child {
-  display: none;
-}
-
-.company-main {
-  width: 100%;
-  height: 130vh;
+  height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.company-main > div:first-child {
+main > div:first-child {
   width: 90%;
   height: 5%;
   display: flex;
@@ -369,7 +174,7 @@
 
 .company-contents {
   width: 90%;
-  height: 90%;
+  height: 85%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -397,22 +202,24 @@
   margin-right: 3px;
 }
 .company-contents > div > div:last-child {
-  width: 65%;
-  height: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: row;
   border: solid 1px #c2c2c2;
   font-size: 0.8rem;
-  padding-left: 2vw;
-  line-height: 2;
+  padding-left: 1vw;
+  line-height: 1.8;
 }
 .company-contents > div:nth-child(1) {
   width: 100%;
   height: 15%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.company-contents > div:nth-child(1) > div:last-child {
+  width: 65%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: row;
 }
@@ -424,6 +231,14 @@
   align-items: center;
   flex-direction: row;
 }
+.company-contents > div:nth-child(2) > div:last-child {
+  width: 65%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
 .company-contents > div:nth-child(3) {
   width: 100%;
   height: 15%;
@@ -432,26 +247,51 @@
   align-items: center;
   flex-direction: row;
 }
+.company-contents > div:nth-child(3) > div:last-child {
+  width: 65%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
 .company-contents > div:nth-child(4) {
   width: 100%;
-  height: 15%;
+  height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
 }
-.company-contents > div:nth-child(5) {
+.company-contents > div:nth-child(4) > div:last-child {
+  width: 65%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.company-contents > div:nth-child(4) > div:last-child > div:nth-child(1) {
   width: 100%;
-  height: 40%;
+  height: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+}
+.company-contents > div:nth-child(4) > div:last-child > div:nth-child(2) {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  color: #e64b4b;
 }
 
-.company-footer {
+footer {
   width: 100%;
-  height: 55vh;
+  height: 40%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -459,7 +299,7 @@
   color: #444444;
   font-size: 0.9rem;
 }
-.company-footer > div:first-child {
+footer > div:first-child {
   width: 80%;
   height: 10%;
   display: flex;
@@ -468,7 +308,7 @@
   flex-direction: column;
   margin-top: 2vh;
 }
-.company-footer > div:first-child > h2 {
+footer > div:first-child > h2 {
   width: 100%;
   height: 40%;
   display: flex;
@@ -476,7 +316,7 @@
   align-items: center;
   flex-direction: row;
 }
-.company-footer > div:first-child > h4 {
+footer > div:first-child > h4 {
   width: 100%;
   height: 40%;
   display: flex;
@@ -484,7 +324,7 @@
   align-items: center;
   flex-direction: row;
 }
-.company-footer > div:last-child {
+footer > div:last-child {
   width: 100%;
   height: 8%;
   display: flex;
@@ -495,7 +335,7 @@
   font-size: 0.8rem;
 }
 
-#mobile-guid-menu-2 {
+#mobile-guid-menu {
   width: 100%;
   height: 60%;
   display: flex;
@@ -504,9 +344,9 @@
   flex-direction: row;
   flex-wrap: wrap;
 }
-#mobile-guid-menu-2 > a {
+#mobile-guid-menu > a {
   width: 45%;
-  height: 12%;
+  height: 15%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -514,7 +354,7 @@
   background-color: #FAFAFA;
   border: solid 1px #c2c2c2;
 }
-#mobile-guid-menu-2 > a > div:first-child {
+#mobile-guid-menu > a > div:first-child {
   width: 70%;
   height: 100%;
   display: flex;
@@ -523,7 +363,7 @@
   flex-direction: row;
   padding-left: 2vw;
 }
-#mobile-guid-menu-2 > a > div:last-child {
+#mobile-guid-menu > a > div:last-child {
   width: 20%;
   height: 100%;
   display: flex;
@@ -531,11 +371,11 @@
   align-items: center;
   flex-direction: row;
 }
-#mobile-guid-menu-2 > a > div:last-child > img {
+#mobile-guid-menu > a > div:last-child > img {
   width: 20px;
   height: 20px;
 }
 
-#guid-menu-2 {
+#guid-menu {
   display: none;
 }

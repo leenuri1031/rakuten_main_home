@@ -249,7 +249,7 @@
     z-index: 100;
   }
 
-  .shopping-footer {
+  footer {
     width: 1080px;
     height: 70vh;
     display: flex;

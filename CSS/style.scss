@@ -158,14 +158,14 @@ main{
 
 //slide-----------------------------------------------------
 #slide{
-  @include mixin.size(100%,10%);
+  @include mixin.container-style(100vw,10%, center, center);
   border-top: 3px solid var.$col-2;
   border-bottom: 3px solid var.$col-2;
   position: relative;
 }
 
 .slick-list{
-  @include mixin.size(100%, 100%);
+  @include mixin.size(1080px, 100%);
 }
 
 .slick-track {
@@ -192,11 +192,11 @@ main{
 }
 
 .slick-prev {
-  left: 0%;
+  left: 21.5%;
 }
 
 .slick-next {
-  right: 0%;
+  right: 21.5%;
 }
 .slick-prev:before, .slick-next:before {
   font-size: 40px;
@@ -501,7 +501,7 @@ footer{
     }
   }
   &>div:last-child{
-    @include mixin.container-style(100%, 7%, center, center, column);
+    @include mixin.container-style(100vw, 7%, center, center, column);
     background-color: var.$col-1;
   }
 }

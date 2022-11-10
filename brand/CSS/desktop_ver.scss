@@ -161,17 +161,23 @@
 
 // slide-----------------------------------
 #slide{
-  @include mixin.container-style(1080px, 468px, center, center);
+  @include mixin.container-style(100vw, 468px, center, center);
+  
   border-top: 3px solid var.$col-2;
   border-bottom: 3px solid var.$col-2;
 }
 
+.slick-list{
+  @include mixin.size(1080px, 100%);
+}
+
+
 .slick-prev {
-  left: 0%;
+  left: 21.5%;
 }
 
 .slick-next {
-  right: 0%;
+  right: 21.5%;
 }
 .slick-prev:before, .slick-next:before {
   font-size: 40px;

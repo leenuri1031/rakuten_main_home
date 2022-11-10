@@ -152,7 +152,7 @@
     }
   // search-box-class-setting------------------------------
 
-.shopping-footer{
+footer{
   @include mixin.container-style(1080px, 70vh, space-between, center, column);
 }
 

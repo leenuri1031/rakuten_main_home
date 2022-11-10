@@ -122,7 +122,7 @@
 
 // slide-----------------------------------
 #slide{
-  @include mixin.size(100%, 30vh);
+  @include mixin.size(100vw, 30vh);
   position: relative;
 }
 

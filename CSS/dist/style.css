@@ -254,15 +254,19 @@ main {
 }
 
 #slide {
-  width: 100%;
+  width: 100vw;
   height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   border-top: 3px solid #c2c2c2;
   border-bottom: 3px solid #c2c2c2;
   position: relative;
 }
 
 .slick-list {
-  width: 100%;
+  width: 1080px;
   height: 100%;
 }
 
@@ -302,11 +306,11 @@ main {
 }
 
 .slick-prev {
-  left: 0%;
+  left: 21.5%;
 }
 
 .slick-next {
-  right: 0%;
+  right: 21.5%;
 }
 
 .slick-prev:before, .slick-next:before {
@@ -814,7 +818,7 @@ footer > div:first-child > h4 {
   flex-direction: row;
 }
 footer > div:last-child {
-  width: 100%;
+  width: 100vw;
   height: 7%;
   display: flex;
   justify-content: center;
