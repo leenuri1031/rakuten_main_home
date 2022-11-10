@@ -21,18 +21,7 @@
 }
 
 @media (min-width: 600px) {
-  #root {
-    width: 100vw;
-    height: 110vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-  }
-  #mobile-area {
-    display: none;
-  }
-  #desktop-area {
+  .shopping-header {
     width: 100%;
     height: 222.3px;
     display: flex;
@@ -40,11 +29,22 @@
     align-items: center;
     flex-direction: column;
     background-color: white;
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 2;
   }
+  .shopping-header > section:first-child {
+    display: none;
+  }
+  .shopping-header > section:last-child {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+  }
+
   .header-top {
     width: 1080px;
     height: 40%;
@@ -61,6 +61,7 @@
     width: 100%;
     height: 100%;
   }
+
   .site-menu {
     width: 50%;
     height: 80%;
@@ -95,6 +96,7 @@
   .site-menu > div:nth-child(3) {
     border-right: 2px solid #444444;
   }
+
   .header-bottom {
     width: 1080px;
     height: 50%;
@@ -111,6 +113,7 @@
     align-items: center;
     flex-direction: row;
   }
+
   .dropdown {
     width: 20%;
     height: 100%;
@@ -119,6 +122,7 @@
     align-items: center;
     flex-direction: column;
   }
+
   .dropdown:hover .item {
     width: 100%;
     height: 240px;
@@ -129,7 +133,7 @@
     background-color: white;
     border-bottom: 3px solid #c2c2c2;
     position: absolute;
-    top: 220px;
+    top: 222px;
     left: 0;
     z-index: 100;
   }
@@ -162,6 +166,7 @@
     font-weight: 500;
     color: #B8648E;
   }
+
   .dropdown-btn {
     width: 100%;
     height: 100%;
@@ -182,12 +187,14 @@
     align-items: center;
     flex-direction: row;
   }
+
   .dropdown-btn:hover {
     color: #B8648E;
   }
   .dropdown-btn:hover > a:hover {
     color: #B8648E;
   }
+
   .item {
     font-size: 0.8rem;
     font-weight: 500;
@@ -195,15 +202,18 @@
     display: none;
     letter-spacing: 1px;
   }
+
   .menu-btn {
     width: 20px;
     height: 20px;
     margin-left: 2vw;
   }
+
   .menu-btn:hover {
     width: 22px;
     height: 22px;
   }
+
   .search-box {
     width: 30%;
     height: 50%;
@@ -213,6 +223,7 @@
     flex-direction: row;
     position: relative;
   }
+
   .text-area {
     width: 280px;
     height: 30px;
@@ -222,6 +233,7 @@
     font-weight: 500;
     color: #444444;
   }
+
   .search-btn {
     width: 20px;
     height: 20px;
@@ -234,6 +246,7 @@
     left: 85%;
     z-index: 100;
   }
+
   .shopping-footer {
     width: 1080px;
     height: 70vh;
@@ -242,14 +255,17 @@
     align-items: center;
     flex-direction: column;
   }
+
   #mobile-guid-menu {
     display: none;
   }
+
   #mail-banner {
     display: none;
   }
+
   #guid-menu {
-    width: 1080px;
+    width: 100%;
     height: 40%;
     display: flex;
     justify-content: space-around;
@@ -296,6 +312,7 @@
     width: 20px;
     height: 20px;
   }
+
   .banner {
     width: 100%;
     height: 30%;
@@ -316,4 +333,28 @@
     width: 980px;
     height: 192px;
   }
-}/*# sourceMappingURL=desktop_ver.css.map */
+
+  .company-header {
+    width: 100%;
+    height: 222.3px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+  .company-header > section:first-child {
+    display: none;
+  }
+  .company-header > section:last-child {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+  }
+}

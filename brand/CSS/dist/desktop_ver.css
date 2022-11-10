@@ -25,9 +25,13 @@
     height: 950vh;
   }
 
-  header {
+  #mobile-area {
+    display: none;
+  }
+
+  #desktop-area {
     width: 100%;
-    height: 21.6vh;
+    height: 222.3px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -35,18 +39,7 @@
     background-color: white;
     position: sticky;
     top: 0;
-    z-index: 2;
-  }
-  header > section:first-child {
-    display: none;
-  }
-  header > section:last-child {
-    width: 100%;
-    height: 90%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
+    z-index: 10;
   }
 
   .header-top {
@@ -251,15 +244,6 @@
     z-index: 100;
   }
 
-  main {
-    width: 1080px;
-    height: 86.2%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-  }
-
   #slide {
     width: 1080px;
     height: 468px;
@@ -310,7 +294,7 @@
   }
 
   .brand-top {
-    width: 80%;
+    width: 100%;
     height: 110vh;
     display: flex;
     justify-content: space-around;
@@ -400,7 +384,7 @@
   }
 
   .brand-media {
-    width: 80%;
+    width: 100%;
     height: 165vh;
     display: flex;
     justify-content: space-around;
@@ -439,6 +423,7 @@
     font-weight: 500;
     color: #222;
     line-height: 3;
+    z-index: 1;
   }
   .brand-media > img:nth-child(4) {
     width: 85%;
@@ -463,7 +448,7 @@
   }
 
   .brand-patent {
-    width: 80%;
+    width: 100%;
     height: 125vh;
     display: flex;
     justify-content: space-around;
@@ -524,7 +509,7 @@
   }
 
   .brand-lap {
-    width: 50%;
+    width: 60%;
     height: 40vh;
     display: flex;
     justify-content: center;
@@ -553,7 +538,7 @@
   }
 
   .brand-promiss {
-    width: 80%;
+    width: 100%;
     height: 100vh;
     display: flex;
     justify-content: space-evenly;
@@ -699,7 +684,7 @@
   }
 
   .brand-history {
-    width: 80%;
+    width: 100%;
     height: 180vh;
     display: flex;
     justify-content: space-around;
@@ -736,7 +721,7 @@
   }
 
   .brand-bottom {
-    width: 80%;
+    width: 100%;
     height: 65vh;
     display: flex;
     justify-content: center;

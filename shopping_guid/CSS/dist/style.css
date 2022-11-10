@@ -119,7 +119,7 @@
   color: #2f2f2f;
 }
 
-#shopping-guid-root {
+#root {
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -128,7 +128,7 @@
   flex-direction: column;
 }
 
-.shopping-header {
+#mobile-area {
   width: 100%;
   height: 15vh;
   display: flex;
@@ -136,41 +136,25 @@
   align-items: center;
   flex-direction: row;
   position: relative;
-  z-index: 2;
 }
-.shopping-header > section:first-child {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-.shopping-header > section:first-child > div:last-child {
-  width: 70%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-.shopping-header > section:first-child > div:last-child > div:first-child {
+#mobile-area .logo {
   width: 80%;
-  height: 80%;
+  height: 40%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: row;
   font-size: 1.5rem;
   font-weight: 500;
   color: #000;
   letter-spacing: 10px;
 }
-.shopping-header > section:last-child {
+
+#desktop-area {
   display: none;
 }
 
-.shopping-footer {
+footer {
   width: 100%;
   height: 85vh;
   display: flex;
@@ -180,7 +164,7 @@
   color: #444444;
   font-size: 0.9rem;
 }
-.shopping-footer > div:first-child {
+footer > div:first-child {
   width: 80%;
   height: 10%;
   display: flex;
@@ -189,7 +173,7 @@
   flex-direction: column;
   margin-top: 2vh;
 }
-.shopping-footer > div:first-child > h2 {
+footer > div:first-child > h2 {
   width: 100%;
   height: 40%;
   display: flex;
@@ -197,7 +181,7 @@
   align-items: center;
   flex-direction: row;
 }
-.shopping-footer > div:first-child > h4 {
+footer > div:first-child > h4 {
   width: 100%;
   height: 40%;
   display: flex;
@@ -205,7 +189,7 @@
   align-items: center;
   flex-direction: row;
 }
-.shopping-footer > div:last-child {
+footer > div:last-child {
   width: 100%;
   height: 5%;
   display: flex;

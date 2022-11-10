@@ -28,7 +28,7 @@
   display: flex;
   align-items: center;
   position: fixed;
-  top: 3.5%;
+  top: 3%;
   left: 5%;
   width: 26px;
   height: 26px;
@@ -94,8 +94,6 @@
   color: rgb(47, 47, 47);
 }
 
-// slide---------------------------------------
-
 // class-setting-----------------------------------------
 
 #root{
@@ -103,37 +101,24 @@
 
 }
 
-header{
+#mobile-area{
   @include mixin.container-style(100%, 8vh, space-around, center);
   // background-color: salmon;
   position: relative;
   z-index: 2;
 
-  &>section:first-child{
-    @include mixin.container-style(100%, 100%, center, center);
-
-    &>div:last-child{
-      @include mixin.container-style(70%, 100%, center, center);
-      // border: solid black 1px;
-
-      &>div:first-child{
-        @include mixin.container-style(80%, 80%, center, flex-end);
-        @include mixin.font(1.5rem, 500, #000);
-        letter-spacing: 10px;
-        // border: solid red 1px;
-      }
-    }
+  .logo{
+    @include mixin.container-style(80%, 80%, center, flex-end);
+    @include mixin.font(1.5rem, 500, #000);
+    letter-spacing: 10px;
+    // border: solid black 1px;
   }
-
-  &>section:last-child{
-    display: none;
-  }
-  
 
 }
 
-
-
+#desktop-area{
+  display: none;
+}
 
 // slide-----------------------------------
 #slide{
@@ -610,5 +595,3 @@ footer{
 #guid-menu{
   display: none;
 }
-
-

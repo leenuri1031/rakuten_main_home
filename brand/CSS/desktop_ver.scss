@@ -4,26 +4,24 @@
 // -------------------------------------------
 
 @media(min-width:600px){
+
+
   #root{
     height: 950vh;
     // height: 100vh;
   }
 
-  header{
-    @include mixin.container-style(100%, 21.6vh, flex-end, center,column);
-    background-color: white;
-    position: sticky;
-    top: 0;
-    z-index: 2;
-    &>section:first-child{
-      display: none;
-    }
-
-    &>section:last-child{
-      @include mixin.container-style(100%, 90%, flex-start, center, column);
-      // border: 1px solid black;
-    }
+  #mobile-area{
+    display: none;
   }
+
+  #desktop-area{
+      @include mixin.container-style(100%, 222.3px, flex-end, center,column);
+      background-color: white;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
 
   // header-top------------------------------
 .header-top{
@@ -159,12 +157,6 @@
 // search-box-class-setting------------------------------
 
 //main-----------------------------------------------------
-main{
-  @include mixin.container-style(1080px, 86.2%, space-around, center, column);
-  // background-color: cadetblue;
-  // border: 5px solid red;
-}
-
 
 
 // slide-----------------------------------
@@ -209,7 +201,7 @@ main{
 
 // brand-top-----------------------------------
 .brand-top{
-  @include mixin.container-style(80%, 110vh, space-around, center, column);
+  @include mixin.container-style(100%, 110vh, space-around, center, column);
   // background-color: cornsilk;
 
     &>div:nth-child(1){
@@ -268,7 +260,7 @@ main{
 
 // brand-media-----------------------------------
 .brand-media{
-  @include mixin.container-style(80%, 165vh, space-around, center, column);
+  @include mixin.container-style(100%, 165vh, space-around, center, column);
   position: relative;
   // background-color: burlywood;
 
@@ -289,6 +281,7 @@ main{
     @include mixin.posi(absolute, 35%, 50%);
     @include mixin.font(1.1rem, 500, #222);
     line-height: 3;
+    z-index: 1;
   }
 
   &>img:nth-child(4){
@@ -309,7 +302,7 @@ main{
 
 // brand-patent-----------------------------------
 .brand-patent{
-  @include mixin.container-style(80%, 125vh, space-around, center, column);
+  @include mixin.container-style(100%, 125vh, space-around, center, column);
   // border: #000 solid 1px;
 }
 
@@ -362,7 +355,7 @@ main{
 
 // brand-lap-----------------------------------
 .brand-lap{
-  @include mixin.container-style(50%, 40vh, center, center, column);
+  @include mixin.container-style(60%, 40vh, center, center, column);
   // background-color: cadetblue;
   &>div{
     &>div{
@@ -388,7 +381,7 @@ main{
 
 // brand-promiss-----------------------------------
 .brand-promiss{
-  @include mixin.container-style(80%, 100vh, space-evenly, center, column);
+  @include mixin.container-style(100%, 100vh, space-evenly, center, column);
   // background-color: chartreuse;
   &>div:first-child{
     @include mixin.container-style(100%, 5.5%, space-around, center, column);
@@ -428,7 +421,7 @@ main{
 
 // brand-history-----------------------------------
 .brand-history{
-  @include mixin.container-style(80%, 180vh, space-around, center, column);
+  @include mixin.container-style(100%, 180vh, space-around, center, column);
   // background-color: cornflowerblue;
   &>div:nth-child(1){
     @include mixin.container-style(90%, 5%, center, center);
@@ -450,7 +443,7 @@ main{
 
 // brand-bottom-----------------------------------
 .brand-bottom{
-  @include mixin.container-style(80%, 65vh, center, center, column);
+  @include mixin.container-style(100%, 65vh, center, center, column);
   // background-color: darksalmon;
   &>div:first-child{
     @include mixin.container-style(100%, 60%, space-around, flex-start, column);
@@ -553,5 +546,4 @@ main{
     }
   }
 
- 
 }

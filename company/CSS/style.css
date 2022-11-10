@@ -47,9 +47,8 @@
   display: flex;
   align-items: center;
   position: fixed;
-  top: 3.5%;
-  left: 6%;
-  top: 6%;
+  top: 5%;
+  left: 5%;
   width: 26px;
   height: 26px;
   cursor: pointer;
@@ -121,7 +120,7 @@
 
 #root {
   width: 100vw;
-  height: 100vh;
+  height: 150vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -130,7 +129,7 @@
 
 #mobile-area {
   width: 100%;
-  height: 15vh;
+  height: 8%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -154,9 +153,110 @@
   display: none;
 }
 
+main {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main > div:first-child {
+  width: 90%;
+  height: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 1.2rem;
+  letter-spacing: 5px;
+}
+
+.company-contents {
+  width: 90%;
+  height: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.company-contents > div {
+  margin-bottom: 1px;
+}
+.company-contents > div > div:first-child {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border: solid 1px #c2c2c2;
+  font-size: 0.9rem;
+  margin-right: 3px;
+  background-color: #FAFAFA;
+}
+.company-contents > div > div:nth-child(2) {
+  width: 0;
+  height: 100%;
+  border: solid 0.5px #c2c2c2;
+  margin-right: 3px;
+}
+.company-contents > div > div:last-child {
+  width: 65%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  border: solid 1px #c2c2c2;
+  font-size: 0.8rem;
+  padding-left: 1vw;
+  line-height: 1.8;
+}
+.company-contents > div:nth-child(1) {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.company-contents > div:nth-child(2) {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.company-contents > div:nth-child(3) {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.company-contents > div:nth-child(4) {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.company-contents > div:nth-child(5) {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
 footer {
   width: 100%;
-  height: 85vh;
+  height: 30%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -191,7 +291,7 @@ footer > div:first-child > h4 {
 }
 footer > div:last-child {
   width: 100%;
-  height: 5%;
+  height: 8%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -202,22 +302,21 @@ footer > div:last-child {
 
 #mobile-guid-menu {
   width: 100%;
-  height: 40%;
+  height: 60%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
-  background-color: #FAFAFA;
   flex-wrap: wrap;
 }
 #mobile-guid-menu > a {
   width: 45%;
-  height: 16%;
+  height: 15%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  background-color: white;
+  background-color: #FAFAFA;
   border: solid 1px #c2c2c2;
 }
 #mobile-guid-menu > a > div:first-child {
@@ -242,41 +341,6 @@ footer > div:last-child {
   height: 20px;
 }
 
-#mail-banner {
-  width: 100%;
-  height: 35%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-}
-#mail-banner > a {
-  width: 100%;
-  height: 120px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-#mail-banner > a > img {
-  width: 90%;
-  height: 90%;
-}
-#mail-banner > div {
-  width: 80%;
-  height: 35%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  line-height: 2;
-  color: #ACB5D4;
-}
-
 #guid-menu {
-  display: none;
-}
-
-.banner {
   display: none;
 }/*# sourceMappingURL=style.css.map */

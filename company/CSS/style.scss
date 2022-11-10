@@ -28,9 +28,8 @@
   display: flex;
   align-items: center;
   position: fixed;
-  top: 3.5%;
-  left: 6%;
-  top: 6%;
+  top: 5%;
+  left: 5%;
   width: 26px;
   height: 26px;
 
@@ -94,15 +93,15 @@
   border-radius: 40px;
   color: rgb(47, 47, 47);
 }
+
 // class-setting-----------------------------------------
 
-//shopping_guid---------------------------------------------------
 #root{
-  @include mixin.container-style(100vw, 100vh, space-between, center, column );
+  @include mixin.container-style(100vw, 150vh, space-between, center, column );
 }
 
 #mobile-area{
-  @include mixin.container-style(100%, 15vh, space-around, center);
+  @include mixin.container-style(100%, 8%, space-around, center);
   // background-color: salmon;
   position: relative;
   // z-index: 2;
@@ -121,39 +120,64 @@
 }
 
 
-// header{
-//   @include mixin.container-style(100%, 15vh, space-around, center);
-//   // background-color: salmon;
-//   position: relative;
-//   z-index: 2;
+main{
+  @include mixin.container-style(100%, 60%, center, center, column );
+  &>div:first-child{
+    @include mixin.container-style(90%, 5%, center, center);
+    // border: #000 solid 1px;
+    font-size: 1.2rem;
+    letter-spacing: 5px;
+  }
+}
 
-//   &>section:first-child{
-//     @include mixin.container-style(100%, 100%, center, center);
+.company-contents{
+  @include mixin.container-style(90%, 85%, center, center, column );
+  // background-color: #ACB5D4;
+  &>div{
+    margin-bottom: 1px;
 
-//     &>div:last-child{
-//       @include mixin.container-style(70%, 100%, center, center);
-//       // border: solid black 1px;
+    &>div:first-child{
+      @include mixin.container-style(30%, 100%, center, center);
+      border: solid 1px var.$col-2;
+      font-size: 0.9rem;
+      margin-right: 3px;
+      background-color: var.$col-1;
+    }
+    &>div:nth-child(2){
+      @include mixin.size(0, 100%);
+      border: solid 0.5px var.$col-2;
+      margin-right: 3px;
+    }
 
-//       &>div:first-child{
-//         @include mixin.container-style(80%, 80%, center, center);
-//         @include mixin.font(1.5rem, 500, #000);
-//         letter-spacing: 10px;
-//         // border: solid red 1px;
-//       }
-//     }
-//   }
+    &>div:last-child{
+      @include mixin.container-style(65%, 100%, flex-start, center);
+      border: solid 1px var.$col-2;
+      font-size: 0.8rem;
+      padding-left: 1vw;
+      line-height: 1.8;
+    }
+  }
 
-//   &>section:last-child{
-//     display: none;
-//   }
-  
-
-// }
-
+  @for $i from 1 through 4{
+    &>div:nth-child(#{$i}){
+    @include mixin.container-style(100%, 15%, center, center);
+    // border: solid 1px black; 
+    
+    }
+  }
+  // &>div:nth-child(1){}
+  // &>div:nth-child(2){}
+  // &>div:nth-child(3){}
+  // &>div:nth-child(4){}
+  &>div:nth-child(5){
+    @include mixin.container-style(100%, 40%, center, center);
+    // border: solid 1px black; 
+  }
+}
 
 
 footer{
-  @include mixin.container-style(100%, 85vh, space-between, center, column);
+  @include mixin.container-style(100%, 30%, space-between, center, column);
   color: var.$col-3;
   font-size: 0.9rem;
   // background-color: antiquewhite;
@@ -172,19 +196,19 @@ footer{
   }
 
   &>div:last-child{
-    @include mixin.container-style(100%, 5%, center, center, column);
+    @include mixin.container-style(100%, 8%, center, center, column);
     background-color: var.$col-1;
     font-size: 0.8rem;
   }
 }
 
 #mobile-guid-menu{
-  @include mixin.container-style(100%, 40%, space-around, center);
-  background-color: var.$col-1;
+    @include mixin.container-style(100%, 60%, space-around, center);
+  // background-color: var.$col-1;
   flex-wrap: wrap;
   &>a{
-    @include mixin.container-style(45%, 16%, space-between, center);
-    background-color: white;
+    @include mixin.container-style(45%, 15%, space-between, center);
+    background-color: var.$col-1;
     border: solid 1px var.$col-2;
     
     &>div:first-child{
@@ -203,30 +227,9 @@ footer{
   }
 }
 
-#mail-banner{
-  @include mixin.container-style(100%, 35%, space-around, center, column);
-  &>a{
-    @include mixin.container-style(100%, 120px, center, center);
-    &>img{
-      @include mixin.size(90%, 90%);
-    }
-  }
-  &>div{
-    @include mixin.container-style(80%, 35%, center, center);
-    line-height: 2;
-    // background-color: antiquewhite;
-    color: #ACB5D4;
-  }
-}
-
 #guid-menu{
   display: none;
 }
-
-.banner{
-  display: none;
-}
-//shopping_guid---------------------------------------------------
-
+//company---------------------------------------------------
 
 
