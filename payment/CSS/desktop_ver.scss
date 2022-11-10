@@ -19,6 +19,8 @@
     position: sticky;
     top: 0;
     z-index: 10;
+    border-bottom: 3px solid var.$col-2;
+
   }
   // header-top------------------------------
   .header-top{
@@ -76,7 +78,7 @@
     @include mixin.container-style(100%, 240px, space-around, center, column );
     background-color: white;
     border-bottom: 3px solid var.$col-2;
-    @include mixin.posi(absolute,215px);
+    @include mixin.posi(absolute,210px);
     &>div{
       @include mixin.container-style(1080px, 45%, space-around, center);
       &>div{

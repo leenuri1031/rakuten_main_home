@@ -44,6 +44,7 @@
     position: sticky;
     top: 0;
     z-index: 10;
+    border-bottom: 3px solid #c2c2c2;
   }
   .header-top {
     width: 1080px;
@@ -129,7 +130,7 @@
     background-color: white;
     border-bottom: 3px solid #c2c2c2;
     position: absolute;
-    top: 220px;
+    top: 215px;
     left: 0;
     z-index: 100;
   }
