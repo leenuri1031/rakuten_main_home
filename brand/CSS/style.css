@@ -281,9 +281,9 @@ main {
   flex-direction: row;
   background-color: #E8D5DA;
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 550;
-  color: #222;
+  color: #444444;
   line-height: 2;
 }
 .brand-top > div:nth-child(1) > div:nth-child(2) {
@@ -319,7 +319,7 @@ main {
   align-items: center;
   flex-direction: row;
   text-align: center;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 500;
   color: #444444;
   position: absolute;
@@ -349,20 +349,20 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  border-top: solid 2px #444444;
-  border-bottom: solid 2px #444444;
+  border-top: solid 2px #E8D5DA;
+  border-bottom: solid 2px #E8D5DA;
   text-align: center;
   position: absolute;
   top: 0;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 500;
-  color: #222;
+  color: #444444;
   line-height: 2.5;
 }
 .brand-top > div:nth-child(2) > div:last-child {
   width: 0%;
   height: 30%;
-  border: solid 1px #444444;
+  border: solid 1px #E8D5DA;
   position: absolute;
   bottom: 1%;
 }
@@ -443,9 +443,9 @@ main {
   align-items: center;
   flex-direction: row;
   text-align: center;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 500;
-  color: #222;
+  color: #444444;
 }
 
 .brand-patent {
@@ -475,14 +475,14 @@ main {
   position: relative;
 }
 .patent-top > div:nth-child(1) > div {
-  width: 70%;
+  width: 75%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   position: absolute;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 500;
   color: #444444;
 }
@@ -528,7 +528,7 @@ main {
   align-items: center;
   flex-direction: row;
   position: absolute;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 500;
   color: #444444;
 }
@@ -578,16 +578,16 @@ main {
   height: 100%;
 }
 .brand-lap > div:first-child > div:last-child {
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   font-weight: 400;
-  color: #222;
+  color: #444444;
   line-height: 2;
   background-color: #E8D5DA;
 }
 .brand-lap > div:last-child > div:first-child {
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   font-weight: 400;
-  color: #222;
+  color: #444444;
   line-height: 2;
   background-color: #E8D5DA;
 }
@@ -621,7 +621,7 @@ main {
   align-items: center;
   flex-direction: row;
   position: absolute;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 500;
   color: #444444;
   letter-spacing: 1px;
@@ -632,7 +632,7 @@ main {
 }
 .brand-promiss > div:nth-child(2) {
   width: 100%;
-  height: 24%;
+  height: 25%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -640,7 +640,7 @@ main {
   box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
 }
 .brand-promiss > div:nth-child(2) > img {
-  width: 40%;
+  width: 37%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -649,7 +649,7 @@ main {
   border-right: 1px solid rgba(2, 2, 2, 0.2);
 }
 .brand-promiss > div:nth-child(2) > div {
-  width: 60%;
+  width: 63%;
   height: 100%;
   display: flex;
   justify-content: space-around;
@@ -665,7 +665,7 @@ main {
   flex-direction: row;
   font-size: 0.9rem;
   font-weight: 500;
-  color: #222;
+  color: #444444;
   letter-spacing: 5px;
 }
 .brand-promiss > div:nth-child(2) > div > div:last-child {
@@ -675,15 +675,15 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 400;
-  color: #222;
+  color: #444444;
   text-align: center;
   line-height: 2;
 }
 .brand-promiss > div:nth-child(3) {
   width: 100%;
-  height: 24%;
+  height: 25%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -691,7 +691,7 @@ main {
   box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
 }
 .brand-promiss > div:nth-child(3) > img {
-  width: 40%;
+  width: 37%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -700,7 +700,7 @@ main {
   border-right: 1px solid rgba(2, 2, 2, 0.2);
 }
 .brand-promiss > div:nth-child(3) > div {
-  width: 60%;
+  width: 63%;
   height: 100%;
   display: flex;
   justify-content: space-around;
@@ -716,7 +716,7 @@ main {
   flex-direction: row;
   font-size: 0.9rem;
   font-weight: 500;
-  color: #222;
+  color: #444444;
   letter-spacing: 5px;
 }
 .brand-promiss > div:nth-child(3) > div > div:last-child {
@@ -726,15 +726,15 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 400;
-  color: #222;
+  color: #444444;
   text-align: center;
   line-height: 2;
 }
 .brand-promiss > div:nth-child(4) {
   width: 100%;
-  height: 24%;
+  height: 25%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -742,7 +742,7 @@ main {
   box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
 }
 .brand-promiss > div:nth-child(4) > img {
-  width: 40%;
+  width: 37%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -751,7 +751,7 @@ main {
   border-right: 1px solid rgba(2, 2, 2, 0.2);
 }
 .brand-promiss > div:nth-child(4) > div {
-  width: 60%;
+  width: 63%;
   height: 100%;
   display: flex;
   justify-content: space-around;
@@ -767,7 +767,7 @@ main {
   flex-direction: row;
   font-size: 0.9rem;
   font-weight: 500;
-  color: #222;
+  color: #444444;
   letter-spacing: 5px;
 }
 .brand-promiss > div:nth-child(4) > div > div:last-child {
@@ -777,9 +777,9 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 400;
-  color: #222;
+  color: #444444;
   text-align: center;
   line-height: 2;
 }
@@ -799,9 +799,9 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  font-size: 1rem;
-  font-weight: 540;
-  color: #222;
+  font-size: 1.1rem;
+  font-weight: 580;
+  color: #444444;
   letter-spacing: 0.3rem;
   background-color: #E8D5DA;
 }

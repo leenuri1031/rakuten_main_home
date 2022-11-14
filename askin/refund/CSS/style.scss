@@ -28,7 +28,7 @@
   display: flex;
   align-items: center;
   position: fixed;
-  top: 3%;
+  top: 4%;
   left: 5%;
   width: 26px;
   height: 26px;
@@ -97,11 +97,11 @@
 // class-setting-----------------------------------------
 
 #root{
-  @include mixin.container-style(100vw, 180vh, space-between, center, column );
+  @include mixin.container-style(100vw, 250vh, space-between, center, column );
 }
 
 #mobile-area{
-  @include mixin.container-style(100%, 8%, space-around, center);
+  @include mixin.container-style(100%, 5%, space-around, center);
   // background-color: salmon;
   position: relative;
   // z-index: 2;
@@ -121,7 +121,7 @@
 
 
 main{
-  @include mixin.container-style(100%, 60%, space-around, center, column );
+  @include mixin.container-style(100%, 65%, space-around, center, column );
   // background-color: antiquewhite;
   &>div:first-child{
     @include mixin.container-style(90%, 5%, center, center);

@@ -47,7 +47,7 @@
   display: flex;
   align-items: center;
   position: fixed;
-  top: 3%;
+  top: 4%;
   left: 5%;
   width: 26px;
   height: 26px;
@@ -120,7 +120,7 @@
 
 #root {
   width: 100vw;
-  height: 120vh;
+  height: 200vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -129,7 +129,7 @@
 
 #mobile-area {
   width: 100%;
-  height: 8%;
+  height: 5%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -155,7 +155,7 @@
 
 main {
   width: 100%;
-  height: 50%;
+  height: 65%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -291,7 +291,7 @@ main > div:first-child {
 
 footer {
   width: 100%;
-  height: 40%;
+  height: 30%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -346,7 +346,7 @@ footer > div:last-child {
 }
 #mobile-guid-menu > a {
   width: 45%;
-  height: 15%;
+  height: 19%;
   display: flex;
   justify-content: space-between;
   align-items: center;

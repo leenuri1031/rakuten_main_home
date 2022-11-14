@@ -211,7 +211,7 @@ main{
         @include mixin.container-style(100%, 30%, center, center);
         background-color: var.$col-4;
         text-align: center;
-        @include mixin.font(0.8rem, 550, #222);
+        @include mixin.font(1rem, 550, var.$col-3);
         line-height: 2;
       }
 
@@ -229,7 +229,7 @@ main{
           &>div{
             @include mixin.container-style(23%, 100%, center, center);
             text-align: center;
-            @include mixin.font(0.7rem, 500, var.$col-3);
+            @include mixin.font(0.8rem, 500, var.$col-3);
             // border: solid black 1px;
             position: absolute;
           }
@@ -246,18 +246,18 @@ main{
       // border: #000 solid 1px;
         &>div:first-child{
           @include mixin.container-style(90%, 60%, center, center);
-          border-top: solid 2px var.$col-3;
-          border-bottom: solid 2px var.$col-3;
+          border-top: solid 2px var.$col-4;
+          border-bottom: solid 2px var.$col-4;
           text-align: center;
           position: absolute;
           top: 0;
-          @include mixin.font(0.8rem, 500, #222);
+          @include mixin.font(1rem, 500, var.$col-3);
           line-height: 2.5;
         }
 
         &>div:last-child{
           @include mixin.size(0%,30%);
-          border: solid 1px var.$col-3;
+          border: solid 1px var.$col-4;
           // border-left: #000 solid 1px;
           position: absolute;
           bottom: 1%;
@@ -307,7 +307,7 @@ main{
   &>div:nth-child(5){
     @include mixin.container-style(100%, 20%, center, center);
     text-align: center;
-    @include mixin.font(0.7rem, 500, #222);
+    @include mixin.font(0.8rem, 500, var.$col-3);
     // background-color: #ffffff;
   }
 
@@ -328,9 +328,9 @@ main{
     // border: #000 solid 1px;
     position: relative;
     &>div{
-      @include mixin.container-style(70%, 100%, center, center);
+      @include mixin.container-style(75%, 100%, center, center);
       position: absolute;
-      @include mixin.font(0.9rem, 500, var.$col-3);
+      @include mixin.font(1rem, 500, var.$col-3);
       // background-color: antiquewhite
     }
     &>img{
@@ -359,7 +359,7 @@ main{
     &>div{
       @include mixin.container-style(70%, 100%, center, center);
       position: absolute;
-      @include mixin.font(0.9rem, 500, var.$col-3);
+      @include mixin.font(1rem, 500, var.$col-3);
       // background-color: antiquewhite
     }
     &>img{
@@ -398,7 +398,7 @@ main{
     }
 
     &>div:last-child{
-      @include mixin.font(0.75rem, 400, #222);
+      @include mixin.font(0.9rem, 400, var.$col-3);
       line-height: 2;
       background-color: var.$col-4;
     }
@@ -406,7 +406,7 @@ main{
 
   &>div:last-child{
     &>div:first-child{
-      @include mixin.font(0.75rem, 400, #222);
+      @include mixin.font(0.9rem, 400, var.$col-3);
       line-height: 2;
       background-color: var.$col-4;
     }
@@ -428,7 +428,7 @@ main{
     &>div{
       @include mixin.container-style(70%, 100%, center, center);
       position: absolute;
-      @include mixin.font(0.9rem, 500, var.$col-3);
+      @include mixin.font(1rem, 500, var.$col-3);
       letter-spacing: 1px;
       // background-color: antiquewhite
     }
@@ -440,26 +440,26 @@ main{
 
   @for $i from 2 through 4{
     &>div:nth-child(#{$i}){
-      @include mixin.container-style(100%, 24%, space-around, center);
+      @include mixin.container-style(100%, 25%, space-around, center);
       // border: solid black 1px;
       box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, .2);
       &>img{
-        @include mixin.container-style(40%, 100%, center, center);
+        @include mixin.container-style(37%, 100%, center, center);
         border-right: 1px solid rgba(2, 2, 2, .2);
         // box-shadow: 1px 1px 2px 1px rgba(2, 2, 2, .2);
       }
       &>div{
-        @include mixin.container-style(60%, 100%, space-around, center, column);
+        @include mixin.container-style(63%, 100%, space-around, center, column);
         
         &>div:first-child{
           @include mixin.container-style(100%, 20%, center, flex-end);
-          @include mixin.font(0.9rem, 500, #222);
+          @include mixin.font(0.9rem, 500, var.$col-3);
           letter-spacing: 5px;
           // border: solid black 1px;
         }
         &>div:last-child{
           @include mixin.container-style(100%, 70%, center, center);
-          @include mixin.font(0.7rem, 400, #222);
+          @include mixin.font(0.8rem, 400, var.$col-3);
           text-align: center;
           line-height: 2;
         }
@@ -474,7 +474,7 @@ main{
   &>div:nth-child(1){
     @include mixin.container-style(100%, 4%, center, center);
     // border: solid black 1px;
-    @include mixin.font(1rem, 540, #222);
+    @include mixin.font(1.1rem, 580, var.$col-3);
     letter-spacing: 0.3rem;
     background-color: var.$col-4;
   }
