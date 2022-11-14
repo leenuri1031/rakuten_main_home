@@ -230,7 +230,7 @@ footer{
     // border: solid black 1px;
 
     &>a{
-      @include mixin.container-style(30%, 35%, space-between, center);
+      @include mixin.container-style(30%, 40%, space-between, center);
       background-color: var.$col-1;
       border: solid 1px var.$col-2;
       
