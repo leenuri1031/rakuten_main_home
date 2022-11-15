@@ -10,7 +10,7 @@
 
 //---header-----------------------------------
 header{
-  @include mixin.container-style(100%, 3.8%, flex-end, center, column);
+  @include mixin.container-style(100%, 222.3px, flex-end, center, column);
   background-color: white;
   position: sticky;
   top: 0;
