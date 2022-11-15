@@ -211,7 +211,7 @@ main{
         @include mixin.container-style(100%, 30%, center, center);
         background-color: var.$col-4;
         text-align: center;
-        @include mixin.font(1rem, 550, var.$col-3);
+        @include mixin.font(0.95rem, 550, var.$col-3);
         line-height: 2;
       }
 
