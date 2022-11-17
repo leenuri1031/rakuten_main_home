@@ -76,7 +76,7 @@ header{
   @include mixin.container-style(100%, 240px, space-around, center, column );
   background-color: white;
   border-bottom: 3px solid var.$col-2;
-  @include mixin.posi(absolute,22vh);
+  @include mixin.posi(absolute,26vh);
   &>div{
     @include mixin.container-style(1080px, 45%, space-around, center);
     &>div{
@@ -435,11 +435,12 @@ main{
   
   &>div{
     @include mixin.container-style(100%, 33.3%, space-around, center);
+    // background-color: antiquewhite;
     &>a{
       @include mixin.container-style(100%, 100%, flex-start, center);
       // border: solid 1px black;
       &>img{
-        @include mixin.size(125px,125px);
+        @include mixin.size(110px,100%);
         margin-right: 2vw;
       }
       &>div{
