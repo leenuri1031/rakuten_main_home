@@ -190,7 +190,7 @@ footer > div:first-child > h4 {
   flex-direction: row;
 }
 footer > div:last-child {
-  width: 100%;
+  width: 100vw;
   height: 5%;
   display: flex;
   justify-content: center;

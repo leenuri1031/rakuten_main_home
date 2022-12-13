@@ -36,7 +36,7 @@
 
   #desktop-area {
     width: 100%;
-    height: 222.3px;
+    height: 222px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -136,7 +136,7 @@
     background-color: white;
     border-bottom: 3px solid #c2c2c2;
     position: absolute;
-    top: 20vh;
+    top: 210px;
     left: 0;
     z-index: 100;
   }
@@ -340,7 +340,7 @@
   }
   footer > div:first-child {
     width: 30%;
-    height: 13%;
+    height: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -365,12 +365,13 @@
   }
   footer > div:last-child {
     width: 100vw;
-    height: 7%;
+    height: 15%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background-color: #FAFAFA;
+    font-size: 0.7rem;
   }
 
   #mobile-guid-menu {

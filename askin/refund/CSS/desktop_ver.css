@@ -319,7 +319,7 @@
   }
   footer > div:first-child {
     width: 30%;
-    height: 13%;
+    height: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -344,12 +344,13 @@
   }
   footer > div:last-child {
     width: 100vw;
-    height: 7%;
+    height: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background-color: #FAFAFA;
+    font-size: 0.7rem;
   }
   #mobile-guid-menu {
     display: none;

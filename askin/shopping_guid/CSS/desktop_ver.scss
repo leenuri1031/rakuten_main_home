@@ -6,7 +6,7 @@
 @media(min-width:600px){
 //shopping_guid---------------------------------------------------
 #root{
-  @include mixin.container-style(100vw, 110vh, space-between, center, column );
+  @include mixin.container-style(100vw, 130vh, space-between, center, column );
 }
 
 #mobile-area{
@@ -154,8 +154,20 @@
   // search-box-class-setting------------------------------
 
 footer{
-  @include mixin.container-style(1080px, 70vh, space-between, center, column);
+  @include mixin.container-style(1080px, 100vh, space-between, center, column);
+
+  &>div:first-child{
+    @include mixin.container-style(80%, 8%, space-between, center, column);
+  }
+
+  &>div:last-child{
+    @include mixin.container-style(100vw, 7%, center, center, column);
+    background-color: var.$col-1;
+    font-size: 0.8rem;
+  }
 }
+
+
 
   #mobile-guid-menu{
     display: none;
@@ -166,15 +178,16 @@ footer{
   }
   
   #guid-menu{
-    @include mixin.container-style(1080px, 40%, space-around, center, column);
+    @include mixin.container-style(1080px, 35%, space-around, center, column);
     background-color: var.$col-1;
+    // border: solid black 1px;
   
     &>div{
       @include mixin.container-style(100%, 40%, space-around, center);
       // border: solid black 1px;
   
       &>a{
-        @include mixin.container-style(30%, 50%, space-between, center);
+        @include mixin.container-style(28%, 50%, space-between, center);
         background-color: white;
         border: solid 1px var.$col-2;
         
@@ -196,7 +209,7 @@ footer{
   }
 
   .banner{
-    @include mixin.container-style(100%, 30%, center, center);
+    @include mixin.container-style(100%, 25%, center, center);
     // background-color: antiquewhite;
     &>a{
       @include mixin.container-style(100%, 100%, center, center);

@@ -23,7 +23,7 @@
 @media (min-width: 600px) {
   #root {
     width: 100vw;
-    height: 380vh;
+    height: 390vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -417,7 +417,7 @@
 
   footer {
     width: 1080px;
-    height: 50vh;
+    height: 60vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -451,12 +451,13 @@
   }
   footer > div:last-child {
     width: 100vw;
-    height: 7%;
+    height: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background-color: #FAFAFA;
+    font-size: 0.7rem;
   }
 
   #mobile-guid-menu {

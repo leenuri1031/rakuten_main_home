@@ -6,7 +6,7 @@
 @media(min-width:600px){
 //shopping_guid---------------------------------------------------
 #root{
-  @include mixin.container-style(100vw, 250vh, space-between, center, column );
+  @include mixin.container-style(100vw, 260vh, space-between, center, column );
 }
 
 #mobile-area{
@@ -194,7 +194,7 @@
 
   
 footer{
-  @include mixin.container-style(1080px, 50vh, space-between, center, column);
+  @include mixin.container-style(1080px, 60vh, space-between, center, column);
   color: var.$col-3;
 
   &>div:first-child{
@@ -210,8 +210,9 @@ footer{
     }
   }
   &>div:last-child{
-    @include mixin.container-style(100vw, 7%, center, center, column);
+    @include mixin.container-style(100vw, 10%, center, center, column);
     background-color: var.$col-1;
+    font-size: 0.7rem;
   }
 }
 

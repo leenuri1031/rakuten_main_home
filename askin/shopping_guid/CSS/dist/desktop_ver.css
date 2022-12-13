@@ -23,7 +23,7 @@
 @media (min-width: 600px) {
   #root {
     width: 100vw;
-    height: 110vh;
+    height: 130vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -252,11 +252,29 @@
 
   footer {
     width: 1080px;
-    height: 70vh;
+    height: 100vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+  }
+  footer > div:first-child {
+    width: 80%;
+    height: 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+  footer > div:last-child {
+    width: 100vw;
+    height: 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #FAFAFA;
+    font-size: 0.8rem;
   }
 
   #mobile-guid-menu {
@@ -269,7 +287,7 @@
 
   #guid-menu {
     width: 1080px;
-    height: 40%;
+    height: 35%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -285,7 +303,7 @@
     flex-direction: row;
   }
   #guid-menu > div > a {
-    width: 30%;
+    width: 28%;
     height: 50%;
     display: flex;
     justify-content: space-between;
@@ -318,7 +336,7 @@
 
   .banner {
     width: 100%;
-    height: 30%;
+    height: 25%;
     display: flex;
     justify-content: center;
     align-items: center;

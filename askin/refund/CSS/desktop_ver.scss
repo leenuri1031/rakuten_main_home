@@ -204,7 +204,7 @@ footer{
   color: var.$col-3;
 
   &>div:first-child{
-    @include mixin.container-style(30%, 13%, center, center, column);
+    @include mixin.container-style(30%, 10%, center, center, column);
     margin-top: 2vh;
     // border: solid black 1px;
 
@@ -216,8 +216,9 @@ footer{
     }
   }
   &>div:last-child{
-    @include mixin.container-style(100vw, 7%, center, center, column);
+    @include mixin.container-style(100vw, 10%, center, center, column);
     background-color: var.$col-1;
+    font-size: 0.7rem;
   }
 }
 

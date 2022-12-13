@@ -22,7 +22,7 @@
 
 #root {
   width: 100vw;
-  height: 600vh;
+  height: 650vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,7 +32,7 @@
 
 header {
   width: 100%;
-  height: 222.3px;
+  height: 223px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -42,7 +42,6 @@ header {
   position: sticky;
   top: 0;
   z-index: 10;
-  border-bottom: 3px solid #c2c2c2;
 }
 
 .header-top {
@@ -125,7 +124,7 @@ header {
 
 .dropdown:hover .item {
   width: 100%;
-  height: 240px;
+  height: 220px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -133,7 +132,7 @@ header {
   background-color: white;
   border-bottom: 3px solid #c2c2c2;
   position: absolute;
-  top: 20vh;
+  top: 95%;
   left: 0;
   z-index: 100;
 }
@@ -258,14 +257,15 @@ main {
 
 #slide {
   width: 100vw;
-  height: 10%;
+  height: 504px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  border-top: 3px solid #c2c2c2;
   border-bottom: 3px solid #c2c2c2;
   position: relative;
-  top: -1.1%;
+  top: -3.5vh;
   left: 0;
   z-index: 100;
   z-index: 5;
@@ -350,14 +350,30 @@ main {
 
 #banner-top {
   width: 90.8%;
-  height: 5%;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+#banner-top > div:first-child {
+  width: 100%;
+  height: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#banner-top > div:last-child {
+  width: 100%;
+  height: 45%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
   border: dotted 5px #D3568A;
 }
-#banner-top > div:nth-child(2) {
+#banner-top > div:last-child > div:nth-child(2) {
   width: 50%;
   height: 100%;
   display: flex;
@@ -365,7 +381,7 @@ main {
   align-items: center;
   flex-direction: column;
 }
-#banner-top > div:nth-child(2) > div:first-child {
+#banner-top > div:last-child > div:nth-child(2) > div:first-child {
   width: 100%;
   height: 50%;
   display: flex;
@@ -377,7 +393,7 @@ main {
   color: #D3568A;
   letter-spacing: 1rem;
 }
-#banner-top > div:nth-child(2) > div:last-child {
+#banner-top > div:last-child > div:nth-child(2) > div:last-child {
   width: 100%;
   height: 30%;
   display: flex;
@@ -388,7 +404,7 @@ main {
   font-weight: 450;
   color: #444444;
 }
-#banner-top > div:last-child {
+#banner-top > div:last-child > div:last-child {
   width: 20%;
   height: 100%;
   display: flex;
@@ -476,7 +492,7 @@ main {
 }
 .product-part > div > a > div:nth-child(3) {
   width: 90%;
-  height: 10%;
+  height: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -486,7 +502,7 @@ main {
 
 #banner-mid {
   width: 100%;
-  height: 10%;
+  height: 9%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -495,7 +511,7 @@ main {
 
 #recommend {
   width: 100vw;
-  height: 12%;
+  height: 11%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -577,7 +593,15 @@ main {
   width: 100%;
   height: 10%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+.recommend-item > div > a > div:nth-child(3) > div:first-child {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
   align-items: center;
   flex-direction: row;
   color: #B8648E;
@@ -595,7 +619,7 @@ main {
 
 #banner-bot {
   width: 100%;
-  height: 10%;
+  height: 9%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -640,7 +664,7 @@ main {
 
 #category {
   width: 100vw;
-  height: 15%;
+  height: 13%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -800,7 +824,7 @@ footer {
 }
 footer > div:first-child {
   width: 30%;
-  height: 13%;
+  height: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -825,12 +849,13 @@ footer > div:first-child > h4 {
 }
 footer > div:last-child {
   width: 100vw;
-  height: 7%;
+  height: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   background-color: #FAFAFA;
+  font-size: 0.7rem;
 }
 
 #guid-menu {

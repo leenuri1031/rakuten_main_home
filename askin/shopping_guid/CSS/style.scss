@@ -172,7 +172,7 @@ footer{
   }
 
   &>div:last-child{
-    @include mixin.container-style(100%, 5%, center, center, column);
+    @include mixin.container-style(100vw, 5%, center, center, column);
     background-color: var.$col-1;
     font-size: 0.8rem;
   }

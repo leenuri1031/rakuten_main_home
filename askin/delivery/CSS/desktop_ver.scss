@@ -6,7 +6,7 @@
 @media(min-width:600px){
 //shopping_guid---------------------------------------------------
 #root{
-  @include mixin.container-style(100vw, 150vh, space-between, center, column );
+  @include mixin.container-style(100vw, 160vh, space-between, center, column );
 }
 
 #mobile-area{
@@ -14,7 +14,7 @@
 }
 
 #desktop-area{
-    @include mixin.container-style(100%, 222.3px, flex-end, center,column);
+    @include mixin.container-style(100%, 223px, flex-end, center,column);
     background-color: white;
     position: sticky;
     top: 0;
@@ -78,7 +78,7 @@
     @include mixin.container-style(100%, 240px, space-around, center, column );
     background-color: white;
     border-bottom: 3px solid var.$col-2;
-    @include mixin.posi(absolute,18vh);
+    @include mixin.posi(absolute,188px);
     &>div{
       @include mixin.container-style(1080px, 45%, space-around, center);
       &>div{
@@ -209,7 +209,7 @@
   
   
 footer{
-  @include mixin.container-style(1080px, 50vh, space-between, center, column);
+  @include mixin.container-style(1080px, 60vh, space-between, center, column);
   color: var.$col-3;
 
   &>div:first-child{
@@ -225,8 +225,9 @@ footer{
     }
   }
   &>div:last-child{
-    @include mixin.container-style(100vw, 7%, center, center, column);
+    @include mixin.container-style(100vw, 15%, center, center, column);
     background-color: var.$col-1;
+    font-size: 0.7rem;
   }
 }
 
