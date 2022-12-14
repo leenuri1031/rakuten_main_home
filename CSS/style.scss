@@ -331,6 +331,10 @@ main{
 #banner-mid{
   @include mixin.container-style(100%, 9%, space-between, center, column);
   // background-color: chartreuse;
+  
+  &>a{
+    @include mixin.container-style(100%, 45%, center, center);
+  }
 }
 //banner-mid------------------------------------------------
 
