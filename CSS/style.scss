@@ -234,8 +234,9 @@ main{
 
 //banner-top------------------------------------------------
 #banner-top{
-  @include mixin.container-style(90.8%, 10%, space-between, center, column);
-  // @include mixin.container-style(90.8%, 8%, space-between, center, column); ------ more banner bottom 
+  // @include mixin.container-style(90.8%, 10%, space-between, center, column);
+  @include mixin.container-style(90.8%, 8%, space-between, center, column);
+  //  ------ more banner bottom 
   // background-color: antiquewhite;
   // border: dotted 5px var.$col-6;
 
@@ -413,8 +414,9 @@ main{
 
 //banner-bot------------------------------------------------
 #banner-bot{
-  @include mixin.container-style(100%, 9%, space-around, center, column);
-  // @include mixin.container-style(100%, 13%, space-around, center, column); ---  more banner height
+  // @include mixin.container-style(100%, 9%, space-around, center, column);
+  @include mixin.container-style(100%, 13%, space-around, center, column); 
+  // ---  more banner height
   // background-color: aliceblue;
 }
 //banner-bot------------------------------------------------
