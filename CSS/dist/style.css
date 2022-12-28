@@ -22,7 +22,7 @@
 
 #root {
   width: 100vw;
-  height: 650vh;
+  height: 800vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -264,7 +264,7 @@ main {
   border-top: 3px solid #c2c2c2;
   border-bottom: 3px solid #c2c2c2;
   position: relative;
-  top: -3.5vh;
+  top: -10vh;
   left: 0;
   z-index: 100;
   z-index: 5;
@@ -349,7 +349,7 @@ main {
 
 #banner-top {
   width: 90.8%;
-  height: 10%;
+  height: 6.5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -418,7 +418,7 @@ main {
 
 #best {
   width: 100%;
-  height: 10%;
+  height: 7%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -499,9 +499,92 @@ main {
   color: #B8648E;
 }
 
+#new-arrival {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+#new-arrival > div:first-child {
+  width: 100%;
+  height: 5%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+#new-arrival > div:first-child > div:nth-child(1) {
+  width: 95%;
+  height: 60%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #444444;
+}
+#new-arrival > div:first-child > div:nth-child(2) {
+  width: 95%;
+  height: 40%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+
+.new-product {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+.new-product > div {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.new-product > div > a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.new-product > div > a > img {
+  width: 180px;
+  height: 180px;
+}
+.new-product > div > a > div:nth-child(2) {
+  width: 90%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+}
+.new-product > div > a > div:nth-child(3) {
+  width: 90%;
+  height: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  color: #B8648E;
+}
+
 #banner-mid {
   width: 100%;
-  height: 9%;
+  height: 7%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -518,7 +601,7 @@ main {
 
 #recommend {
   width: 100vw;
-  height: 11%;
+  height: 9%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -626,7 +709,7 @@ main {
 
 #banner-bot {
   width: 100%;
-  height: 5%;
+  height: 7%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -635,7 +718,7 @@ main {
 
 #special {
   width: 100%;
-  height: 10%;
+  height: 7%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -671,7 +754,7 @@ main {
 
 #category {
   width: 100vw;
-  height: 13%;
+  height: 11.5%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -822,7 +905,7 @@ main {
 
 footer {
   width: 1080px;
-  height: 10%;
+  height: 8%;
   display: flex;
   justify-content: space-between;
   align-items: center;
