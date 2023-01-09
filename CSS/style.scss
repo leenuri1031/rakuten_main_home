@@ -234,7 +234,7 @@ main{
 
 //banner-top------------------------------------------------
 #banner-top{
-  @include mixin.container-style(90.8%, 6.5%, space-between, center, column);
+  @include mixin.container-style(90.8%, 6%, space-between, center, column);
   // @include mixin.container-style(90.8%, 8%, space-between, center, column);
   //  ------ more banner bottom 
   // background-color: antiquewhite;
@@ -244,8 +244,9 @@ main{
   //   width: 10%;
   // }
   &>div:first-child{
-    @include mixin.container-style(100%, 45%, center, center, column);
+    @include mixin.container-style(100%, 40%, center, center, column);
     // background-color: aliceblue;
+    border: solid salmon 2px;
   }
 
   &>div:last-child{
@@ -280,7 +281,7 @@ main{
 
 //best------------------------------------------------------
 #best{
-  @include mixin.container-style(100%, 7%, space-around, center, column);
+  @include mixin.container-style(100%, 6%, space-around, center, column);
   // background-color: antiquewhite;
 
   &>div:first-child{
@@ -330,7 +331,7 @@ main{
 
 //new-arrival-----------------------------------------------
 #new-arrival{
-  @include mixin.container-style(100%, 20%, space-around, center, column);
+  @include mixin.container-style(100%, 17%, space-around, center, column);
   // background-color: beige;
 
   &>div:first-child{
@@ -382,12 +383,15 @@ main{
 
 //banner-mid------------------------------------------------
 #banner-mid{
-  @include mixin.container-style(100%, 7%, space-between, center, column);
+  @include mixin.container-style(100%, 6%, space-between, center, column);
   // background-color: chartreuse;
   
   &>a{
     @include mixin.container-style(100%, 45%, center, center);
-  }
+    &>img{
+      @include mixin.size(924.8px, 181px);
+    }
+  } 
 }
 //banner-mid------------------------------------------------
 
@@ -467,7 +471,7 @@ main{
 //banner-bot------------------------------------------------
 #banner-bot{
   // @include mixin.container-style(100%, 5%, space-around, center, column);
-  @include mixin.container-style(100%, 7%, space-around, center, column);
+  @include mixin.container-style(100%, 12%, space-around, center, column);
   // @include mixin.container-style(100%, 13%, space-around, center, column); 
   // ---  more banner height
   // background-color: aliceblue;

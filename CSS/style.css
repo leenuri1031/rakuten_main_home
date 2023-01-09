@@ -350,7 +350,7 @@ main {
 
 #banner-top {
   width: 90.8%;
-  height: 6.5%;
+  height: 6%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -358,11 +358,12 @@ main {
 }
 #banner-top > div:first-child {
   width: 100%;
-  height: 45%;
+  height: 40%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border: solid salmon 2px;
 }
 #banner-top > div:last-child {
   width: 100%;
@@ -419,7 +420,7 @@ main {
 
 #best {
   width: 100%;
-  height: 7%;
+  height: 6%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -502,7 +503,7 @@ main {
 
 #new-arrival {
   width: 100%;
-  height: 20%;
+  height: 17%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -585,7 +586,7 @@ main {
 
 #banner-mid {
   width: 100%;
-  height: 7%;
+  height: 6%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -598,6 +599,10 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: row;
+}
+#banner-mid > a > img {
+  width: 924.8px;
+  height: 181px;
 }
 
 #recommend {
@@ -710,7 +715,7 @@ main {
 
 #banner-bot {
   width: 100%;
-  height: 7%;
+  height: 12%;
   display: flex;
   justify-content: space-around;
   align-items: center;
