@@ -2,3 +2,92 @@
 @use './CSS/mixin' as mixin;
 @use './CSS/basic';
 // -------------------------------------------
+body{
+  @include mixin.container-style(100vw, 100vh, center, center);
+  position: relative;
+}
+main{
+  @include mixin.container-style(1080px,504px, center, center);
+  // background-color: cadetblue;
+  // border: 5px solid red;
+}
+
+#slide{
+  @include mixin.container-style(100%,504px, center, center);
+  // border-top: 3px solid var.$col-2;
+  // border-bottom: 3px solid var.$col-2;
+  z-index: 5;
+}
+
+.slide-item {
+  @include mixin.size(100%, 100%);
+  // z-index: 10;
+  &>a{
+    @include mixin.container-style(100%, 100%, center, center);
+    &>img{
+      @include mixin.size(100%, 504px);
+    }
+  }
+}
+
+#left-arrow, #right-arrow{
+  @include mixin.container-style(50px,50px, center, center);
+  opacity: 0.5;
+  position: absolute;
+  z-index: 5;
+  top: 48%;
+}
+
+#left-arrow:hover, #right-arrow:hover{
+  // background-color: rgb(230, 230, 230) ;
+  opacity: 1;
+}
+
+#left-arrow{
+  left: 21.5%;
+}
+
+#right-arrow{
+  right: 21.5%
+}
+
+
+// .slick-arrow{
+//   @include mixin.container-style(5%, 10%, center, center);
+//   position: absolute;
+//   z-index: 1;
+//   top: 50%;
+//   background: none;
+// }
+
+// .slick-prev {
+//   left: 21.5%;
+// }
+
+// .slick-next {
+//   right: 21.5%;
+// }
+// .slick-prev:before, .slick-next:before {
+//   font-size: 40px;
+//   line-height: 1;
+//   opacity: 0.7;
+//   color:rgb(255, 253, 253);
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+//   position: relative;
+// }
+
+// .slick-prev:before{
+//   left: 0%;
+// }
+// .slick-next:before{
+//   right: 0%;
+// }
+
+
+.slick-dots{
+  @include mixin.container-style(100%, 5%, center, center);
+  position: absolute;
+  top: 105%;
+  // z-index: 10;
+}

@@ -6,76 +6,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="./test.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">	
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css">	
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">	
-  <script src="/JS/jquery-1.12.4.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>	
+  <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  
 </head>
 <body>
-  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
+  <main>
+    <section id="slide">
+      <div class="slide-item">
         <a href="https://event.rakuten.co.jp/campaign/point-up/marathon/20230109bmkpp/multicoupon/">
           <img src="https://image.rakuten.co.jp/smartforyou/cabinet/event/09652271/ma_slide_bn_pc_2.jpg">
         </a>
       </div>
-      <div class="carousel-item">
+      <div class="slide-item">
         <a href="https://event.rakuten.co.jp/campaign/point-up/marathon/">
           <img src="https://image.rakuten.co.jp/smartforyou/cabinet/event/09652271/ma_slide_bn_1.jpg">
         </a>
       </div>
-      <div class="carousel-item">
+      <div class="slide-item">
         <a href="https://item.rakuten.co.jp/smartforyou/acdis_trouble_set/">
           <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09452582/a_t_set_bn_pc_2.jpg">
         </a>
       </div>
-      <div class="carousel-item">
+      <div class="slide-item">
         <a href="https://item.rakuten.co.jp/smartforyou/c/0000001320/">
           <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09452582/new_arrival_2.jpg" >
         </a>
       </div>
-      <div class="carousel-item">
+      <div class="slide-item">
         <a href="https://item.rakuten.co.jp/smartforyou/c/0000001320/">
           <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09452582/acdis_arrival.jpg" >
         </a>
       </div>
-      <div class="carousel-item">
+      <div class="slide-item">
         <a href="https://item.rakuten.co.jp/smartforyou/c/0000001316/" >
           <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09452582/mask_event_bn_3.jpg" >
         </a>
       </div>
-      <div class="carousel-item">
+      <div class="slide-item">
         <a href="https://item.rakuten.co.jp/smartforyou/regeneration_set/">
           <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09452582/main_bn_set.jpg" >
         </a>
       </div>
-      <div class="carousel-item">
+      <div class="slide-item">
         <a href="https://item.rakuten.co.jp/smartforyou/synergy_azulen_ampoule/" >
           <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09452582/sa_banner.jpg" >
         </a>
       </div>
-    </div>
+    </section>
+    <div id="left-arrow"><img src="./IMG/left.png"></div>
+    <div id="right-arrow"><img src="./IMG/right.png" ></div>
+  </main>
 
-
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
+  <script>
+    $(function(){
+      $('#slide').slick({
+      infinite : true,     
+      slidesToShow : 1,  
+      slidesToScroll : 1,        
+      speed : 2000,     
+      dots : true,        
+      autoplay : true,  
+      pauseOnHover : true,
+      prevArrow : $('#left-arrow'), 
+      nextArrow : $('#right-arrow'), 
+      });
+    });
+</script>
 </body>
 </html>

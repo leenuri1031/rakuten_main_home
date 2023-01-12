@@ -159,6 +159,10 @@ main{
   @include mixin.container-style(1080px, 86.2%, space-around, center, column);
   // background-color: cadetblue;
   // border: 5px solid red;
+  &>section:first-child{
+    @include mixin.container-style(100vw,504px, center, center);
+    position: relative;
+  }
 }
 
 //slide-----------------------------------------------------
@@ -174,12 +178,12 @@ main{
   @include mixin.size(1080px, 100%);
 }
 
-.slick-track {
-  @include mixin.size(100%, 100%);
-}
+// .slick-track {
+//   @include mixin.size(100%, 100%);
+// }
 
 .slide-item {
-  @include mixin.size(100%, 100%);
+  @include mixin.size(1080px, 504px);
   // z-index: 10;
   &>a{
     @include mixin.container-style(100%, 100%, center, center);
@@ -189,37 +193,59 @@ main{
   }
 }
 
-.slick-arrow{
-  @include mixin.container-style(5%, 10%, center, center);
+#left-arrow, #right-arrow{
+  @include mixin.container-style(50px,50px, center, center);
+  opacity: 0.5;
   position: absolute;
-  z-index: 1;
-  top: 50%;
-  background: none;
+  z-index: 5;
+  top: 24%;
 }
 
-.slick-prev {
-  left: 21.5%;
+#left-arrow:hover, #right-arrow:hover{
+  // background-color: rgb(230, 230, 230) ;
+  opacity: 1;
 }
 
-.slick-next {
-  right: 21.5%;
-}
-.slick-prev:before, .slick-next:before {
-  font-size: 40px;
-  line-height: 1;
-  opacity: 0.7;
-  color:rgb(255, 253, 253);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  position: relative;
+#left-arrow{
+  left: 22%;
 }
 
-.slick-prev:before{
-  left: 0%;
+#right-arrow{
+  right: 22%
 }
-.slick-next:before{
-  right: 0%;
-}
+
+
+// .slick-arrow{
+//   @include mixin.container-style(5%, 10%, center, center);
+//   position: absolute;
+//   z-index: 1;
+//   top: 50%;
+//   background: none;
+// }
+
+// .slick-prev {
+//   left: 21.5%;
+// }
+
+// .slick-next {
+//   right: 21.5%;
+// }
+// .slick-prev:before, .slick-next:before {
+//   font-size: 40px;
+//   line-height: 1;
+//   opacity: 0.7;
+//   color:rgb(255, 253, 253);
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+//   position: relative;
+// }
+
+// .slick-prev:before{
+//   left: 0%;
+// }
+// .slick-next:before{
+//   right: 0%;
+// }
 
 
 .slick-dots{
@@ -354,7 +380,7 @@ main{
   // border: #2c2c2c solid 2px;
 
   &>div{
-    @include mixin.container-style(20%, 100%, space-around, center, column);
+    @include mixin.container-style(100%, 100%, space-around, center, column);
     &>a{
       @include mixin.container-style(100%, 100%, space-around, center, column);
 
