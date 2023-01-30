@@ -23,7 +23,7 @@
 @media (min-width: 600px) {
   #root {
     width: 100vw;
-    height: 200vh;
+    height: 180vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -252,81 +252,22 @@
 
   main {
     width: 1080px;
-    height: 130vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
   main > div:first-child {
-    width: 90%;
-    height: 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    font-size: 2rem;
-    letter-spacing: 5px;
+    display: none;
   }
-
-  .company-contents {
-    width: 100%;
-    height: 80%;
+  main > div:last-child {
+    width: 972px;
+    height: 972px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-  }
-  .company-contents > div {
-    margin-bottom: 1px;
-  }
-  .company-contents > div > div:first-child {
-    font-size: 1.2rem;
-  }
-  .company-contents > div > div:last-child {
-    font-size: 1rem;
-    padding-left: 2vw;
-    line-height: 2.5;
-  }
-  .company-contents > div:nth-child(1) {
-    width: 100%;
-    height: 18%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
-  .company-contents > div:nth-child(2) {
-    width: 100%;
-    height: 18%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
-  .company-contents > div:nth-child(3) {
-    width: 100%;
-    height: 18%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
-  .company-contents > div:nth-child(4) {
-    width: 100%;
-    height: 18%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
-  .company-contents > div:nth-child(5) {
-    width: 100%;
-    height: 35%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
   }
 
   footer {

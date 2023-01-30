@@ -6,7 +6,7 @@
 @media(min-width:600px){
 //shopping_guid---------------------------------------------------
 #root{
-  @include mixin.container-style(100vw, 200vh, space-between, center, column );
+  @include mixin.container-style(100vw, 180vh, space-between, center, column );
 }
 
 #mobile-area{
@@ -154,45 +154,47 @@
   // search-box-class-setting------------------------------
 
   main{
-    @include mixin.container-style(1080px, 130vh, center, center, column );
+    @include mixin.container-style(1080px, 100vh, center, center, column );
+
     &>div:first-child{
-      @include mixin.container-style(90%, 10%, center, center);
-      // border: #000 solid 1px;
-      font-size: 2rem;
-      letter-spacing: 5px;
+      display: none;
+    }
+  
+    &>div:last-child{
+      @include mixin.container-style(972px, 972px, center, center, column );
     }
   }
 
-  .company-contents{
-    @include mixin.container-style(100%, 80%, center, center, column );
-    // background-color: #ACB5D4;
-    &>div{
-      margin-bottom: 1px;
+  // .company-contents{
+  //   @include mixin.container-style(100%, 80%, center, center, column );
+  //   // background-color: #ACB5D4;
+  //   &>div{
+  //     margin-bottom: 1px;
   
-      &>div:first-child{
-        font-size: 1.2rem;
-      }
+  //     &>div:first-child{
+  //       font-size: 1.2rem;
+  //     }
 
-      &>div:last-child{
-        font-size: 1rem;
-        padding-left: 2vw;
-        line-height: 2.5;
-      }
-    }
+  //     &>div:last-child{
+  //       font-size: 1rem;
+  //       padding-left: 2vw;
+  //       line-height: 2.5;
+  //     }
+  //   }
   
-    @for $i from 1 through 4{
-      &>div:nth-child(#{$i}){
-      @include mixin.container-style(100%, 18%, center, center);
-      // border: solid 1px black; 
+  //   @for $i from 1 through 4{
+  //     &>div:nth-child(#{$i}){
+  //     @include mixin.container-style(100%, 18%, center, center);
+  //     // border: solid 1px black; 
       
-      }
-    }
+  //     }
+  //   }
 
-    &>div:nth-child(5){
-      @include mixin.container-style(100%, 35%, center, center);
-      // border: solid 1px black; 
-    }
-  }
+  //   &>div:nth-child(5){
+  //     @include mixin.container-style(100%, 35%, center, center);
+  //     // border: solid 1px black; 
+  //   }
+  // }
   
   
 footer{
