@@ -1,0 +1,235 @@
+@use './var'as var;
+@use './mixin' as mixin;
+@use './basic';
+// -------------------------------------------
+
+// hamberger-menu---------------------------------------
+#menu__toggle {
+  opacity: 0;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  left: 0;
+}
+
+.menu__btn {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  width: 26px;
+  height: 26px;
+
+  cursor: pointer;
+  z-index: 1;
+}
+
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  transition-duration: .25s;
+  background-color: rgb(47, 47, 47);
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+
+.menu__box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -100%;
+
+  @include mixin.container-style(40%, 90%, space-around, center, column);
+
+  width: 80%;
+  height: 90%;
+
+  margin: 0;
+  padding: 80px 0;
+
+  list-style: none;
+
+  background-color: rgba(143, 43, 95,0.8);
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+
+  transition-duration: .25s;
+}
+
+.menu__item {
+  // border: solid black 1px;
+  // padding: 12px 24px;
+  @include mixin.container-style(200px,50px, center, center);
+  @include mixin.font(1.2rem, 600, rgb(255, 255, 255));
+  text-decoration: none;
+  transition-duration: .25s;
+}
+.menu__item:hover {
+  background-color: #ffffff;
+  border-radius: 40px;
+  color: rgb(47, 47, 47);
+}
+
+// class-setting-----------------------------------------
+
+#root{
+  @include mixin.container-style(100vw, 250vh, space-between, center, column );
+}
+
+#mobile-area{
+  @include mixin.container-style(100%, 5%, space-around, center);
+  // background-color: salmon;
+  position: relative;
+  // z-index: 2;
+
+  .logo{
+    @include mixin.container-style(80%, 40%, center, flex-start);
+    @include mixin.font(1.5rem, 500, #000);
+    letter-spacing: 10px;
+    // border: solid black 1px;
+  }
+
+}
+
+#desktop-area{
+  display: none;
+}
+
+
+main{
+  @include mixin.container-style(100%, 70%, center, center, column );
+  &>div:first-child{
+    @include mixin.container-style(90%, 5%, center, center);
+    // border: #000 solid 1px;
+    font-size: 1.2rem;
+    letter-spacing: 5px;
+  }
+}
+
+.company-contents{
+  @include mixin.container-style(90%, 85%, center, center, column );
+  // background-color: #ACB5D4;
+  &>div{
+    margin-bottom: 1px;
+
+    &>div:first-child{
+      @include mixin.container-style(30%, 100%, center, center);
+      border: solid 1px var.$col-2;
+      font-size: 0.9rem;
+      margin-right: 3px;
+      background-color: var.$col-1;
+    }
+    &>div:nth-child(2){
+      @include mixin.size(0, 100%);
+      border: solid 0.5px var.$col-2;
+      margin-right: 3px;
+    }
+
+    &>div:last-child{
+      @include mixin.container-style(65%, 100%, flex-start, center);
+      border: solid 1px var.$col-2;
+      font-size: 0.8rem;
+      padding-left: 1vw;
+      line-height: 1.8;
+    }
+  }
+
+  @for $i from 1 through 4{
+    &>div:nth-child(#{$i}){
+    @include mixin.container-style(100%, 15%, center, center);
+    // border: solid 1px black; 
+    
+    }
+  }
+  // &>div:nth-child(1){}
+  // &>div:nth-child(2){}
+  // &>div:nth-child(3){}
+  // &>div:nth-child(4){}
+  &>div:nth-child(5){
+    @include mixin.container-style(100%, 40%, center, center);
+    // border: solid 1px black; 
+  }
+}
+
+
+footer{
+  @include mixin.container-style(100%, 25%, space-between, center, column);
+  color: var.$col-3;
+  font-size: 0.9rem;
+  // background-color: antiquewhite;
+
+  &>div:first-child{
+    @include mixin.container-style(80%, 10%, space-between, center, column);
+    margin-top: 2vh;
+    // border: solid black 1px;
+
+    &>h2{
+      @include mixin.container-style(100%, 40%, center, center);
+    }
+    &>h4{
+      @include mixin.container-style(100%, 40%, center, center);
+    }
+  }
+
+  &>div:last-child{
+    @include mixin.container-style(100%, 8%, center, center, column);
+    background-color: var.$col-1;
+    font-size: 0.8rem;
+  }
+}
+
+#mobile-guid-menu{
+    @include mixin.container-style(100%, 60%, space-around, center);
+  // background-color: var.$col-1;
+  flex-wrap: wrap;
+  &>a{
+    @include mixin.container-style(45%, 17%, space-between, center);
+    background-color: var.$col-1;
+    border: solid 1px var.$col-2;
+    
+    &>div:first-child{
+      @include mixin.container-style(70%, 100%, flex-start, center);
+      padding-left: 2vw;
+    }
+
+    &>div:last-child{
+      @include mixin.container-style(20%,100%, center,center);
+      // border: solid 2px black;
+
+      &>img{
+        @include mixin.size(20px, 20px);
+      }
+    }
+  }
+}
+
+#guid-menu{
+  display: none;
+}
+//company---------------------------------------------------
+
+

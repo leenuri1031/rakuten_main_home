@@ -1,0 +1,428 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100;200;300;400;500;600;700;800;900&family=Sawarabi+Gothic&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+* a {
+  color: #444444;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+* {
+  font-family: "Sawarabi Gothic", "M PLUS 1", sans-serif;
+}
+
+@media (min-width: 600px) {
+  #root {
+    width: 100vw;
+    height: 200vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #mobile-area {
+    display: none;
+  }
+
+  #desktop-area {
+    width: 100%;
+    height: 222px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 3px solid #c2c2c2;
+  }
+
+  .header-top {
+    width: 1080px;
+    height: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+  .header-top > a {
+    width: 35%;
+    height: 100%;
+  }
+  .header-top > a > img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .site-menu {
+    width: 50%;
+    height: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: row;
+  }
+  .site-menu > div {
+    width: 25%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .site-menu > div > a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    font-size: 0.8rem;
+  }
+  .site-menu > div:nth-child(1) {
+    border-right: 2px solid #444444;
+  }
+  .site-menu > div:nth-child(2) {
+    border-right: 2px solid #444444;
+  }
+  .site-menu > div:nth-child(3) {
+    border-right: 2px solid #444444;
+  }
+
+  .header-bottom {
+    width: 1080px;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: row;
+  }
+  .header-bottom > div:first-child {
+    width: 75%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .dropdown {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .dropdown:hover .item {
+    width: 100%;
+    height: 240px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    border-bottom: 3px solid #c2c2c2;
+    position: absolute;
+    top: 210px;
+    left: 0;
+    z-index: 100;
+  }
+  .dropdown:hover .item > div {
+    width: 1080px;
+    height: 45%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+  }
+  .dropdown:hover .item > div > div {
+    width: 250px;
+    height: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+  }
+  .dropdown:hover .item > div > div > a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+  }
+  .dropdown:hover .item > div > div > a:hover {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #B8648E;
+  }
+
+  .dropdown-btn {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  .dropdown-btn > a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .dropdown-btn:hover {
+    color: #B8648E;
+  }
+  .dropdown-btn:hover > a:hover {
+    color: #B8648E;
+  }
+
+  .item {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #2c2c2c;
+    display: none;
+    letter-spacing: 1px;
+  }
+
+  .menu-btn {
+    width: 20px;
+    height: 20px;
+    margin-left: 2vw;
+  }
+
+  .menu-btn:hover {
+    width: 22px;
+    height: 22px;
+  }
+
+  .search-box {
+    width: 30%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+  }
+
+  .text-area {
+    width: 280px;
+    height: 30px;
+    border-radius: 20px;
+    padding-left: 10px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #444444;
+  }
+
+  .search-btn {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: absolute;
+    top: 31%;
+    left: 85%;
+    z-index: 100;
+  }
+
+  main {
+    width: 1080px;
+    height: 130vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  main > div:first-child {
+    width: 90%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    font-size: 2rem;
+    letter-spacing: 5px;
+  }
+
+  .company-contents {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .company-contents > div {
+    margin-bottom: 1px;
+  }
+  .company-contents > div > div:first-child {
+    font-size: 1.2rem;
+  }
+  .company-contents > div > div:last-child {
+    font-size: 1rem;
+    padding-left: 2vw;
+    line-height: 2.5;
+  }
+  .company-contents > div:nth-child(1) {
+    width: 100%;
+    height: 18%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .company-contents > div:nth-child(2) {
+    width: 100%;
+    height: 18%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .company-contents > div:nth-child(3) {
+    width: 100%;
+    height: 18%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .company-contents > div:nth-child(4) {
+    width: 100%;
+    height: 18%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .company-contents > div:nth-child(5) {
+    width: 100%;
+    height: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  footer {
+    width: 1080px;
+    height: 50vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    color: #444444;
+  }
+  footer > div:first-child {
+    width: 30%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2vh;
+  }
+  footer > div:first-child > h2 {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  footer > div:first-child > h4 {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  footer > div:last-child {
+    width: 100vw;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #FAFAFA;
+    font-size: 0.7rem;
+  }
+
+  #mobile-guid-menu {
+    display: none;
+  }
+
+  #guid-menu {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  #guid-menu > div {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+  }
+  #guid-menu > div > a {
+    width: 30%;
+    height: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    background-color: #FAFAFA;
+    border: solid 1px #c2c2c2;
+  }
+  #guid-menu > div > a > div:first-child {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    padding-left: 2vw;
+  }
+  #guid-menu > div > a > div:last-child {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  #guid-menu > div > a > div:last-child > img {
+    width: 20px;
+    height: 20px;
+  }
+}
