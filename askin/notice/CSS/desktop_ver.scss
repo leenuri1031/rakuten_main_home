@@ -165,36 +165,7 @@
     }
   }
 
-  // .company-contents{
-  //   @include mixin.container-style(100%, 80%, center, center, column );
-  //   // background-color: #ACB5D4;
-  //   &>div{
-  //     margin-bottom: 1px;
-  
-  //     &>div:first-child{
-  //       font-size: 1.2rem;
-  //     }
 
-  //     &>div:last-child{
-  //       font-size: 1rem;
-  //       padding-left: 2vw;
-  //       line-height: 2.5;
-  //     }
-  //   }
-  
-  //   @for $i from 1 through 4{
-  //     &>div:nth-child(#{$i}){
-  //     @include mixin.container-style(100%, 18%, center, center);
-  //     // border: solid 1px black; 
-      
-  //     }
-  //   }
-
-  //   &>div:nth-child(5){
-  //     @include mixin.container-style(100%, 35%, center, center);
-  //     // border: solid 1px black; 
-  //   }
-  // }
   
   
 footer{
