@@ -1,93 +1,216 @@
 @use './CSS/var'as var;
 @use './CSS/mixin' as mixin;
-@use './CSS/basic';
+@use './basic';
 // -------------------------------------------
-body{
-  @include mixin.container-style(100vw, 100vh, center, center);
-  position: relative;
-}
-main{
-  @include mixin.container-style(1080px,504px, center, center);
-  // background-color: cadetblue;
-  // border: 5px solid red;
+
+html{
+  font-size: 10px;
 }
 
-#slide{
-  @include mixin.container-style(100%,504px, center, center);
-  // border-top: 3px solid var.$col-2;
-  // border-bottom: 3px solid var.$col-2;
-  z-index: 5;
+.board_wrap {
+  width: 1080px;
+  margin: 100px auto;
 }
 
-.slide-item {
-  @include mixin.size(100%, 100%);
-  // z-index: 10;
-  &>a{
-    @include mixin.container-style(100%, 100%, center, center);
-    &>img{
-      @include mixin.size(100%, 504px);
-    }
+.board_title{
+  margin-bottom: 30px;
+
+  &>strong{
+    font-size: 3rem;
+  }
+
+  &>p{
+    margin-top: 5px;
+    font-size: 1.4rem;
   }
 }
 
-#left-arrow, #right-arrow{
-  @include mixin.container-style(50px,50px, center, center);
-  opacity: 0.5;
-  position: absolute;
-  z-index: 5;
-  top: 48%;
+.bt_wrap{
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0;
+  // inline-block의 부모에 font-size를 0으로 지정해서 정확한 사이즈 파악할 수 있음
+
+  &>a{
+    display: inline-block;
+    min-width: 80px;
+    margin-left: 10px;
+    padding: 10px;
+    border: var.$solid-black;
+    border-radius: 2px;
+    font-size: 1.4rem;
+  }
+
+  &>a:nth-child(1){
+    margin-left: 0;
+  }
+
+  &>a.on{
+    background:#000;
+    color: #fff;
+  }
 }
 
-#left-arrow:hover, #right-arrow:hover{
-  // background-color: rgb(230, 230, 230) ;
-  opacity: 1;
+.board_list{
+  width: 100%;
+  border-top: 2px solid #000;
+
+  &>div{
+    border-bottom: 1px solid #ddd;
+    font-size: 0;
+
+    &>div{
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 1.4rem;
+      text-align: center;
+      padding: 15px 0;
+    }
+
+  }
+  
+  &>div.top{
+    border-bottom: 1px solid #999;  
+
+    &>div{
+      font-weight: 600;
+    }
+  }
+
+  &>div.top .title{
+  text-align: center;
+  }
+
+  &>div:last-child{
+    border-bottom: 1px solid #000;
+  }
 }
 
-#left-arrow{
-  left: 21.5%;
+.board_list .num{
+  width: 10%;
 }
 
-#right-arrow{
-  right: 21.5%
+.board_list .title{
+  width: 60%;
+  text-align: left;
+}
+
+// .board_list .top .title{
+//   text-align: center;
+// }
+
+.board_list .writer{
+  width: 10%;
+}
+
+.board_list .date{
+  width: 10%;
+}
+
+.board_list .counter{
+  width: 10%;
 }
 
 
-// .slick-arrow{
-//   @include mixin.container-style(5%, 10%, center, center);
-//   position: absolute;
-//   z-index: 1;
-//   top: 50%;
-//   background: none;
-// }
+.board_page{
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0;
 
-// .slick-prev {
-//   left: 21.5%;
-// }
+  &>a{
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-left: 0;
+    vertical-align: middle;
+    line-height: 100%;
+  }
 
-// .slick-next {
-//   right: 21.5%;
-// }
-// .slick-prev:before, .slick-next:before {
-//   font-size: 40px;
-//   line-height: 1;
-//   opacity: 0.7;
-//   color:rgb(255, 253, 253);
-//   -webkit-font-smoothing: antialiased;
-//   -moz-osx-font-smoothing: grayscale;
-//   position: relative;
-// }
+  &>a.bt{
+    font-size: 1.2rem;
+    padding-top: 10px;
+    letter-spacing: -1px;
+  }
 
-// .slick-prev:before{
-//   left: 0%;
-// }
-// .slick-next:before{
-//   right: 0%;
-// }
+  &>a.num{
+    font-size: 1.4rem;
+    padding-top: 8px;
+  }
 
+  &>a.num.on{
+    border-color: #000;
+    background: #000;
+    color: #fff;
+  }
 
-.slick-dots{
-  @include mixin.container-style(100%, 5%, center, center);
-  position: absolute;
-  top: 105%;
-  // z-index: 10;
+  &>a:first-child{
+    border-left: 1px solid #ddd;
+  }
 }
+
+
+.board_view{
+  width: 100%;
+  border-top: 2px solid #000;
+  // font-size: 1.4rem;
+
+  &>div.title{
+    padding: 20px 15px;
+    border-bottom: 1px dashed #ddd;
+    font-size: 2rem;
+  }
+
+  &>div.info{
+    padding: 15px;
+    border-bottom: 1px solid #999;
+    font-size: 0;
+
+    &>dl{
+      display: inline-block;
+      padding: 0 20px;
+      position: relative;
+
+      &>dt, dd{
+      display: inline-block;
+      font-size: 1.4rem;
+      }
+
+      &>dd{
+        margin-left: 10px;
+        color: #777;
+      }
+    }
+
+    &>dl::before{
+      content: "";
+      display: block;
+      width: 1px;
+      height: 20px;
+      background: #ddd;     
+      @include mixin.posi(absolute, 1px);
+    }
+
+    &>dl:first-child::before{
+      display: none;
+    }
+
+    &>dl:first-child{
+      padding-left: 0;
+    }
+  }
+
+  &>div.cont{
+    padding: 15px;
+    border-bottom: 1px solid #000;
+    line-height: 160%;
+    font-size: 1.4rem;
+  }
+}
+
+// .board_view .title{
+// }
+
+
+
