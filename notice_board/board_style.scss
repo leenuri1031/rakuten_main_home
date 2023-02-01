@@ -1,7 +1,152 @@
 @use './var'as var;
 @use './mixin' as mixin;
 @use './basic';
+@use './media';
 // -------------------------------------------
+
+.board_wrap{
+  width: 1000px;
+  margin: 100px auto;
+}
+
+.board_title{
+  margin-bottom: 30px;
+
+  &>strong{
+    font-size: 3rem;
+  }
+
+  &>p{
+    margin-top: 5px;
+    font-size: 1.4rem;
+  }
+}
+
+.board_list{
+  width: 100%;
+  border-top: 2px solid black;
+
+  &>div{
+    border-bottom: 1px solid #ddd;
+    font-size: 0;
+
+    &>div{
+      display: inline-block;
+      width: 10%;
+      text-align: center;
+      font-size: 1.4rem;
+      vertical-align: middle;
+      padding: 15px 0;
+    }
+
+    &>div.title{
+      width: 60%;
+      text-align: left;
+    }
+
+  }
+
+  &>div.top{
+    border-bottom: 1px solid #999;
+
+    &>div{
+      font-weight: 600;
+    }
+
+    &>div.title{
+      text-align: center;
+    }
+  }
+
+  &>div:last-child{
+    border-bottom: var.$solid-black;
+  }
+}
+
+.board_page{
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0;
+
+  &>a{
+    display: inline-block;
+    @include mixin.size(32px, 32px);
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-left: 0;
+    vertical-align: middle;
+    line-height: 100%;
+  }
+
+  &>a:first-child{
+    border-left: 1px solid #ddd;
+  }
+
+  &>a.bt{ 
+    font-size: 1.2rem;
+    padding-top: 10px;
+    letter-spacing: -1px;
+  }
+
+  &>a.num{
+    font-size: 1.4rem;
+    padding-top: 8px;
+  }
+
+  &>a.num.on{
+    border-color: #000;
+    background: #000;
+    color: #fff;
+  }
+
+}
+
+
+.bt_wrap{
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0;
+
+  &>a{
+    display: inline-block;
+    min-width: 80px;
+    padding: 10px;
+    border: var.$solid-black;
+    border-radius: 2px;
+    font-size: 1.4rem;
+    margin-left: 10px;
+  }
+
+  &>a:first-child{
+    margin-left: 0;
+  }
+
+  &>a.on{
+    background: #000;
+    color: #fff;
+  }
+}
+
+
+
+.board_view{
+  width: 100%;
+  border-top: 2px solid #000;
+  // font-size: 1.4rem;
+
+  &>div:first-child{
+    padding: 20px 15px;
+    border-bottom: 1px dashed #ddd;
+    font-size: 2rem;
+  }
+}
+
+.info{
+  padding: 15px;
+  border-bottom: 1px solid #999;
+  // font-size: 0;
+  
+}
 
 
 
