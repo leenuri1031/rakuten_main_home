@@ -216,7 +216,7 @@ footer{
   &>div:last-child{
     @include mixin.container-style(100vw, 15%, center, center, column);
     background-color: var.$col-1;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 }
 
