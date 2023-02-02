@@ -139,14 +139,55 @@
     border-bottom: 1px dashed #ddd;
     font-size: 2rem;
   }
+
+  &>div:last-child{
+    padding: 15px;
+    border-bottom: var.$solid-black;
+    line-height: 160%;
+    font-size: 1.4rem;
+  }
 }
 
 .info{
   padding: 15px;
   border-bottom: 1px solid #999;
-  // font-size: 0;
-  
+  font-size: 0;
+
+  &>dl{
+    display: inline-block;
+    position: relative;
+    padding: 0 20px;
+
+    &>dt, dd{
+      display: inline-block;
+      font-size: 1.4rem;
+    }
+
+    // &>dt{}
+
+    &>dd{
+      margin-left: 10px;
+      color: #777;
+    }
+  }
+
+  &>dl:first-child{
+    padding-left: 0;
+  }
+
+  @for $i from 2 through 4{
+    &>dl:nth-child(#{$i})::before{
+      content: "";
+      // position: relative;
+      display: block;
+      @include mixin.posi(absolute, 5px);
+      width: 1px;
+      height: 13px;
+      background: #ddd;
+    }
+  }
 }
+
 
 
 

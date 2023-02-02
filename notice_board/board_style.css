@@ -131,8 +131,64 @@ a {
   border-bottom: 1px dashed #ddd;
   font-size: 2rem;
 }
+.board_view > div:last-child {
+  padding: 15px;
+  border-bottom: 1px solid black;
+  line-height: 160%;
+  font-size: 1.4rem;
+}
 
 .info {
   padding: 15px;
   border-bottom: 1px solid #999;
+  font-size: 0;
+}
+.info > dl {
+  display: inline-block;
+  position: relative;
+  padding: 0 20px;
+}
+.info > dl > dt, .info > dl dd {
+  display: inline-block;
+  font-size: 1.4rem;
+}
+.info > dl > dd {
+  margin-left: 10px;
+  color: #777;
+}
+.info > dl:first-child {
+  padding-left: 0;
+}
+.info > dl:nth-child(2)::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  z-index: 100;
+  width: 1px;
+  height: 13px;
+  background: #ddd;
+}
+.info > dl:nth-child(3)::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  z-index: 100;
+  width: 1px;
+  height: 13px;
+  background: #ddd;
+}
+.info > dl:nth-child(4)::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  z-index: 100;
+  width: 1px;
+  height: 13px;
+  background: #ddd;
 }/*# sourceMappingURL=board_style.css.map */
