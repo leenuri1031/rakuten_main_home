@@ -567,6 +567,11 @@ main{
   // @include mixin.container-style(100%, 13%, space-around, center, column); 
   // ---  more banner height
   // background-color: aliceblue;
+  &>a{
+    &>img{
+      border: solid 2px #ddd
+    }
+  }
 }
 //banner-bot------------------------------------------------
 

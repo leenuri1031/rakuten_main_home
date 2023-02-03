@@ -696,6 +696,9 @@ main > section:first-child {
   align-items: center;
   flex-direction: column;
 }
+#banner-bot > a > img {
+  border: solid 2px #ddd;
+}
 
 #special {
   width: 100%;
