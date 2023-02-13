@@ -1,0 +1,164 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+#cssmenu,
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul li a,
+#cssmenu #menu-button {
+　text-align:center;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+
+  float:left;
+}
+#cssmenu ul{  margin:0px 0px 0px 80px;}
+#cssmenu ul li{padding:0px 0px 0px 30px;}
+#cssmenu:after,
+#cssmenu > ul:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+#cssmenu #menu-button {
+  display: none;
+}
+#cssmenu {
+  font-family: Montserrat, sans-serif;
+  background:url(../main-bar-ps1310.png);
+  width:194px;
+  font-size:1.1em;
+  margin:0px 0px 4px 15px;
+}
+#free {margin:0px 0px 0px 15px;}
+#cssmenu > ul > li {
+  float: left;
+}
+#cssmenu.align-center > ul {
+  font-size: 0;
+  text-align: center;
+  font-size:1.1em;
+}
+#cssmenu.align-center > ul > li {
+  display: inline-block;
+  float: none;
+}
+#cssmenu.align-center ul ul {
+  text-align: left;
+}
+#cssmenu.align-right > ul > li {
+  float: right;
+}
+#cssmenu > ul > li > a {
+  padding: 17px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family:Arial, Helvetica, sans-serif;
+}
+#cssmenu > ul > li:hover > a {
+  color: #6e6e6e;
+}
+
+#cssmenu{
+	width:1310px;
+	border-radius:5px;
+	  list_style:none;
+	}
+	 
+body {
+	width:1310px;
+	height:auto;
+	margin:0 10px 0 0;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:85%;
+	}
+ul{
+	list-style:none;
+	margin:0px 0px 0px -34px;}
+
+ul li{
+   list_style:none;
+   }
+
+		
+#listneim{
+	background:url(../main-bar-ps850.png);
+	border-radius:5px;
+	width:850px;
+	padding:12px 0px 12px 0px;
+	font-size:1.1em;
+	color:#fff;
+	margin:15px 0px 5px 0px;
+	
+}	
+	#listneim span{
+		font-family:Arial, Helvetica, sans-serif;
+		margin: 0px 0px 0px 10px; }
+	
+
+
+
+	#listneim-2 span{
+		font-family:Arial, Helvetica, sans-serif;
+		margin: 0px 0px 0px 10px; }
+
+
+#liftmenu{
+
+	border-radius:10px;
+	float:right;
+	width:850px;
+	right:100px;
+	margin: 5px 75px  0px 0px ;}
+	
+#rightmenu{
+	border-radius:10px;
+	float:left;
+	width:220px;
+
+	margin: 7px 1px 0px 113px;}
+	
+#img-1{
+	margin: 0px 1px 0px 114px;}
+#top_search{margin:12px 0px 0px -20px; } 
+
+
+
+#p-up{
+	background:url(../main-bar-ps1120.png);
+	width:1109px;
+	height:14px;
+	border-radius:5px;
+	margin-top:15px;
+	padding:12px 0px 12px 12px;
+	margin: 0px 1px 15px 114px;
+	font-size:1.1em;
+	color:#fff;
+	
+	}
+
+#hrad img{width:419px;}
+#nav_kisyu img{width:276px;}
+#tecyo img{width:276px;}
+#img-1 img{width:368px;}
+	 
+a {
+	color:#9f9f9f;
+	text-decoration:none;
+}
+a:hover {
+	text-decoration:none;
+}
+

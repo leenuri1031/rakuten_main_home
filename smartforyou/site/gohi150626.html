@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>smartforyou</title>
+
+<style>
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+.clearfix:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+body {
+	font-family:'Lucida Grande',  'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3',  Meiryo, メイリオ, sans-serif;
+}
+html {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+	vertical-align: middle;
+}
+q, blockquote {
+	quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+	content: "";
+	content: none;
+}
+a {
+	text-decoration: none;
+}
+a img {
+	border: none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+	display: block;
+}
+.mb_7 {
+	margin-bottom: 7%
+}
+/*must_buy*/
+#must_pc_wrapper {
+	margin:0%;
+	width: 665px;
+}
+ #must_pc_wrapper:not(:target) {
+ width: 645px\9; /* IE9, 10 */
+}
+ @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+ #must_pc_wrapper:not(:target) {
+ width: 645px; /* IE10 */
+}
+}
+.must_buy_title {
+	margin-bottom: 7%;
+	width:100%;
+}
+.contents_title {
+	margin-bottom:3%;
+}
+.must_buy_contents {
+	width: 93%;
+	margin: 0 auto;
+}
+.main_one_column {
+	width: 100%;
+	margin-bottom: 3%;
+}
+.main_one_column a {
+	display: block;
+}
+.main_one_column a img {
+	vertical-align: bottom;
+}
+.one_column_price {
+	display: block;
+	text-align: center;
+}
+.two_column {
+	padding: 0;
+	width: 100%;
+	margin-bottom: 3%;
+}
+.two_column .main_list {
+	background-color: #f1f1f1;
+	background-size: cover;
+	background-repeat: no-repeat;
+	float: left;
+	width: 49%;
+	list-style: none;
+	box-sizing: border-box;
+	border: 2px solid #d21c57;
+}
+.two_column .main_list:first-child {
+	margin-right: 2%;
+}
+.two_column .main_list a img:first-child {
+	margin: 5% 5% 5% 5%;
+}
+.two_column .main_list a img:last-child {
+	margin: 0% 5% 5% 5%;
+}
+.two_column .main_list a img {
+	width: 90%;
+	vertical-align: bottom;
+}
+.two_column .dis_list {
+	background-image: url(../img/sale_point/dis_bg.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	float: left;
+	width: 49%;
+	list-style: none;
+	box-sizing: border-box;
+	border: 2px solid #7c1515;
+}
+.two_column .dis_list:first-child {
+	margin-right: 2%;
+}
+.two_column .dis_list img:last-child {
+	width: 90%;
+	margin: 0% 5% 5% 5%;
+}
+.two_column .dis_list img:first-child {
+	width: 90%;
+	margin: 15% 5% 5% 5%;
+	vertical-align: bottom
+}
+.longhit_column {
+	width: 100%;
+	margin-bottom: 4%;
+}
+.longhit_column li {
+	margin-right:2%;
+	float: left;
+	width: 31%;
+	border:1px solid #aaaaaa;
+	box-sizing: border-box;
+}
+.longhit_column li:first-child {
+	margin-left: 1%;
+}
+.longhit_column li:last-child {
+	margin-right: 0%;
+}
+.longhit_column li a img {
+	width: 96%;
+	vertical-align: bottom;
+	margin:3% 2% 0% 2%;
+}
+#must_pc_wrapper .longhit_category {
+	display: block;
+	padding:3% 2% 3% 2%;
+	text-align:center;
+	font-size: 18px;
+	font-weight: bold;
+	color: #fff;
+	background-color: #aaaaaa;
+}
+#must_wrapper .longhit_category {
+	display: block;
+	padding:3% 2% 3% 2%;
+	text-align:center;
+	font-size: 12px;
+	font-weight: bold;
+	color: #fff;
+	background-color: #aaaaaa;
+}
+#must_pc_wrapper .longhit_price {
+	display: block;
+	margin:5% 2% 3% 2%;
+	text-align: right;
+	font-size: 24px;
+	font-weight: bold;
+	color: #f94466;
+}
+#must_wrapper .longhit_price {
+	display: block;
+	margin:5% 2% 3% 2%;
+	text-align: right;
+	font-size: 16px;
+	font-weight: bold;
+	color: #f94466;
+	letter-spacing: -1
+}
+.longhit_price span {
+	font-size: 70%;
+}
+.column_end {
+	margin-bottom: 15%!important;
+}
+/*　week end */
+.day_headline {
+	width: 100%;
+	margin-bottom: 2%
+}
+.timesale_column a img {
+	vertical-align: bottom;
+}
+/*newitem*/
+
+#new_pc_wrapper {
+	margin:0%;
+	width: 730px;
+	letter-spacing: 1px;
+	font-family:'Lucida Grande',  'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3',  Meiryo, メイリオ, sans-serif;
+}
+#new_wrapper {
+	letter-spacing: 1px;
+	font-family:'Lucida Grande',  'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3',  Meiryo, メイリオ, sans-serif;
+}
+#summer_title {
+	margin-bottom: 4%;
+	width:100%;
+}
+.summer_item {
+	display: block;
+	padding: 1% 2%;
+	font-size: 14px;
+	background-color:#530981;
+	color: #fff;
+	margin-bottom: 3%;
+	text-align: center;
+}
+
+.newitem_day1 {
+	display: block;
+	padding: 1% 2%;
+	font-size: 14px;
+	background-color: #3EE87F;
+	color: #fff;
+	margin-bottom: 3%;
+}
+
+
+.newitem_day2 {
+	display: block;
+	padding: 1% 2%;
+	font-size: 14px;
+	background-color: #FF6600;
+	color: #fff;
+	margin-bottom: 3%;
+}
+
+
+.item_ul {
+	margin-bottom: 5%;
+}
+.item_ul_last {
+	margin-bottom: 8%;
+}
+.item_list {
+	float: left;
+	width: 31%;
+	margin-right: 2%;
+}
+.item_list a {
+	font-size: 11px;
+	color: #999;
+	display: block;
+	text-align: center;
+}
+.item_list:first-child {
+	margin-left: 0%;
+}
+.item_list:last-child {
+	margin:0;
+}
+.item_list img {
+	width: 100%;
+	vertical-align: bottom;
+	margin-bottom: 2%;
+}
+#new_pc_wrapper .new_headline, #new_wrapper .new_headline {
+	display: block;
+	padding: 1% 2%;
+	color: #333;
+	text-align: center;
+	font-weight: bold;
+	/*border: 1px solid #333;*/
+  margin-bottom:3%;/*background-color: #fb5bb3;*/
+}
+#new_wrapper .new_headline {
+	font-size: 12px;
+}
+#new_pc_wrapper .new_headline {
+	font-size: 20px;
+}
+.new_headline span {
+	color: #861C1C;
+}
+#new_pc_wrapper .search_more, #new_wrapper .search_more {
+	background: #ff6633;
+	margin: 5% auto 7%;
+	padding: 1% 2%;
+	text-align: center;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+#new_pc_wrapper .search_more {
+	font-size: 14px;
+	width: 40%;
+}
+#new_wrapper .search_more {
+	font-size: 10px;
+	width: 60%;
+}
+.search_more a {
+	display: block;
+	padding: 3% 0;
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+}
+.two_column .time_list {
+	float: left;
+	width: 49%;
+	list-style: none;
+}
+.two_column .time_list:first-child {
+	margin-right: 2%;
+}
+.two_column .time_list img {
+	width: 100%;
+}
+/* time sale */
+
+.time_title {
+	text-align: center;
+	margin-bottom:3%;
+}
+.column_end2 {
+	margin-bottom: 8%!important;
+}
+.two_column2 {
+	padding: 0;
+	width: 100%;
+	margin-bottom: 3%;
+}
+.two_column2 .main_list {
+	float: left;
+	width: 50%;
+	list-style: none;
+}
+.two_column2 .dis_list {
+	float: left;
+	width: 50%;
+	list-style: none;
+}
+/* Super Sale */
+
+div.point_title {
+	margin-bottom: 3%;
+	width: 100%;
+	text-align: center;
+}
+ul.future {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+ul.future li {
+	width: 48%;
+	margin: 1%;
+	padding: 0;
+	float: left;
+}
+ul.future li img {
+	vertical-align: middle;
+}
+div.block_title {
+	margin-top: 10%;
+	margin-bottom: 3%;
+	width: 100%;
+	text-align: center;
+}
+ul.timesale {
+	width: 100%;
+	margin: 0 0 7% 0;
+	padding: 0;
+	list-style: none;
+}
+ul.timesale li {
+	width: 48%;
+	margin: 1%;
+	padding: 0;
+	float: left;
+}
+ul.timesale li img {
+	vertical-align: middle;
+}
+.three_column {
+	padding: 0;
+	width: 100%;
+	margin-bottom: 3%;
+}
+.three_column .main_list {
+	background-color: #ffffff;
+	float: left;
+	width: 31%;
+	list-style: none;
+	box-sizing: border-box;
+	border: 4px solid #eea942;
+	margin-left: 2%;
+}
+.three_column .main_list:first-child {
+}
+.three_column .main_list a img:first-child {
+	margin: 5% 5% 5% 5%;
+}
+.three_column .main_list a img:last-child {
+	margin: 0% 5% 5% 5%;
+}
+.three_column .main_list a img {
+	width: 90%;
+	vertical-align: bottom;
+}
+.pb50 .three_column .main_list {
+	border-color: #780443;
+}
+/* 送料無料ページ 150318 */
+
+div.main_one_column.fc {
+	margin-bottom: 7%;
+}
+
+.two_column .fc_list {
+	background-color: #ffffff;
+	float: left;
+	width: 49%;
+	list-style: none;
+	box-sizing: border-box;
+	border: 4px solid #dd3600;
+	text-align: center;
+}
+.two_column .fc_list:last-child {
+	margin-left: 2%;
+}
+.two_column .fc_list a img {
+
+	width: 90%;
+}
+.three_column .fc_list {
+	padding-top: 2%;
+	background-color: #ffffff;
+	float: left;
+	width: 32%;
+	list-style: none;
+	box-sizing: border-box;
+	border: 4px solid #eea942;
+	text-align: center;
+}
+.three_column .fc_list:first-child {
+	margin-right: 2%;
+}
+.three_column .fc_list:last-child {
+	margin-left: 2%;
+}
+.three_column .fc_list a img {
+	width: 90%;
+}
+.fc_tit_more {
+	display: block;
+	padding: 2%;
+	font-size: 1.5em;
+	background-color: #333;
+	color: #fff;
+	margin-top: 10%;
+	margin-bottom: 3%;
+	text-align: center;
+}
+div.btn_more {
+	margin: 7% 0;
+	width: 100%;
+	text-align: center;
+}
+
+div.btn_more a:hover img {
+	opacity:0.6;
+	filter:alpha(opacity=60);
+	-ms-filter: "alpha( opacity=60 )";
+}
+
+
+
+</style>
+
+
+</head>
+<body>
+<div id="new_pc_wrapper">
+
+  <div id="summer_title"><img src="https://www.rakuten.ne.jp/gold/smartforyou/site/new_item/gohisozai_naka171107.jpg" width="100%" alt="SALE&POINT UP"></div>
+
+  <div class="summer_item">ANIMAL DESIGN COLLECTION</div>
+  <div class="new_headline"><span>ANIMAL DESIGN </span>手帳形ダイアリー＆ケース</div>
+  <ul class="clearfix item_ul">
+    <li class="item_list"><a href="https://search.rakuten.co.jp/search/inshop-mall?f=1&v=3&sid=280427&uwd=1&s=1&p=1&sitem=dsp01-09&st=A&nitem=&min=&max=" target="_top"><img src="https://www.rakuten.ne.jp/gold/smartforyou/site/new_item/gohi_01.jpg" alt="">python Leather Flip Cover</a></li>
+    <li class="item_list"><a href="https://search.rakuten.co.jp/search/inshop-mall?f=1&v=3&sid=280427&uwd=1&s=1&p=1&sitem=dcs01&st=A&nitem=&min=&max=" target="_top"><img src="https://www.rakuten.ne.jp/gold/smartforyou/site/new_item/gohi_02.jpg" alt="">Crocdike Diary Case</a></li>
+    <li class="item_list"><a href="https://search.rakuten.co.jp/search/inshop-mall?f=1&v=3&sid=280427&uwd=1&s=1&p=1&sitem=ds01&st=A&nitem=&min=&max=" target="_top"><img src="https://www.rakuten.ne.jp/gold/smartforyou/site/new_item/gohi_03.jpg" alt="">Snake ダイアリー</a></li>
+       <li class="item_list"><a href="https://search.rakuten.co.jp/search/inshop-mall?f=1&v=3&sid=280427&uwd=1&s=1&p=1&sitem=dc01-4&st=A&nitem=&min=&max=" target="_top"><img src="https://www.rakuten.ne.jp/gold/smartforyou/site/new_item/gohi_04.jpg" alt="">Crocodile ダイアリー</a></li>       
+       <li class="item_list"><a href="https://search.rakuten.co.jp/search/inshop-mall?f=1&v=3&sid=280427&uwd=1&s=1&p=1&sitem=DOS&st=A&nitem=&min=&max=" target="_top"><img src="https://www.rakuten.ne.jp/gold/smartforyou/site/new_item/gohi_05.jpg" alt="">Ostrichi ダイアリー</a></li>
+       
+       
+        <li class="item_list"><a href="https://search.rakuten.co.jp/search/inshop-mall/diel02/-/f.1-p.1-s.1-sf.0-sid.280427-st.A-v.3" target="_top"><img src="https://www.rakuten.ne.jp/gold/smartforyou/site/new_item/gohi_06.jpg" alt="">Enamel Leopard ダイアリー</a></li>       
+   
+       
+                
+       
+    <li class="item_list"><a href="https://search.rakuten.co.jp/search/inshop-mall/dieltl/-/f.1-p.1-s.1-sf.0-sid.280427-st.A-v.3" target="_top"><img src="https://www.rakuten.ne.jp/gold/smartforyou/site/new_item/gohi_08.jpg" alt="">Triangle Enamel Leopard ダイアリー</a></li>       
+          
+      
+              <li class="item_list"><a href="https://search.rakuten.co.jp/search/inshop-mall?f=1&v=3&sid=280427&uwd=1&s=1&p=1&sitem=dstl&st=A&nitem=&min=&max=" target="_top"><img src="https://www.rakuten.ne.jp/gold/smartforyou/site/new_item/gohi_09.jpg" alt="">Triangle snake Beaute Flip Cover</a></li>      
+        
+           
+           <li class="item_list"><a href="https://search.rakuten.co.jp/search/inshop-mall?f=1&v=3&sid=280427&uwd=1&s=1&p=1&sitem=diwc01-03&st=A&nitem=&min=&max=" target="_top"><img src="https://www.rakuten.ne.jp/gold/smartforyou/site/new_item/gohi_07.jpg" alt="">Crocodile ダイアリー</a></li>
+           
+                      
+                      
+        <li class="item_list"><a href="https://search.rakuten.co.jp/search/inshop-mall/DSL01/-/sid.280427-st.A" target="_top"><img src="https://www.rakuten.ne.jp/gold/smartforyou/site/new_item/gohi_12.jpg" alt="">snake 柄 Flip Cover</a></li>
+               
+       
+        
+               
+    
+  </ul>
+  
+
+ 
+  <div class="search_more"><a href="https://item.rakuten.co.jp/smartforyou/c/0000000342/" target="_top">手帳形ダイアリーもっと見る</a></div>
+ 
+  
+</div>
+<script type="text/javascript" charset="EUC-JP" src="https://a.ichiba.jp.rakuten-static.com/com/js/d/pa/pa2.min.js"></script></body>
+</html>

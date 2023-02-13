@@ -1,0 +1,378 @@
+/*- 2.0.5 -*/
+
+@charset "EUC-JP";
+
+/* external shop parts  */
+#rakutenLimitedId_searchEngineExtshopParts * {
+ background: none no-repeat none fixed left top !important;
+ border: none !important;
+ margin: 0 !important;
+ padding:0 !important;
+ list-style: none none !important;
+ list-style-type: none !important;
+ font-size: 10pt !important;
+ font-style: normal !important;
+ font-variant: normal !important;
+ font-weight: normal !important;
+ line-height: 1 !important;
+ font-family: "£Í£Ó £Ð¥´¥·¥Ã¥¯", sans-serif !important;
+ quotes: none !important;
+ counter-reset: none !important;
+ counter-increment: none !important;
+ content: normal !important;
+ border-collapse: separate !important;
+ border-spacing: 0 !important;
+ box-sizing: content-box !important;
+ outline: none !important;
+ overflow: hidden !important;
+ float: none !important;
+ table-layout: auto !important;
+ letter-spacing: normal !important;
+ z-index: auto !important;
+ color: #000000 !important;
+ cursor: auto !important;
+ caption-side: top !important;
+ clear: none !important;
+ clip: auto !important;
+ text-align: left !important;
+ text-decoration: none !important;
+ text-indent: 0 !important;
+ text-transform: none !important;
+ direction: ltr !important;
+ empty-cells: show !important;
+ unicode-bidi: normal !important;
+ vertical-align: auto !important;
+ visibility: visible !important;
+ white-space: normal !important;
+ word-spacing: normal !important;
+ position: static !important;
+ max-height: none !important;
+ max-width: 100% !important;
+ min-height: 0 !important;
+ min-width: 0 !important;
+ left: auto !important;
+ right: auto !important;
+ top: auto !important;
+ bottom: auto !important;
+ height: auto !important;
+ width: auto !important;
+ opacity: 1;
+ /* for ie */
+ _zoom: 1 !important;
+ overflow-x: visible !important;
+ overflow-y: visible !important;
+ text-autospace: none !important;
+ text-justify: auto !important;
+ text-underline-position: below !important;
+ word-break: normal !important;
+ word-wrap: normal !important;
+ writing-mode: lr-tb !important;
+ layout-grid: none !important;
+ ime-mode: auto !important;
+ line-break: normal !important;
+ ruby-align: auto !important;
+ ruby-overhang: auto !important;
+ ruby-position: inline !important;
+ background-position-x: left !important;
+ background-position-y: top !important;
+ behavior: none !important;
+ /* css3 */
+ background-clip: border-box !important;
+ background-origin: padding-box  !important;
+ background-size: auto  !important;
+ border-radius: 0  !important;
+ border-image: none 100% 1 0 stretch !important;
+ box-decoration-break: slice !important;
+ box-shadow: none !important;
+ transform: none  !important;
+ transform-origin: 50% 50% !important;
+ transform-style: flat !important;
+ perspective: none !important;
+ box-orient: inline-axis !important;
+ box-direction: normal !important;
+ box-ordinal-group: 1 !important;
+ box-align: stretch !important;
+ box-flex: 0.0 !important;
+ box-flex-group: 1 !important;
+ box-pack: start !important;
+ box-lines: single !important;
+ columns: auto auto !important;
+ column-gap: normal !important;
+ column-rule: medium none #FFFFFF !important;
+ break-after: auto !important;
+ break-before: auto !important;
+ break-inside: auto  !important;
+ column-span: 1  !important;
+ column-fill: balance !important;
+ word-break: normal !important;
+ text-wrap: normal !important;
+ word-wrap: normal !important;
+ text-justify: auto !important;
+ text-shadow: none !important;
+ ruby-position: before !important;
+ ruby-align: auto !important;
+ ruby-overhang: none !important;
+ ruby-span: none !important;
+ font-size-adjust: none !important;
+ font-stretch: normal !important;
+ -moz-box-sizing: content-box !important;
+}
+#rakutenLimitedId_searchEngineExtshopParts div {
+ display: block !important;
+}
+
+#rakutenLimitedId_searchEngineExtshopParts h2 {
+ display: block !important;
+}
+
+#rakutenLimitedId_searchEngineExtshopParts img {
+ display: block !important;
+}
+
+#rakutenLimitedId_searchEngineExtshopParts ul {
+ display: block !important;
+}
+
+#rakutenLimitedId_searchEngineExtshopParts li {
+ display: block !important;
+}
+
+#rakutenLimitedId_searchEngineExtshopParts a {
+ display: inline !important;
+ cursor: pointer !important;
+}
+
+#rakutenLimitedId_searchEngineExtshopParts a img {
+ cursor: pointer !important;
+}
+
+#rakutenHeaderTabletExtPartsSpace {
+ position: relative !important;
+ height: 190 !important;
+ _height: 250 !important; /* IE */
+ display: none;
+}
+
+#rakutenLimitedId_searchEngineExtshopParts {
+ position: absolute !important;
+ left: 0 !important;
+ width: 100% !important;
+ margin-top: 0 !important;
+ z-index: 2147483640 !important;
+ border-bottom: 1px solid #BF0000 !important;
+ background-color: white !important;
+ overflow: hidden !important;
+}
+
+#rakutenLimitedId_searchEngineExtshopParts div.searchEngineExtpartsHeadline {
+ background: none repeat scroll 0 0 #FFFFFF !important;
+ color: #BF0000 !important;
+ position: relative !important;
+ padding: 6px 10px 5px 10px !important;
+ border-color: white !important;
+}
+
+#rakutenLimitedId_searchEngineExtshopParts div.searchEngineExtpartsHeadline div {
+ background: none repeat scroll 0 0 #FFFFFF !important;
+ float: left !important;
+}
+
+#rakutenLimitedId_searchEngineExtshopParts div.searchEngineExtpartsHeadline .titleH2{
+ background: none repeat scroll 0 0 #FFFFFF !important;
+ font-weight: bold !important;
+ color: #BF0000 !important;
+ line-height: 1.5 !important;
+ min-width: 120 !important;
+ white-space: nowrap !important;
+}
+
+#rakutenLimitedId_searchEngineExtshopParts div.searchEngineExtpartsHeadline #searchEngineExtpartsDetailLink {
+ background: none repeat scroll 0 0 #FFFFFF !important;
+ position: relative !important;
+ padding-left: 20 !important;
+}
+
+#rakutenLimitedId_searchEngineExtshopParts div.searchEngineExtpartsHeadline #searchEngineExtpartsDetailLink * {
+ background: none repeat scroll 0 0 #FFFFFF !important;
+ color: #1C53A5 !important;
+ font-weight: bold !important;
+ line-height: 1.5 !important;
+}
+
+#rakutenLimitedId_searchEngineExtshopParts div.searchEngineExtpartsBody {
+ background: none repeat scroll 0 0 #FFFFFF !important;
+ padding: 0px 10px 0px 10px !important;
+ border-color: white !important;
+}
+
+#rakutenLimitedId_searchEngineExtshopParts #searchEngineExtpartsBodyInline {
+ margin: 0 0 0 0 !important;
+ position: relative !important;
+ _zoom: 1 !important;
+ width: 100% !important;
+ clear: both !important;
+}
+
+#rakutenLimitedId_searchEngineExtshopParts #searchEngineExtpartsBodyInline .searchEngineExtpartsRecoCont {
+ padding: 2px 0 !important;
+ clear: both !important;
+ overflow: hidden !important;
+ _zoom: 1 !important;
+ position: relative !important;
+}
+
+#rakutenLimitedId_searchEngineExtshopParts #searchEngineExtpartsBodyInline .searchEngineExtpartsRecoCont p {
+  padding-top: 2px !important;
+  text-align: left !important;
+  font-weight: bold !important;
+}
+
+#rakutenLimitedId_searchEngineExtshopParts #searchEngineExtpartsBodyInline .searchEngineExtpartsRecoCont .apiBtLeft {
+  background-color: white !important;
+  padding: 20px 10px 0 0 !important;
+  position: absolute !important;
+  float: left !important;
+  top: 0 !important;
+  left: 0 !important;
+  z-index: 5 !important;
+  height: 130px !important;
+  width: 15 !important;
+}
+
+#rakutenLimitedId_searchEngineExtshopParts #searchEngineExtpartsBodyInline .searchEngineExtpartsRecoCont .apiBtLeft img {
+ padding: 10 0 0 0 !important;
+ width: 15 !important;
+ _margin-top: 25 !important; /* IE6 */
+ cursor: pointer !important;
+}
+
+#rakutenLimitedId_searchEngineExtshopPartsk #searchEngineExtpartsBodyInline .searchEngineExtpartsRecoCont .apiBtLeft a {
+ outline: none !important;
+ display: none !important;
+}
+
+#rakutenLimitedId_searchEngineExtshopParts #searchEngineExtpartsBodyInline .searchEngineExtpartsRecoCont .apiBtRight {
+ padding: 10px 0 0 0 !important;
+ position: absolute !important;
+ float: right !important;
+ top: 20px !important;
+ right: 0 !important;
+ width: 15px !important;
+ z-index: 50 !important;
+}
+
+#rakutenLimitedId_searchEngineExtshopParts #searchEngineExtpartsBodyInline .searchEngineExtpartsRecoCont .apiBtRight a {
+ display: none !important;
+}
+
+#rakutenLimitedId_searchEngineExtshopParts #searchEngineExtpartsBodyInline .searchEngineExtpartsRecoCont .apiBtRight img {
+ cursor: pointer !important;
+}
+
+#rakutenLimitedId_searchEngineExtshopParts div.searchEngineExtPtBlock {
+ height: 160px !important;
+ margin-right: -36px !important; /*Width of left+right -1px*/
+ width: 100% !important;
+ overflow: hidden !important;
+ _zoom: 1 !important;
+ background-color: #FFFFFF !important;
+}
+
+#rakutenLimitedId_searchEngineExtshopParts .searchEngineExtPtBlock .searchEngineExtPtdisplay {
+ position: relative !important;
+ margin-left: 0px !important;
+ margin-right: 36px !important;  /*Width of left+right -1px*/
+}
+
+#rakutenLimitedId_searchEngineExtshopParts .searchEngineExtPtRecoBlock .searchEngineExtPtdisplay {
+ left: 18px !important;
+}
+
+#rakutenLimitedId_searchEngineExtshopParts .searchEngineExtPtContSpr {
+ /* background: url(http://a.ichiba.jp.rakuten-static.com/com/img/home/200809/api/dot2.gif) repeat-y left top !important; */
+ height: 180px !important;
+}
+
+#rakutenLimitedId_searchEngineExtshopParts #searchEngineExtpartsBodyInline .searchEngineExtpartsRecoCont ul {
+ padding: 0px 8px 0px 8px !important;
+ display: block !important;
+ position: relative !important;
+ margin:0 auto !important;
+ clear: both !important;
+ _padding-left: 14 !important; /* IE6 */
+ _margin: 0 0 0 0 !important; /* IE6 */
+}
+
+#rakutenLimitedId_searchEngineExtshopParts #searchEngineExtpartsBodyInline .searchEngineExtpartsRecoCont ul li {
+ line-height: 1.2em !important;
+ background: none !important;
+}
+
+#rakutenLimitedId_searchEngineExtshopParts #searchEngineExtpartsBodyInline .searchEngineExtpartsRecoCont ul li img {
+ border-style: none !important;
+ margin: 0 auto !important;
+}
+
+#rakutenLimitedId_searchEngineExtshopParts #searchEngineExtpartsBodyInline .searchEngineExtpartsRecoCont ul li.extPtRank {
+ color: #BF0000 !important;
+ font-weight: bold !important;
+ text-align: center !important;
+}
+	
+#rakutenLimitedId_searchEngineExtshopParts #searchEngineExtpartsBodyInline .searchEngineExtpartsRecoCont ul li.extPtThumb {
+ width: 80px !important;
+ height: 80px !important;
+ padding-bottom: 10px !important;
+ text-align: center !important;
+ margin: 0 auto !important;
+ _margin-left: 7px !important /* TODO */
+}
+
+#rakutenLimitedId_searchEngineExtshopParts #searchEngineExtpartsBodyInline .searchEngineExtpartsRecoCont ul li.extPtName {
+ height: 30px !important;
+ margin: 0 auto !important;
+ word-break: break-all !important; /*  */
+ word-wrap: break-word !important; /* */
+}
+
+#rakutenLimitedId_searchEngineExtshopParts #searchEngineExtpartsBodyInline .searchEngineExtpartsRecoCont ul li.extPtName a {
+ color:#1D54A7 !important;
+ text-decoration:none !important;
+ word-wrap: break-word !important;
+ word-break: break-all !important; /*  */
+ word-wrap: break-word !important; /* */
+ _line-height: 1.2 !important; /* TODO */
+}
+
+#rakutenLimitedId_searchEngineExtshopParts #searchEngineExtpartsBodyInline .searchEngineExtpartsRecoCont ul li.extPtName a:hover {
+ color:#C00000 !important;
+ text-decoration: underline !important;
+}
+
+#rakutenLimitedId_searchEngineExtshopParts #searchEngineExtpartsBodyInline .searchEngineExtpartsRecoCont ul li.extPtPrice {
+ margin: 0 auto !important;
+ color: #BF0000 !important;
+ font-weight: bold !important;
+ text-align: right !important;
+ white-space: nowrap !important;
+}
+
+#rakutenLimitedId_searchEngineExtshopParts #searchEngineExtpartsBodyInline .searchEngineExtpartsRecoCont ul li.extPtDelivery {
+ margin: 0 auto !important;
+ text-align: right !important;
+}
+
+#rakutenLimitedId_searchEngineExtshopParts #searchEngineExtpartsAlteredContents {
+ height: 175px !important;
+ position: relative !important;
+ text-align: center !important;
+ top: 45px !important;
+}
+
+#rakutenLimitedId_searchEngineExtshopParts #searchEngineExtpartsLoading {
+ display: none !important;
+ height: 175px !important;
+ position: relative !important;
+ text-align: center !important;
+ top: 45px !important;
+}

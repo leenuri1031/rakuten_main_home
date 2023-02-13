@@ -1,0 +1,70 @@
+/*gm 検索*/
+
+#gm li.search {
+    background-image: url(../img/common_bg9215.png?time=170131);
+    background-position: right -178px;
+    width: 20%;
+}
+#gm li, #gm li.search {
+    background-image: url(../img/common_bg9215.png?time=170131);
+    background-position: 0px -70px;
+    display: block;
+    float: left;
+    height: 36px;
+}
+#gm .search_button {
+    border: 0;
+    background-image: url(../img/common_bg9215.png?time=170131);
+    background-position: left -34px;
+    padding-top: 36px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 0px;
+    width: 34px;
+    cursor: pointer;
+}
+#gm li.search .txt_box {
+    background-image: url(../img/common_bg9215.png?time=170131);
+    background-position: 0px -214px;
+    margin: 0 10px 0 0;
+    padding: 5px 0 5px 39px;
+    position: relative;
+    height: 26px;
+    overflow: hidden;
+}
+
+/*スマホトップバー*/
+@media screen and (max-width: 600px) {
+	#sp_nav h2 {
+		background-image: url(../img/menu_icon.png);
+		background-size: 26px 19px;
+		background-position: 13px 7px;
+		background-repeat: no-repeat;
+		display: block;
+		margin: 4px 0;
+		padding-left: 60px;
+		height: 34px;
+		width: 0;
+		cursor: pointer;
+		overflow: hidden;
+	}
+	.header_cart .cart {
+		border: 0;
+		background-image: url(../img/cart_icon_bk9215.png?time=170131);
+		background-size: 26px 19px;
+		background-position: 5px 7px;
+		margin: 0;
+		padding: 0;
+		height: auto;
+		background-size:24px;
+		background-position: 3px 8px;
+		width:30px;
+		margin: 4px 0;
+		height: 34px;
+		line-height: 82px;
+		overflow: hidden;
+	}
+}
+
+

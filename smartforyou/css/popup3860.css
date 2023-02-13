@@ -1,0 +1,68 @@
+#sobPopupBanner {
+    position: fixed;
+    top: 35%;
+    left: 10%;
+    width: 80%;
+    z-index: 2147483647;
+    height: 0;
+    opacity: 0;
+    -webkit-transition: opacity .5s;
+    -moz-transition: opacity .5s;
+    -ms-transition: opacity .5s;
+    -o-transition: opacity .5s;
+    transition: opacity .5s;
+}
+#sobPopupBanner > * {
+    display: none;
+}
+#sobPopupBanner.sob__fade {
+    height: auto;
+    opacity: 1;
+}
+#sobPopupBanner.sob__fade > * {
+    display: block;
+}
+
+@media screen and (orientation: landscape) {
+    #sobPopupBanner {
+        top: 15%;
+        left: 20%;
+        width: 60%;
+    }
+}
+
+#sobPopupBanner.sob__fade a {
+    display: block;
+    text-align: center;
+}
+#sobPopupBanner a img {
+    width: 100%;
+    max-width: 100%;
+}
+.sob-popup-close-btn {
+    position: absolute;
+    display: block;
+    right: -15px;
+    top: -15px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    background-color: #333;
+    color: #fff;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: bold;
+    border: 2px solid #fff;
+}
+.sob-popup-close-txt {
+    display: block;
+    padding: 10px 0;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: underline;
+    background-color: #000;
+}

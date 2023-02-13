@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+
+#fguide {
+    margin: 10px 0 0;
+    text-align: center;
+}
+#fguide li {
+    border-left: 1px solid #999;
+    display: inline;
+    font-size: 12px;
+    line-height: 1.6em;
+    list-style-type: none;
+    margin-right: 3px;
+    padding-left: 7px;
+}
+#fguide li a {
+    color: #555;
+}
+#fguide li.guideLeft {
+    border-left: 0 none;
+    padding-left: 0;
+}

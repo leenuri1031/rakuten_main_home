@@ -1,0 +1,596 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+<style type="text/css">
+BODY
+A:link { TEXT-DECORATION: none;}
+A:visited { TEXT-DECORATION: none;}
+A:active { TEXT-DECORATION: none;}
+A:hover { TEXT-DECORATION: none;}
+
+
+th.sch_month_sunday{
+	background-color: #333333;
+	height:18pt;
+	text-align:center;
+	color: #ffffff;
+	font-size:10px
+}
+th.sch_month_saturday{
+	background-color: #333333;
+	height:18pt;
+	text-align:center;
+	color: #ffffff;
+	font-size:10px
+}
+th.sch_month_weekday{
+	background-color: #666666;
+	height:18pt;
+	text-align:center;
+	color: #ffffff;
+	font-size:10px
+}
+
+</style>
+<title></title>
+
+
+
+
+<script type="text/javascript" language="JavaScript" />
+
+ //**********************************************************************
+//* フ?イル名： calendar.js
+//* 説明： カレン??の出力JavaScript
+//*????calendarから呼び出される関数：getCalendarList（該当するカレン??情報）
+//*、	? isHoliday（祝日かどうかを判別する）、setStyle(該当するス?イルを設定する)
+//* Copyright(c)2009年2月13日
+//*
+//* 作成者： 崔宙瑚
+//**********************************************************************
+
+ SUNDAY = 0;//日曜日
+ MONDAY = 1;//月曜日
+ SATURDAY = 6;//土曜日
+ MONTH_MAX = 12; //12月
+ DAY_MAX_ARRAY = new Array(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31); //末日
+ FEBRUARY  = 1; //2月
+ LEAF_YEAR_100 = 100; //100年
+ LEAF_YEAR_400 = 400; //400年
+ LEAF_YEAR_INTERVAL = 4; //4年
+ WEEKDAYS  = 7; //1週間
+ HOLIDAYS_ARRAY = [["1","A"],["11"],["B"],["29"],["3","4","5"],[],["C"],[],["C","23"],["A"],["3","23"],["23","30","31"]]; //祝日
+ HOLIDAY_STYLE = 0; //祝日
+ WEEKDAY_STYLE = 1; //平日
+ SUNDAY_STYLE = 2; //日曜日
+ SATURDAY_STYLE = 3; //土曜日
+ OTHER_MONTH_STYLE = 4; //?示する月ではない
+ TODAY_STYLE = 5; //今日
+ 
+//**********************************************************************
+//* 関数名：getCalendarList
+//* 引数：yyyy, mm 
+//* 説明：年と月を入力されると当月のDateObjectを配列?式に返却する
+//*		?例）入力(2008,5)：2008年5月
+//*           出力：2008年5月1日?31日までのデ??Object配列
+//**********************************************************************
+	function getCalendarList(yyyy, mm) {
+		var _year = yyyy;
+		var _mm = mm - 1;
+		var calendarArray = new Array();
+		//入力日付の1日
+		var inputStartDt = new Date(_year, _mm, 1);
+		var startDt;
+		//入力されたデ??の曜日を取得
+	 	var yobi = inputStartDt.getDay();
+	 	//入力されたデ??の月の1日が日曜日ではない場合
+	 	if (yobi != SUNDAY) {
+	 		var zenGetuMaxDay = 0;
+	 		//1月の場合は12月の末日を求める
+	 		if (0 == inputStartDt.getMonth()) {
+				zenGetuMaxDay = _getEndDay(_year - 1, MONTH_MAX - 1);
+				startDt = new Date(_year - 1, MONTH_MAX - 1, zenGetuMaxDay - yobi + 1);
+			}
+			//1月の以外は1ヶ月前の末日を求める
+			if (0 != inputStartDt.getMonth()) {		
+				zenGetuMaxDay = _getEndDay(inputStartDt.getYear(), inputStartDt.getMonth() - 1);
+				startDt = new Date(_year, inputStartDt.getMonth() - 1, zenGetuMaxDay - yobi + 1);		
+			}
+			for (var i = startDt.getDate(); i <= zenGetuMaxDay; i++) {
+				var tempDate = new Date(_year, _mm - 1, i);
+				calendarArray.push(tempDate);
+			}
+	 	}
+	 	//当月
+		var touGetuMaxDay = _getEndDay(inputStartDt.getYear(), inputStartDt.getMonth());
+		for (var i = inputStartDt.getDate(); i <= touGetuMaxDay; i++) {
+			calendarArray.push(new Date(_year, _mm, i));
+		}
+		//次月		
+		_mm = _mm + 1;
+		if (_mm == 12) {
+			_year++;
+			_mm = 0;
+		}
+		var nextMonthStartDt = new Date(_year, _mm, 1);
+		var nextMonthDay = nextMonthStartDt.getDay();
+		if (SUNDAY != nextMonthDay) {
+			for (var i = 1;; i++) {
+				var tempDate = new Date( nextMonthStartDt.getYear(), nextMonthStartDt.getMonth(), i);
+				if (tempDate.getDay() == SUNDAY) break;	
+				calendarArray.push(tempDate);
+			}
+		}
+		return calendarArray;
+	 }
+//**********************************************************************
+//* 関数名：_getEndDay
+//* 引数：year, month 
+//* 説明：月末日を返却する
+//*		?例）入力：2008,0=>2008年1月、2008,1=>2008年2月
+//*           出力：2008年1月の末日=>31を返却する
+//**********************************************************************	  
+	 function _getEndDay(year, month) {
+		
+		var endDay = DAY_MAX_ARRAY[month];
+		
+		if (month == FEBRUARY) {
+			if (year % LEAF_YEAR_400 == 0) endDay++;
+			else if (year % LEAF_YEAR_INTERVAL == 0 && year % LEAF_YEAR_100 != 0) endDay++;
+		}
+		return endDay;
+	}
+//**********************************************************************
+//* 関数名：isHoliday
+//* 引数：date
+//* 説明：該当する日付が祝日かどうかを判断する
+//**********************************************************************
+	function isHoliday(date) {
+		if (date.getDay() == SUNDAY) return false;
+			var holidays = _getBusinessHolidays(date.getYear(), date.getMonth() + 1);
+		for (var i in holidays) {
+			var holiday = holidays[i];		
+			if(date.getDate() == holiday.getDate()) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+//**********************************************************************
+//* 関数名：_getBusinessHolidays
+//* 引数：yyyy, mm 
+//* 説明：該当する年月の祝日を返却する
+//**********************************************************************
+	function _getBusinessHolidays(yyyy, mm) {
+	
+		var holidays = HOLIDAYS_ARRAY[mm - 1];
+		var realHoliDays = _getRealHoliDays(yyyy, mm, holidays);
+		_calculateAlternateDay(realHoliDays);
+		return realHoliDays;
+	}
+
+//**********************************************************************
+//* 関数名：_getRealHoliDays
+//* 引数：yyyy, mm ,holidays
+//* 説明：該当する年月の祝日をデ??Objectを求める
+//**********************************************************************	
+	function _getRealHoliDays(yyyy, mm, holidays) {
+		var realHoliDays = new Array();
+		for (var i in holidays) {
+			var holiday = holidays[i];
+			//パ?ン?A：該当する月の2週目の月曜日が祝日
+			if ("A" == holiday) {
+				realHoliDays.push(getSiteiWeekDay(yyyy, mm, 2, MONDAY));
+			//パ?ン?B：春分
+			} else if ("B" == holiday) {
+				realHoliDays.push(new Date(yyyy, mm - 1, _getSpringDay(yyyy)));
+			//パ?ン?C：該当する月の3週目の月曜日が祝日		
+			} else if ("C" == holiday) {
+				realHoliDays.push(getSiteiWeekDay(yyyy, mm, 3, MONDAY));
+			//該当する日が祝日
+			} else {
+				realHoliDays.push(new Date(yyyy, mm - 1, holiday));
+			}
+		}
+		//9月の場合敬老の日と秋分が飛び石連休の場合三連休になる
+		if (mm == 9) {
+			if ((realHoliDays[1].getDate() - realHoliDays[0].getDate()) == 2) {
+				realHoliDays.push(new Date(yyyy, mm - 1, realHoliDays[0].getDate() + 1));
+			}
+		}
+		return realHoliDays;
+	}
+	
+//**********************************************************************
+//* 関数名：_calculateAlternateDays
+//* 引数：realHoliDays
+//* 説明：振替休日を求める
+//**********************************************************************
+	function _calculateAlternateDay(realHoliDays) {
+		for (var i = 0; i < realHoliDays.length; i++) {
+ 			var date = realHoliDays[i];
+ 			//祝日が日曜日の場合次の平日が休みになる
+ 			if (SUNDAY == date.getDay()) {
+ 				var alternateDay = date.getDate() + 1;
+				for (var j = i + 1; j < realHoliDays.length; j++) {
+					var holiDay = realHoliDays[j];
+					if (holiDay.getDate() == alternateDay) {
+						alternateDay++;
+					}
+				}
+				realHoliDays.push(new Date(date.getYear(), date.getMonth(), alternateDay));
+ 			}
+		}
+	}
+
+//**********************************************************************
+//* 関数名：_getBusinessHolidays
+//* 引数：yyyy, mm, num, yobi
+//* 説明：該当する年月のnumだけ経過した曜日のデ??Objectを求める
+//*		?例）入力(2008,5,3,0)：2008年5月の3週目の日曜日
+//*           出力：20080518のデ??Object==>new Date(2008,5,18)
+//**********************************************************************	
+	function getSiteiWeekDay(yyyy, mm, num, yobi) {	
+		var firstDay = new Date(yyyy, mm - 1, 1);
+		var firstDayYobi = firstDay.getDay();
+		var addWeekDays = 0;		
+		if (yobi < firstDayYobi) {
+			addWeekDays = WEEKDAYS;
+		}			
+		var purPoseDay = (WEEKDAYS * (num - 1)) + (yobi + addWeekDays - firstDayYobi) + 1;		
+		return new Date(yyyy, mm - 1, purPoseDay);
+	}
+//**********************************************************************
+//* 関数名：_getSpringDay
+//* 引数：yyyy
+//* 説明：該当する年の春分の日を取得する
+//**********************************************************************	
+	function _getSpringDay(yyyy) {
+		
+		var str_yyyy = new String(yyyy);
+	    var num1 = str_yyyy.substring(2,3);
+	    var num2 = str_yyyy.substring(3,4);	  
+	    var day;  
+		if (num1 % 2 == 0) {	
+			switch (num2) {
+			case "0":
+			case "1":
+			case "4":
+			case "5":
+			case "8":
+			case "9":
+			 	day = 20;
+			 	break;
+			case "2":
+			case "3":
+			case "6":
+			case "7": 
+				day = 21;
+			 	break;
+			}								
+		} else {			
+			switch (num2) {
+			case "0":
+			case "1":
+			case "4":
+			case "5":
+			case "8":
+			case "9":			
+			 	day = 21;
+			 	break;
+			case "2":
+			case "3":
+			case "6":
+			case "7":		 
+				day = 20;
+			 	break;
+			}	 
+		}	
+		return day;
+	}
+//**********************************************************************
+//* 関数名：setStyle
+//* 引数：object, num(HOLIDAY = 0,WEEKDAY = 1,SUNDAY = 2,SATURDAY = 3,OTHER_MONTH = 4)
+//* 説明：ス?イルを指定する
+//**********************************************************************		 
+	function setStyle(object, num) {
+		switch (num) {
+			case HOLIDAY_STYLE:
+				object.style.backgroundColor = "#FCE4F1";
+				object.style.color = "#ff8672";
+				object.style.height = "16pt";
+				object.style.textAlign = "center";
+				object.style.cursor = "default";
+				object.style.fontSize = "10pt";
+				break;
+			case WEEKDAY_STYLE:
+				object.style.backgroundColor = "#FCE4F1";
+				object.style.color = "#7e7e7e";
+				object.style.height = "18pt";
+				object.style.textAlign = "center";
+				object.style.cursor = "default";
+				object.style.fontSize = "10pt";
+				break;
+			case SUNDAY_STYLE:
+				object.style.backgroundColor = "#FCE4F1";
+				object.style.color = "#ff8672";
+				object.style.height = "16pt";
+				object.style.textAlign = "center";
+				object.style.cursor = "default";	
+				object.style.fontSize = "10pt";			
+				break;			
+			case SATURDAY_STYLE:
+				object.style.backgroundColor = "#FCE4F1";
+				object.style.color = "#255f95";
+				object.style.height = "16pt";
+				object.style.textAlign = "center";
+				object.style.cursor = "default";		
+				object.style.fontSize = "10pt";		
+				break;			
+			case OTHER_MONTH_STYLE:
+				object.style.backgroundColor = "#FCE4F1";
+				object.style.color = "#fff";
+				object.style.height = "16pt";
+				object.style.textAlign = "center";
+				object.style.cursor = "default";	
+				object.style.fontSize = "10pt";			
+				break;	
+			case TODAY_STYLE:
+				object.style.backgroundColor = "#666666";
+				object.style.color = "#ffffff";
+				object.style.height = "16pt";
+				object.style.textAlign = "center";
+				object.style.cursor = "pointer";
+				object.style.fontSize = "10pt";
+				break;		
+		}		
+		
+	 }
+
+</script>
+<script type = "text/javascript">
+
+//***************今日日付初期化**********************
+genzaiDt = new Date(); //今日日付を取得
+global_year = genzaiDt.getYear(); //YYYYを取る
+if (global_year < 2000) {
+	global_year = 1900 + global_year;
+}
+global_month = genzaiDt.getMonth() + 1; //MMを取る
+global_date = genzaiDt.getDate(); //DDを取る
+//****************************************************************************
+
+
+//**********************************************************************
+//* 関数名：init
+//* 引数：なし
+//* 説明：初期化
+//**********************************************************************
+	function setValue(target) {
+		if(!window.opener 
+				|| window.opener.closed) {
+			alert( "すでにオ?プンしたウインドウは無くなっています" );
+			window.close();
+			return;
+		}
+ 		var val = global_year + '/' + global_month + '/' + target.innerHTML;
+		window.opener.document.personData.workDate.value = val;
+		window.opener.focus();
+		window.close();
+	}
+
+//**********************************************************************
+//* 関数名：nowDate
+//* 引数：なし
+//* 説明：今日のカレン??を?く
+//**********************************************************************
+	function nowDate() {
+		var main = document.getElementById("main");
+		main.innerHTML = global_year + "年" + " " + global_month + "月";
+		var calendarList = getCalendarList(global_year, global_month);			
+		_drawCalendar(calendarList);
+	}
+//**********************************************************************
+//* 関数名：goPrevMonth
+//* 引数：なし
+//* 説明：?示している日付の前月のカレン??を?く
+//**********************************************************************
+	function goPrevMonth() {
+		global_month--;
+		//年が変わる
+		if (global_month == 0) {
+			global_month = 12;
+			global_year--;
+		}
+		var main = document.getElementById("main");
+		main.innerHTML = global_year + "年" + " " + global_month + "月";
+		var calendarList = getCalendarList(global_year,global_month);
+		_drawCalendar(calendarList);
+	}
+//**********************************************************************
+//* 関数名：goNextMonth
+//* 引数：なし
+//* 説明：?示している日付の前月のカレン??を?く
+//**********************************************************************	
+	function goNextMonth() {
+		global_month++;
+		//年が変わる		
+		if (global_month == 13) {
+			global_month = 1;
+			global_year++;
+		}
+		var main = document.getElementById("main");
+		main.innerHTML = global_year + "年" + " " + global_month + "月";
+		var calendarList = getCalendarList(global_year,global_month);
+		_drawCalendar(calendarList);
+	}
+//**********************************************************************
+//* 関数名：drawCalendar
+//* 引数：calendarList
+//* 説明：calendarListを画面に?示する
+//**********************************************************************		 
+	function _drawCalendar(calendarList) {
+		_clear();
+		var index = 1;	
+		for (var i in calendarList) {
+			var num = "p" + index;
+			var p = document.getElementById(num);
+			var date = calendarList[i];		
+			if (_isOtherMonth(date.getMonth())) {
+				setStyle(p, OTHER_MONTH_STYLE);							
+			} else if (isHoliday(date)) {
+				setStyle(p, HOLIDAY_STYLE);								
+			} else if (SATURDAY == date.getDay()) {
+				setStyle(p, SATURDAY_STYLE);								
+			} else if (SUNDAY == date.getDay()) {
+				setStyle(p, SUNDAY_STYLE);								
+			} else {			
+				setStyle(p, WEEKDAY_STYLE);			
+			}
+			if (_isToday(date)) {
+				setStyle(p, TODAY_STYLE);	
+			}
+			p.innerHTML = date.getDate();
+			index++;
+		}
+	 }	
+//**********************************************************************
+//* 関数名：_isToday
+//* 引数：date
+//* 説明：実行する日かを判断する
+//**********************************************************************	 
+	 function _isToday(date) {		 	
+	 	if (date.getYear() == genzaiDt.getYear() 
+	 		&& date.getMonth() == genzaiDt.getMonth() 
+	 		&& date.getDate() == genzaiDt.getDate()) { 
+	 		return true;
+	 	}
+	 	return false;
+	 }
+//**********************************************************************
+//* 関数名：_isOtherMonth
+//* 引数：month
+//* 説明：?示する月かを判別する
+//**********************************************************************	 
+	  function _isOtherMonth(month) {		 	
+	 	if (global_month != month + 1) { 
+	 		return true;
+	 	}
+	 	return false;
+	 
+	 }
+//**********************************************************************
+//* 関数名：_clear
+//* 引数：無し
+//* 説明：コンテンツを?除する
+//**********************************************************************
+	function _clear() {
+		for (var i = 1; i <= 42; i++) {
+			var num = "p" + i;
+			var p = document.getElementById(num);
+			p.innerHTML = "";
+		}
+	}
+//**********************************************************************
+//* 関数名：_printDate
+//* 引数：calendarList
+//* 説明：Debug用取得したカレン??情報を出力
+//**********************************************************************	
+function _printDate(calendarList) {
+	for (var i in calendarList) {
+		var date = calendarList[i];
+		document.writeln(date.getDate());
+	}	
+	document.writeln("<br>");
+}
+</script>
+</head>
+
+<body onload = "nowDate();">
+<table id = "table" style="BORDER-RIGHT: #b8cbda 1px; BORDER-TOP: #b8cbda 1px; BORDER-LEFT: #b8cbda 1px; BORDER-BOTTOM: #b8cbda 1px" width=177 border=0>
+<tr>
+<td></td>
+<td><a href="" onclick="goPrevMonth(); return false"> <font size=1pt color="#000000"><< </a></td>
+<td colspan="3" align="center" style=" font-size:12px; color:#000000;"><p id = "main"></p></td>
+<td align="right"><a href="" onclick="goNextMonth(); return false"> <font size=1pt color="#000000">>> </a></td>
+<td></td>
+</tr>
+<tr height="4">
+<td></td></tr>
+
+<tr id = "tr">
+<th width='24' class='sch_month_sunday'>Sun</th>
+<th width='24' class='sch_month_weekday'>Mon</th>
+<th width='24' class='sch_month_weekday'>Tue</th>
+<th width='24' class='sch_month_weekday'>Wed</th>
+<th width='24' class='sch_month_weekday'>Thu</th>
+<th width='24' class='sch_month_weekday'>Fri</th>
+<th width='24' class='sch_month_saturday'>Sat</th>
+</tr>
+</table>
+
+<table id = "valueTable">
+<tr>
+<td width='24' id = "p1"></td>
+<td width='24' id = "p2"></td>
+<td width='24' id = "p3"></td>
+<td width='24' id = "p4"></td>
+<td width='24' id = "p5"></td>
+<td width='24' id = "p6"></td>
+<td width='24' id = "p7"></td>
+</tr>
+<tr>
+<td id = "p8"></td>
+<td id = "p9"></td>
+<td id = "p10"></td>
+<td id = "p11"></td>
+<td id = "p12"></td>
+<td id = "p13"></td>
+
+<td id = "p14"></td>
+</tr>
+<tr>
+<td id = "p15"></td>
+<td id = "p16"></td>
+<td id = "p17"></td>
+<td id = "p18"></td>
+<td id = "p19"></td>
+<td id = "p20"></td>
+<td id = "p21"></td>
+</tr>
+<tr>
+<td id = "p22"></td>
+<td id = "p23"></td>
+<td id = "p24"></td>
+<td id = "p25"></td>
+<td id = "p26"></td>
+
+<td id = "p27"></td>
+<td id = "p28"></td>
+</tr>
+<tr>
+<td id = "p29"></td>
+<td id = "p30"></td>
+<td id = "p31"></td>
+<td id = "p32"></td>
+<td id = "p33"></td>
+<td id = "p34"></td>
+<td id = "p35"></td>
+
+</tr>
+<tr>
+<td id = "p36"></td>
+<td id = "p37"></td>
+<td id = "p38"></td>
+
+<td id = "p39"></td>
+<td id = "p40"></td>
+<td id = "p41"></td>
+<td id = "p42"></td>
+
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,20 @@
+
+/*フッタカテゴリ非表示*/
+
+@media screen and (max-width: 600px) {
+	#footer_category_review { display:block; }
+	.footer_category_goods { display:none; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

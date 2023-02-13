@@ -1,0 +1,39 @@
+#DB_tab33 ul, #DB_tab33 li{list-style:none;margin:0;padding:0}
+#DB_tab33 img{border:none;vertical-align:top;}
+
+#DB_tab33 {position:relative; width:760px; height:377px; left:-8px; top: -12px;}
+#DB_tab33 .DB_img{position:relative; width:760px;height:377px;border:0px solid #000000;overflow:hidden}
+#DB_tab33 .DB_img ul{position:relative;}
+#DB_tab33 .DB_img ul li{
+	position: absolute;
+	width: 760px;
+	height: 377px;
+	left: 1;
+}
+
+#DB_tab33 .DB_menu{position:relative;margin-top:5px; height: 93px;}
+#DB_tab33 .DB_menu ul{
+	position: absolute;
+	width: 760px;
+	float: left;
+	top: 2px;
+	left: -1px;
+}
+#DB_tab33 .DB_menu ul li img{width:147px;height:90px;}
+#DB_tab33 .DB_menu ul li{float:left; width:147px; margin-left:5px;}
+
+
+
+
+
+#DB_tab33 .DB_menu .DB_box{
+	position: absolute;
+	top: 0;
+	float: left;
+	margin: 0;
+	padding: 0;
+	width: 142px;
+	height: 85px;
+	border: 5px solid #cc0000;
+	left: 15px;
+}
