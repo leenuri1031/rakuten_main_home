@@ -170,7 +170,7 @@ main{
   @include mixin.container-style(100vw,504px, center, center);
   border-top: 3px solid var.$col-2;
   border-bottom: 3px solid var.$col-2;
-  @include mixin.posi(relative,-10vh);
+  @include mixin.posi(relative,-9vh);
   z-index: 5;
 }
 
@@ -178,12 +178,12 @@ main{
   @include mixin.size(1080px, 100%);
 }
 
-// .slick-track {
-//   @include mixin.size(100%, 100%);
-// }
+.slick-track {
+  @include mixin.size(100%, 100%);
+}
 
 .slide-item {
-  @include mixin.size(1080px, 504px);
+  @include mixin.size(100%, 100%);
   // z-index: 10;
   &>a{
     @include mixin.container-style(100%, 100%, center, center);
@@ -216,7 +216,6 @@ main{
 #right-arrow{
   right: 22%
 }
-
 
 // .slick-arrow{
 //   @include mixin.container-style(5%, 10%, center, center);
