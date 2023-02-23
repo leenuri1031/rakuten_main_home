@@ -318,8 +318,8 @@ main{
     &>div:nth-child(1){
     @include mixin.container-style(95%, 60%, flex-start, center);
     @include mixin.font(1.5rem, 500, var.$col-3);
-
     }
+
     &>div:nth-child(2){
     @include mixin.container-style(95%, 40%, flex-start, center);
     }
@@ -331,26 +331,31 @@ main{
 
   &>div{
     @include mixin.container-style(20%, 100%, space-around, center, column);
+
     &>a{
-      @include mixin.container-style(100%, 100%, space-around, center, column);
+      @include mixin.container-style(100%, 100%, center, center, column);
 
       &>img{
         @include mixin.size(180px,180px);
       }
+
       &>div:nth-child(2){
         @include mixin.container-style(90%, 20%, center, center);
         text-align: center;
+        
       }
       &>div:nth-child(3){
         @include mixin.container-style(90%, 5%, center, center);
         color: var.$col-7;
-        // text-decoration-line: line-through;
+        text-decoration-line: line-through;
+        // border: #2c2c2c solid 1px;
       }
 
-      // &>div:nth-child(4){
-      //   @include mixin.container-style(90%, 5%, center, center);
-      //   color: var.$col-7;
-      // }
+      &>div:nth-child(4){
+        @include mixin.container-style(90%, 5%, center, center);
+        color: var.$col-7;
+        margin-top: 5px;
+      }
     }
   }
 }
@@ -561,7 +566,7 @@ main{
 
 //banner-bot------------------------------------------------
 #banner-bot{
-  @include mixin.container-style(100%, 4%, space-around, center, column);
+  @include mixin.container-style(100%, 12%, space-around, center, column);
   // @include mixin.container-style(100%, 12%, space-around, center, column);
   // @include mixin.container-style(100%, 13%, space-around, center, column); 
   // ---  more banner height
