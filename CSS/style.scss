@@ -530,18 +530,18 @@ main{
         &>div:first-child{
           @include mixin.container-style(40%, 100%, space-around, center);
           color: var.$col-7;
-          // text-decoration-line: line-through;
+          text-decoration-line: line-through;
         }
 
-        // &>div:nth-child(2){
-        //   @include mixin.container-style(10%, 100%, space-around, center);
-        //   color: var.$col-7;
-        // }
+        &>div:nth-child(2){
+          @include mixin.container-style(10%, 100%, space-around, center);
+          color: var.$col-7;
+        }
 
-        // &>div:last-child{
-        //   @include mixin.container-style(40%, 100%, space-around, center);
-        //   color: var.$col-7;
-        // }
+        &>div:last-child{
+          @include mixin.container-style(40%, 100%, space-around, center);
+          color: var.$col-7;
+        }
       }
 
       &>div:nth-child(4){

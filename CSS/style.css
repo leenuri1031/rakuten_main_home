@@ -687,6 +687,25 @@ main > section:first-child {
   align-items: center;
   flex-direction: row;
   color: #B8648E;
+  text-decoration-line: line-through;
+}
+.recommend-item > div > a > div:nth-child(3) > div:nth-child(2) {
+  width: 10%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  color: #B8648E;
+}
+.recommend-item > div > a > div:nth-child(3) > div:last-child {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  color: #B8648E;
 }
 .recommend-item > div > a > div:nth-child(4) {
   width: 90%;
