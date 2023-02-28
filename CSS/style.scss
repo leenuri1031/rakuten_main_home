@@ -561,16 +561,16 @@ main{
 
 //banner-bot------------------------------------------------
 #banner-bot{
-  @include mixin.container-style(100%, 4%, space-around, center, column);
+  @include mixin.container-style(100%, 12%, space-around, center, column);
   // @include mixin.container-style(100%, 12%, space-around, center, column);
   // @include mixin.container-style(100%, 13%, space-around, center, column); 
   // ---  more banner height
   // background-color: aliceblue;
-  &>a{
-    &>img{
-      border: solid 2px #ddd
-    }
-  }
+  // &>a{
+  //   &>img{
+  //     border: solid 2px #ddd
+  //   }
+  // }
 }
 //banner-bot------------------------------------------------
 
