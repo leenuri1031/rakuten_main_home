@@ -285,13 +285,13 @@
     flex-direction: column;
   }
   main > div:first-child > div:nth-child(2) .scroll1 > img {
-    content: url(https://image.rakuten.co.jp/smartforyou/cabinet/09728902/spring_bn_1_pc.jpg);
+    content: url(https://image.rakuten.co.jp/smartforyou/cabinet/09728902/spring_bn_1_pc_2.jpg);
   }
   main > div:first-child > div:nth-child(2) .scroll2 > img {
     content: url(https://image.rakuten.co.jp/smartforyou/cabinet/09728902/spring_bn_2_pc.jpg);
   }
   main > div:first-child > div:nth-child(2) .scroll3 > img {
-    content: url(https://image.rakuten.co.jp/smartforyou/cabinet/09728902/spring_bn_2_pc.jpg);
+    content: url(https://image.rakuten.co.jp/smartforyou/cabinet/09728902/spring_bn_3_pc.jpg);
   }
   main > div:last-child {
     height: 70%;
@@ -328,7 +328,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    border: #000 solid 1px;
+    font-size: 1.2rem;
   }
   footer {
     width: 1080px;

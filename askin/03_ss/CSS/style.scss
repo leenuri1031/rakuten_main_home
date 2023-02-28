@@ -162,10 +162,11 @@ main{
 
 .prod{
   @include mixin.container-style(100%, 33%, space-around, center, column );
+  
 
   &>div:nth-child(1){
     @include mixin.container-style(100%, 10%, flex-start, center);
-    background-color: #ccc;
+    background-color: #DDE4EC;
     padding-left: 1rem;
   }
 
@@ -188,6 +189,8 @@ main{
         &>div:last-child{
           @include mixin.container-style(100px, 18px, center, center);
           // border: #000 solid 1px;
+          font-size: 0.8rem;
+          color: #545454;
         }
       }
 

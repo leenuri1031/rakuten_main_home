@@ -226,7 +226,7 @@ main > div:last-child {
   justify-content: flex-start;
   align-items: center;
   flex-direction: row;
-  background-color: #ccc;
+  background-color: #DDE4EC;
   padding-left: 1rem;
 }
 .prod > div:nth-child(2) {
@@ -265,6 +265,8 @@ main > div:last-child {
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  font-size: 0.8rem;
+  color: #545454;
 }
 
 footer {
