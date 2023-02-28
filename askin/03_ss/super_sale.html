@@ -201,7 +201,7 @@
       <div>
         <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09728902/spring_special.jpg" >
       </div>
-      <div>
+      <div id="scroll_part">
         <div class="scroll1"> 
           <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09728902/spring_bn_1_mb.jpg" >
         </div>
@@ -215,7 +215,7 @@
     </div>
     
     <div id="main-bottom">
-      <div class="prod link1">
+      <div id="link1" class="prod">
         <div>
           トラブルケア
         </div>
@@ -259,7 +259,7 @@
         </div>
       </div>
 
-      <div class="prod link2">
+      <div id="link2" class="prod">
         <div>
           水分ケア
         </div> 
@@ -303,7 +303,7 @@
         </div>
       </div>
 
-      <div class="prod link3">
+      <div id="link3" class="prod">
         <div>
           老廃物ケア
         </div>
@@ -418,8 +418,66 @@
       rawpixel.com
     </div>
   </footer>
-
 </div>
+
+<script>
+  const root = document.getElementById('root');
+  // console.log(root);
+  const scrollPart = document.getElementById('scroll_part');
+  // console.log(scrollPart);
+  // console.dir(scrollPart);
+
+  const scroll1 = scrollPart.childNodes[1];
+  const scroll2 = scrollPart.childNodes[3];
+  const scroll3 = scrollPart.childNodes[5];
+
+  // console.log(scroll1);
+  // console.log(scroll2);
+  // console.log(scroll3);
+
+  // console.dir(scroll1);
+  // console.dir(scroll2);
+  // console.dir(scroll3);
+
+  const scrollArr = [scroll1, scroll2, scroll3];
+  console.log(scrollArr);
+
+  const link1 = document.getElementById('link1'); 
+  const link2 = document.getElementById('link2'); 
+  const link3 = document.getElementById('link3'); 
+
+  // console.dir(link1);
+  // console.dir(link2);
+  // console.dir(link3);
+
+  // console.log(link1.offsetTop);
+  // console.log(link2.offsetTop);
+  // console.log(link3.offsetTop);
+
+  for(let i = 0; i<scrollArr.length; i++){
+    // console.log('hello');
+    // console.log(scrollArr[i]);
+    scrollArr[i].style.cursor='pointer';
+  }
+
+  scroll1.addEventListener('click',()=>{
+    window.scrollTo({left:0, top:link1.offsetTop, behavior:'smooth'});
+  } );
+
+  scroll2.addEventListener('click',()=>{
+    window.scrollTo({left:0, top:link2.offsetTop, behavior:'smooth'});
+  } );
+
+  scroll3.addEventListener('click',()=>{
+    window.scrollTo({left:0, top:link3.offsetTop, behavior:'smooth'});
+  } );
+
+
+
+
+
+
+</script>
 
 </body>
 </html>

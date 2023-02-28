@@ -148,9 +148,6 @@ main{
       }
     }
     // background-color: cadetblue;
-
-
-
     }
   }
 
@@ -159,6 +156,7 @@ main{
     // border: #f56 solid 2px;
   }
 }
+
 
 .prod{
   @include mixin.container-style(100%, 33%, space-around, center, column );
