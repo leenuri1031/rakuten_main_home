@@ -131,13 +131,9 @@ main{
     @include mixin.container-style(100%, 25%, center, center, column );
     // background-color: #ccc;
 
-    &>img{
-      @include mixin.size(100%, 100%);
-    }
-
-    &>div:last-child{
-      display: none;
-    }
+      &>img{
+        @include mixin.size(100%, 100%);
+      }
     }
 
     &>div:nth-child(2){
@@ -146,8 +142,15 @@ main{
     &>div{
       @include mixin.container-style(100%, 30%, center, center, column );
       background-color: #ddd;
+
+      &>img{
+        @include mixin.size(100%, 100%);
+      }
     }
     // background-color: cadetblue;
+
+
+
     }
   }
 
