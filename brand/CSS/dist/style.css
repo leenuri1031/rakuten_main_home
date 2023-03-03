@@ -200,6 +200,14 @@
   background: none;
 }
 
+.slick-prev {
+  left: 2%;
+}
+
+.slick-next {
+  right: 2%;
+}
+
 #left-arrow, #right-arrow {
   width: 25px;
   height: 25px;

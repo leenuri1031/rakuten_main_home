@@ -229,6 +229,9 @@
     left: 85%;
     z-index: 100;
   }
+  #slide-container {
+    position: relative;
+  }
   #slide {
     width: 100vw;
     height: 504px;

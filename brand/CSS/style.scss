@@ -153,19 +153,19 @@
   background: none;
 }
 
-// .slick-prev {
-//   left: 2%;
-// }
+.slick-prev {
+  left: 2%;
+}
 
-// .slick-next {
-//   right: 2%;
-// }
+.slick-next {
+  right: 2%;
+}
 
 // .slick-prev:before, .slick-next:before {
 //   font-size: 20px;
 //   line-height: 1;
 //   opacity: 0.7;
-//   color:rgb(255, 253, 253);
+//   color:rgb(235, 189, 189);
 //   -webkit-font-smoothing: antialiased;
 //   -moz-osx-font-smoothing: grayscale;
 //   position: relative;
@@ -177,7 +177,6 @@
 // .slick-next:before{
 //   right: 0%;
 // }
-
 #left-arrow, #right-arrow{
   @include mixin.container-style(25px,25px, center, center);
   opacity: 0.8;

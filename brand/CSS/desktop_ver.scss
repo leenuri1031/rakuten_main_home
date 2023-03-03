@@ -256,6 +256,10 @@
 
 
 // slide-----------------------------------
+#slide-container{
+  position: relative;
+}
+
 #slide{
   @include mixin.container-style(100vw, 504px, center, center);
   @include mixin.posi(relative,-3.5vh);
