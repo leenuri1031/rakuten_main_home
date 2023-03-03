@@ -158,12 +158,13 @@
 
     &>div:first-child{
       height: 25%;
-
+      
       &>div:nth-child(1){
-      @include mixin.container-style(100%, 50%, space-around, center, column );
+        @include mixin.container-style(100%, 50%, space-between, center, column );
+        // background-color: aliceblue;
 
         &>img{
-        @include mixin.size(100%, 70%);
+        @include mixin.size(100%, 80%);
           content: url(https://image.rakuten.co.jp/smartforyou/cabinet/09728902/spring_special.jpg);
         }
 
