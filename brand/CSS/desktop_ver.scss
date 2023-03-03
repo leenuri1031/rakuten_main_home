@@ -268,25 +268,46 @@
   @include mixin.size(1080px, 100%);
 }
 
-
-.slick-prev {
-  left: 21.5%;
+#left-arrow, #right-arrow{
+  @include mixin.container-style(40px,40px, center, center);
+  opacity: 0.8;
+  position: absolute;
+  top: 40%;
 }
 
-.slick-next {
-  right: 21.5%;
-}
-.slick-prev:before, .slick-next:before {
-  font-size: 40px;
-
+#left-arrow:hover, #right-arrow:hover{
+  // background-color: rgb(230, 230, 230) ;
+  opacity: 1;
 }
 
-.slick-prev:before{
-  left: 0%;
+#left-arrow{
+  left: 22.5%;
 }
-.slick-next:before{
-  right: 0%;
+
+#right-arrow{
+  right: 22.5%;
 }
+
+
+
+// .slick-prev {
+//   left: 21.5%;
+// }
+
+// .slick-next {
+//   right: 21.5%;
+// }
+// .slick-prev:before, .slick-next:before {
+//   font-size: 40px;
+
+// }
+
+// .slick-prev:before{
+//   left: 0%;
+// }
+// .slick-next:before{
+//   right: 0%;
+// }
 
 // slide-----------------------------------
 
