@@ -428,9 +428,51 @@ main{
 
 //banner-mid------------------------------------------------
 #banner-mid{
-  @include mixin.container-style(100%, 12%, space-around, center, column);
+  @include mixin.container-style(100%, 12%, space-evenly, center, column);
   // background-color: chartreuse;
+  .notice{
+    @include mixin.container-style(85%, 25%, space-between, center);
+    // border: solid 1px black;
+    border-top: 3px solid var.$col-2;
+    border-bottom: 3px solid var.$col-2;
+    &>div:nth-child(1){
+      @include mixin.container-style(23%, 100%, center, center);
+      // background-color: antiquewhite;
+      // border: solid 1px black;
+      text-align: center;
+      line-height: 3rem;
+      font-size: 1.5rem;
+      @include mixin.font(1.3rem, 600, #DA6986);
+    }
   
+    &>div:nth-child(2){
+      @include mixin.container-style(75%, 100%, space-around, center,column);
+
+      &>div{
+        @include mixin.container-style(100%, 100%, space-around, center);
+        // background-color: aquamarine;
+        // border: solid 1px black;
+        &>a{
+          @include mixin.container-style(100%, 100%, space-around, center);
+    
+          &>div:nth-child(1){
+            @include mixin.container-style(20%, 30%, center, center);
+            background-color: var.$col-8;
+            letter-spacing: 3px;
+            // border: solid 1px black;
+          }
+      
+          &>div:nth-child(2){
+            @include mixin.container-style(70%, 70%, flex-start, center);
+            color: var.$col-3;
+            // border: solid 1px black;
+          }
+      }
+      }
+    }
+  
+  }
+
   &>a{
     @include mixin.container-style(100%, 30%, center, center);
     &>img{
