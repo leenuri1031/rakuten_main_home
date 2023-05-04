@@ -23,7 +23,7 @@
 @media (min-width: 600px) {
   #root {
     width: 100vw;
-    height: 160vh;
+    height: 250vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,7 +34,7 @@
   }
   #desktop-area {
     width: 100%;
-    height: 223px;
+    height: 20vh;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -236,15 +236,15 @@
   }
   main {
     width: 1080px;
-    height: 100vh;
+    height: 170vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
   }
   main > div:first-child {
     width: 90%;
-    height: 10%;
+    height: 3%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -252,99 +252,190 @@
     font-size: 2rem;
     letter-spacing: 5px;
   }
-  .company-contents {
-    width: 100%;
+  .step-1 {
+    width: 90%;
+    height: 12%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+  .step-1 > div:last-child {
+    width: 95%;
     height: 80%;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+  .step-1 > div:last-child > a:nth-child(1) {
+    width: 30%;
+    height: 100%;
+    display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
   }
-  .company-contents > div {
-    margin-bottom: 1px;
+  .step-1 > div:last-child > a:nth-child(1) > img {
+    width: auto;
+    height: 150px;
   }
-  .company-contents > div > div:first-child {
-    font-size: 1.2rem;
-  }
-  .company-contents > div > div:last-child {
+  .step-1 > div:last-child > a:last-child {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
     font-size: 1rem;
-    padding-left: 2vw;
-    line-height: 2.5;
+    font-weight: 570;
+    color: #444444;
   }
-  .company-contents > div:nth-child(1) {
-    width: 100%;
-    height: 12%;
+  .step-2 {
+    width: 90%;
+    height: 85%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
-  .company-contents > div:nth-child(1) > div:last-child {
-    width: 65%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: row;
-  }
-  .company-contents > div:nth-child(2) {
-    width: 100%;
-    height: 12%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
-  .company-contents > div:nth-child(2) > div:last-child {
-    width: 65%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: row;
-  }
-  .company-contents > div:nth-child(3) {
-    width: 100%;
-    height: 12%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
-  .company-contents > div:nth-child(3) > div:last-child {
-    width: 65%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: row;
-  }
-  .company-contents > div:nth-child(4) {
-    width: 100%;
-    height: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
-  .company-contents > div:nth-child(4) > div:last-child {
-    width: 65%;
-    height: 100%;
-    display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
   }
-  .company-contents > div:nth-child(4) > div:last-child > div:nth-child(1) {
+  .step-2 > div:last-child > div:nth-child(1) > div:first-child {
     width: 100%;
     height: 15%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
+    background-color: rgb(213, 230, 230);
   }
-  .company-contents > div:nth-child(4) > div:last-child > div:nth-child(2) {
-    font-size: 1.2rem;
+  .step-2 > div:last-child > div:nth-child(1) > div:nth-child(2) {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    background-color: rgb(213, 230, 230);
+  }
+  .step-2 > div:last-child > div:nth-child(1) > div:nth-child(2) > img {
+    width: auto;
+    height: 200px;
+  }
+  .step-2 > div:last-child > div:nth-child(1) > div:nth-child(2) > div {
+    width: 50%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #444444;
+  }
+  .step-2 > div:last-child > div:nth-child(2) > div:first-child {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    background-color: rgb(213, 230, 230);
+  }
+  .step-2 > div:last-child > div:nth-child(2) > div:nth-child(2) {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    background-color: rgb(213, 230, 230);
+  }
+  .step-2 > div:last-child > div:nth-child(2) > div:nth-child(2) > img {
+    width: auto;
+    height: 200px;
+  }
+  .step-2 > div:last-child > div:nth-child(2) > div:nth-child(2) > div {
+    width: 50%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #444444;
+  }
+  .step-2 > div:last-child > div:nth-child(3) > div:first-child {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    background-color: rgb(213, 230, 230);
+  }
+  .step-2 > div:last-child > div:nth-child(3) > div:nth-child(2) {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    background-color: rgb(213, 230, 230);
+  }
+  .step-2 > div:last-child > div:nth-child(3) > div:nth-child(2) > img {
+    width: auto;
+    height: 200px;
+  }
+  .step-2 > div:last-child > div:nth-child(3) > div:nth-child(2) > div {
+    width: 50%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #444444;
+  }
+  .step-2 > div:last-child > div:last-child {
+    width: 95%;
+    height: 18%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  .step-2 > div:last-child > div:last-child > div:first-child {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+  }
+  .step-2 > div:last-child > div:last-child > div:nth-child(2) {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+  }
+  .step-2 > div:last-child > div:last-child > div:nth-child(2) > img {
+    width: 90%;
+    height: auto;
+  }
+  .step-2 > div:last-child > div:last-child > div:nth-child(2) > div {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #444444;
   }
   footer {
     width: 1080px;
@@ -388,7 +479,7 @@
     align-items: center;
     flex-direction: column;
     background-color: #FAFAFA;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
   #mobile-guid-menu {
     display: none;
