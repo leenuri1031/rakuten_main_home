@@ -262,8 +262,8 @@ main{
 
 //banner-top------------------------------------------------
 #banner-top{
-  // @include mixin.container-style(90.8%, 6%, space-between, center, column);
-  @include mixin.container-style(90.8%, 8%, space-around, center, column);
+  @include mixin.container-style(90.8%, 6%, space-between, center, column);
+  // @include mixin.container-style(90.8%, 7%, space-around, center, column);
   //  ------ more banner bottom 
   // background-color: antiquewhite;
   // border: dotted 5px var.$col-6;
@@ -277,30 +277,53 @@ main{
   }
 
   &>div:last-child{
-    @include mixin.container-style(100%, 45%, space-around, center);
-    border: dotted 5px var.$col-6;
+    @include mixin.container-style(100%, 40%, space-around, center);
+    // border: dotted 5px var.$col-6;
 
-    &>div:nth-child(2){
-      @include mixin.container-style(50%, 100%, center, center, column);
-  
-      &>div:first-child{
-        @include mixin.container-style(100%, 50%, center, center);
-        @include mixin.font(3rem, 700, var.$col-6);
-        letter-spacing: 1rem;
+    &>a{
+      @include mixin.container-style(100%, 100%, space-around, center);
+
+      &>img{
+        @include mixin.size(100%,auto);
       }
+    //   &>div:nth-child(2){
+    //   @include mixin.container-style(50%, 100%, center, center, column);
   
-      &>div:last-child{
-        @include mixin.container-style(100%, 30%, center, center);
-        @include mixin.font(1rem, 450, var.$col-3);
-        // background-color: antiquewhite;
-      }
-    }
+    //   &>div:first-child{
+    //     @include mixin.container-style(100%, 50%, center, center);
+    //     @include mixin.font(3rem, 700, var.$col-6);
+    //     letter-spacing: 1rem;
+    //   }
   
-    &>div:last-child{
-      @include mixin.container-style(20%, 100%, center, center);
-      text-align: center;
-      @include mixin.font(2.5rem, 600, var.$col-3);
+    //   &>div:last-child{
+    //     @include mixin.container-style(100%, 30%, center, center);
+    //     @include mixin.font(1rem, 450, var.$col-3);
+    //     // background-color: antiquewhite;
+    //   }
+    // }
     }
+
+    // &>div:nth-child(2){
+    //   @include mixin.container-style(50%, 100%, center, center, column);
+  
+    //   &>div:first-child{
+    //     @include mixin.container-style(100%, 50%, center, center);
+    //     @include mixin.font(3rem, 700, var.$col-6);
+    //     letter-spacing: 1rem;
+    //   }
+  
+    //   &>div:last-child{
+    //     @include mixin.container-style(100%, 30%, center, center);
+    //     @include mixin.font(1rem, 450, var.$col-3);
+    //     // background-color: antiquewhite;
+    //   }
+    // }
+  
+    // &>div:last-child{
+    //   @include mixin.container-style(20%, 100%, center, center);
+    //   text-align: center;
+    //   @include mixin.font(2.5rem, 600, var.$col-3);
+    // }
   }
 
 }
@@ -566,8 +589,8 @@ main{
 
 //banner-bot------------------------------------------------
 #banner-bot{
-  @include mixin.container-style(100%, 3%, space-around, center, column);
-  // @include mixin.container-style(100%, 10%, space-around, center, column);
+  // @include mixin.container-style(100%, 3%, space-around, center, column);
+  @include mixin.container-style(100%, 10%, space-around, center, column);
   // @include mixin.container-style(100%, 8%, space-around, center, column); 
   // ---  more banner height
   // background-color: aliceblue;
