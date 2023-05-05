@@ -195,23 +195,23 @@
   
   .step-2{
     @include mixin.container-style(90%, 85%, space-between, center,column);
-    
   
     &>div:last-child{
 
       @for $i from 1 to 4{
         &>div:nth-child(#{$i}){
+          // background-color: azure;
+          border: 1px dotted #5FC1C7;
     
           &>div:first-child{
             @include mixin.container-style(100%, 15%, flex-start, center);
-            // background-color: azure;
-            background-color: rgb(213, 230, 230);
+            // background-color: rgb(213, 230, 230);
 
           }
     
           &>div:nth-child(2){
             @include mixin.container-style(100%, 85%, space-evenly, center);
-            background-color: rgb(213, 230, 230);
+            // background-color: rgb(213, 230, 230);
 
     
             &>img{
@@ -229,25 +229,26 @@
   
       &>div:last-child{
         @include mixin.container-style(95%, 18%, space-around, center, column);
-        border: #000 solid 1px;
+        border: 1px dotted #5FC1C7;
+
+        // border: #000 solid 1px;
   
         &>div:first-child{
-          @include mixin.container-style(100%, 10%, flex-start, center);
+          @include mixin.container-style(100%, 15%, flex-start, center);
           // background-color: azure;
         }
   
         &>div:nth-child(2){
-          @include mixin.container-style(100%, 90%, space-evenly, center,column);
+          @include mixin.container-style(100%, 83%, space-evenly, center);
           // background-color: cadetblue;
   
           &>img{
-            @include mixin.size(90%, auto);
+            @include mixin.size(280px, auto);
           }
   
           &>div{
-            @include mixin.container-style(100%, 30%, center, center,column);
-            // border: #000 solid 1px;
-            @include mixin.font(0.8rem, 500, var.$col-3);
+            @include mixin.container-style(50%, 80%, center, center,column);
+            @include mixin.font(1rem, 500, var.$col-3);
           }
         }
       }

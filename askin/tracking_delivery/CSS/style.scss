@@ -204,6 +204,7 @@ main{
             @include mixin.container-style(100%, 30%, center, center,column);
             // border: #000 solid 1px;
             @include mixin.font(0.8rem, 500, var.$col-3);
+            text-align: center;
           }
         }
       }
@@ -230,6 +231,7 @@ main{
           @include mixin.container-style(100%, 30%, center, center,column);
           // border: #000 solid 1px;
           @include mixin.font(0.8rem, 500, var.$col-3);
+          text-align: center;
         }
       }
     }

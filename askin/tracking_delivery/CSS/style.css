@@ -296,6 +296,7 @@ main > div:last-child {
   font-size: 0.8rem;
   font-weight: 500;
   color: #444444;
+  text-align: center;
 }
 .step-2 > div:last-child > div:nth-child(2) {
   width: 95%;
@@ -335,6 +336,7 @@ main > div:last-child {
   font-size: 0.8rem;
   font-weight: 500;
   color: #444444;
+  text-align: center;
 }
 .step-2 > div:last-child > div:nth-child(3) {
   width: 95%;
@@ -374,6 +376,7 @@ main > div:last-child {
   font-size: 0.8rem;
   font-weight: 500;
   color: #444444;
+  text-align: center;
 }
 .step-2 > div:last-child > div:last-child {
   width: 95%;
@@ -413,6 +416,7 @@ main > div:last-child {
   font-size: 0.8rem;
   font-weight: 500;
   color: #444444;
+  text-align: center;
 }
 
 footer {

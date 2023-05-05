@@ -299,6 +299,9 @@
     align-items: center;
     flex-direction: column;
   }
+  .step-2 > div:last-child > div:nth-child(1) {
+    border: 1px dotted #5FC1C7;
+  }
   .step-2 > div:last-child > div:nth-child(1) > div:first-child {
     width: 100%;
     height: 15%;
@@ -306,7 +309,6 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
-    background-color: rgb(213, 230, 230);
   }
   .step-2 > div:last-child > div:nth-child(1) > div:nth-child(2) {
     width: 100%;
@@ -315,7 +317,6 @@
     justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
-    background-color: rgb(213, 230, 230);
   }
   .step-2 > div:last-child > div:nth-child(1) > div:nth-child(2) > img {
     width: auto;
@@ -332,6 +333,9 @@
     font-weight: 500;
     color: #444444;
   }
+  .step-2 > div:last-child > div:nth-child(2) {
+    border: 1px dotted #5FC1C7;
+  }
   .step-2 > div:last-child > div:nth-child(2) > div:first-child {
     width: 100%;
     height: 15%;
@@ -339,7 +343,6 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
-    background-color: rgb(213, 230, 230);
   }
   .step-2 > div:last-child > div:nth-child(2) > div:nth-child(2) {
     width: 100%;
@@ -348,7 +351,6 @@
     justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
-    background-color: rgb(213, 230, 230);
   }
   .step-2 > div:last-child > div:nth-child(2) > div:nth-child(2) > img {
     width: auto;
@@ -365,6 +367,9 @@
     font-weight: 500;
     color: #444444;
   }
+  .step-2 > div:last-child > div:nth-child(3) {
+    border: 1px dotted #5FC1C7;
+  }
   .step-2 > div:last-child > div:nth-child(3) > div:first-child {
     width: 100%;
     height: 15%;
@@ -372,7 +377,6 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
-    background-color: rgb(213, 230, 230);
   }
   .step-2 > div:last-child > div:nth-child(3) > div:nth-child(2) {
     width: 100%;
@@ -381,7 +385,6 @@
     justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
-    background-color: rgb(213, 230, 230);
   }
   .step-2 > div:last-child > div:nth-child(3) > div:nth-child(2) > img {
     width: auto;
@@ -405,11 +408,11 @@
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    border: #000 solid 1px;
+    border: 1px dotted #5FC1C7;
   }
   .step-2 > div:last-child > div:last-child > div:first-child {
     width: 100%;
-    height: 10%;
+    height: 15%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -417,24 +420,24 @@
   }
   .step-2 > div:last-child > div:last-child > div:nth-child(2) {
     width: 100%;
-    height: 90%;
+    height: 83%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
   }
   .step-2 > div:last-child > div:last-child > div:nth-child(2) > img {
-    width: 90%;
+    width: 280px;
     height: auto;
   }
   .step-2 > div:last-child > div:last-child > div:nth-child(2) > div {
-    width: 100%;
-    height: 30%;
+    width: 50%;
+    height: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 500;
     color: #444444;
   }
