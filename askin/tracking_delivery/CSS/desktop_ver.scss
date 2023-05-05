@@ -14,7 +14,7 @@
 }
 
 #desktop-area{
-    @include mixin.container-style(100%, 20vh, flex-end, center,column);
+    @include mixin.container-style(100%, 200px, flex-end, center,column);
     background-color: white;
     position: sticky;
     top: 0;
@@ -229,7 +229,7 @@
   
       &>div:last-child{
         @include mixin.container-style(95%, 18%, space-around, center, column);
-        // border: #000 solid 1px;
+        border: #000 solid 1px;
   
         &>div:first-child{
           @include mixin.container-style(100%, 10%, flex-start, center);
