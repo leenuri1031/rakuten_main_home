@@ -169,19 +169,20 @@
   }
 
   .step-1{
-    @include mixin.container-style(90%, 12%, space-between, center,column);
+    @include mixin.container-style(90%, 14%, space-between, center,column);
     // background-color: antiquewhite;
   
     &>div:last-child{
-      @include mixin.container-style(95%, 80%, space-between, center);
+      @include mixin.container-style(95%, 85%, space-between, center);
       // border: solid 1px black;
+      border: 1px dotted #5FC1C7;
   
       &>a:nth-child(1){
         @include mixin.container-style(30%, 100%, center, center);
         // border: solid 1px black;
     
         &>img{
-          @include mixin.size(auto, 150px);
+          @include mixin.size(auto, 95%);
         }
       }
   
@@ -194,13 +195,14 @@
   }
   
   .step-2{
-    @include mixin.container-style(90%, 85%, space-between, center,column);
+    @include mixin.container-style(90%, 84%, space-between, center,column);
   
     &>div:last-child{
 
       @for $i from 1 to 4{
         &>div:nth-child(#{$i}){
           // background-color: azure;
+          padding-left: 10px;
           border: 1px dotted #5FC1C7;
     
           &>div:first-child{
@@ -230,6 +232,7 @@
       &>div:last-child{
         @include mixin.container-style(95%, 18%, space-around, center, column);
         border: 1px dotted #5FC1C7;
+        padding-left: 10px;
 
         // border: #000 solid 1px;
   
