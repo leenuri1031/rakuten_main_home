@@ -366,14 +366,14 @@ main{
       }
       &>div:nth-child(3){
         @include mixin.container-style(90%, 5%, center, center);
-        color: var.$col-7;
-        // text-decoration-line: line-through;
+        color: var.$col-3;
+        text-decoration-line: line-through;
       }
 
-      // &>div:nth-child(4){
-      //   @include mixin.container-style(90%, 5%, center, center);
-      //   color: var.$col-7;
-      // }
+      &>div:nth-child(4){
+        @include mixin.container-style(90%, 5%, center, center);
+        color: var.$col-7;
+      }
     }
   }
 }
@@ -552,19 +552,19 @@ main{
 
         &>div:first-child{
           @include mixin.container-style(40%, 100%, space-around, center);
-          color: var.$col-7;
-          // text-decoration-line: line-through;
+          color: var.$col-3;
+          text-decoration-line: line-through;
         }
 
-        // &>div:nth-child(2){
-        //   @include mixin.container-style(10%, 100%, space-around, center);
-        //   color: var.$col-7;
-        // }
+        &>div:nth-child(2){
+          @include mixin.container-style(10%, 100%, space-around, center);
+          color: var.$col-7;
+        }
 
-        // &>div:last-child{
-        //   @include mixin.container-style(40%, 100%, space-around, center);
-        //   color: var.$col-7;
-        // }
+        &>div:last-child{
+          @include mixin.container-style(40%, 100%, space-around, center);
+          color: var.$col-7;
+        }
       }
 
       &>div:nth-child(4){
@@ -604,15 +604,15 @@ main{
 
 //special---------------------------------------------------
 #special{
-  @include mixin.container-style(100%, 14%, space-around, center, column);
+  @include mixin.container-style(100%, 12%, space-around, center, column);
   // background-color: antiquewhite;
 
   &>div:first-child{
-    @include mixin.container-style(100%, 15%, space-around, center, column);
+    @include mixin.container-style(100%, 20%, space-around, center, column);
     // border: #2c2c2c solid 2px;
 
     &>div:nth-child(1){
-    @include mixin.container-style(95%, 60%, flex-start, center);
+    @include mixin.container-style(95%, 50%, flex-start, center);
     @include mixin.font(1.5rem, 500, var.$col-3);
 
     }
