@@ -1,0 +1,301 @@
+@use './var'as var;
+@use './mixin' as mixin;
+@use './basic';
+// -------------------------------------------
+
+@media(min-width:600px){
+//shopping_guid---------------------------------------------------
+#root{
+  @include mixin.container-style(100vw, 450vh, space-between, center, column );
+}
+
+#mobile-area{
+  display: none;
+}
+
+#desktop-area{
+    @include mixin.container-style(100%, 230px, flex-end, center,column);
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 3px solid var.$col-2;
+  }
+  // header-top------------------------------
+  .header-top{
+    @include mixin.container-style(1080px,40%, space-between, center);
+    // border: #2c2c2c solid 2px;
+  
+    &>a{
+      @include mixin.size(35%, 100%);
+      // border: rebeccapurple solid 3px;
+  
+      &>img{   
+        @include mixin.size(100%, 100%);
+      }
+    }
+  }
+  
+  .site-menu{
+    @include mixin.container-style(50%,80%, space-around, flex-start);
+  
+    &>div{
+      @include mixin.container-style(25%,30%, center, center);
+      // border: #2c2c2c solid 1px;
+      
+      &>a{
+        @include mixin.container-style(100%,100%, center, center);
+        font-size: 0.8rem
+      }
+    }
+  
+    @for $i from 1 through 3 {
+      &>div:nth-child(#{$i}){
+        border-right: 2px solid var.$col-3;
+      }
+    }
+  }
+  // header-top------------------------------
+  
+  // header-bottom------------------------------
+  .header-bottom{
+    @include mixin.container-style(1080px,50%, space-between, flex-end);
+    // background-color: aliceblue;
+    &>div:first-child{
+      @include mixin.container-style(75%,50%, space-around, center);
+      // background-color: antiquewhite
+    }
+  }
+  // header-bottom------------------------------
+  // drop-down-menu-class-setting------------------------------
+  .dropdown{
+    @include mixin.container-style(20%, 100%, space-around, center,column);
+    // position: relative;
+  }
+  
+  .dropdown:hover .item{
+    @include mixin.container-style(100%, 240px, space-around, center, column );
+    background-color: white;
+    border-bottom: 3px solid var.$col-2;
+    @include mixin.posi(absolute,210px);
+    &>div{
+      @include mixin.container-style(1080px, 45%, space-around, center);
+      &>div{
+        @include mixin.container-style(250px, 60px, flex-start, center);
+        &>a{
+          @include mixin.container-style(100%, 100%, flex-start, center);
+        }
+  
+        &>a:hover{
+          @include mixin.font(0.9rem, 500,var.$col-7);
+        }
+      }
+    }
+  }
+  
+  .dropdown-btn{
+    @include mixin.container-style(100%,100% ,center,center);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+  
+    &>a{
+      @include mixin.container-style(100%,100% ,center,center);
+    }
+  }
+  
+  .dropdown-btn:hover{
+    color: var.$col-7;
+    &>a:hover{
+      color: var.$col-7;
+    }
+  }
+  
+  .item{
+    @include mixin.font(0.8rem, 500, #2c2c2c);
+    display: none;
+    letter-spacing: 1px;
+  }
+  
+  .menu-btn{
+    @include mixin.size(20px,20px);
+    margin-left: 2vw;
+  }
+  
+  .menu-btn:hover{
+    @include mixin.size(22px,22px);
+  }
+  
+  // drop-down-menu-class-setting------------------------------
+  
+  // search-box-class-setting------------------------------
+    .search-box{
+      @include mixin.container-style(30%,50%, center, center);
+      // background-color: #2c2c2c;
+      position: relative;
+    }
+  
+    .text-area{
+      width: 280px;
+      height: 30px;
+      // background-color: #ff7c7c;
+      border-radius: 20px;
+      // background-color: #ff7c7c;
+      padding-left: 10px;
+      @include mixin.font(0.8rem, 500, var.$col-3);
+    }
+  
+    .search-btn{
+      @include mixin.container-style(20px,20px, center, center);
+      @include mixin.posi(absolute, 31%, 85%);
+      // border: #222 solid 1px;
+    }
+  // search-box-class-setting------------------------------
+
+  main{
+    @include mixin.container-style(1080px, 370vh, space-around, center, column );
+
+    &>div:first-child{
+      height: 25%;
+      
+      &>div:nth-child(1){
+        @include mixin.container-style(100%, 50%, space-between, center, column );
+        // background-color: aliceblue;
+
+        &>img{
+        @include mixin.size(100%, 80%);
+          content: url(https://image.rakuten.co.jp/smartforyou/cabinet/09728902/spring_special.jpg);
+        }
+
+    
+        &>div:last-child{
+          @include mixin.container-style(80%, 25%, center, center);
+          text-align: center;
+          line-height: 2;
+          // background-color: #ddd;
+        }
+      }
+  
+      &>div:nth-child(2){
+        @include mixin.container-style(100%, 40%, space-between, center);
+  
+        &>div{
+          @include mixin.container-style(30%, 100%, center, center, column );
+        }
+
+        .scroll1{
+          &>img{
+            content: url(https://image.rakuten.co.jp/smartforyou/cabinet/09728902/spring_bn_1_pc_2.jpg);
+          }
+        }
+    
+        .scroll2{
+          &>img{
+            content: url(https://image.rakuten.co.jp/smartforyou/cabinet/09728902/spring_bn_2_pc.jpg);
+          }
+        }
+    
+        .scroll3{
+          &>img{
+            content: url(https://image.rakuten.co.jp/smartforyou/cabinet/09728902/spring_bn_3_pc.jpg);
+          }
+        }
+      }
+    }
+
+    &>div:last-child{
+      height: 70%;
+    }
+  }
+
+  .prod{
+
+    &>div:nth-child(1){
+      height: 6%;
+      padding-left: 1.5rem;
+    }
+  
+    &>div:nth-child(2){
+      @include mixin.container-style(100%, 85%, space-around, center);
+      // background-color: antiquewhite;
+      flex-wrap: wrap;
+  
+      &>div{
+        @include mixin.container-style(30%, 45%, space-around, center, column);
+        // background-color: #f56;
+
+        &>a{
+
+          &>img{
+            @include mixin.size(250px, 250px);
+          }
+    
+          &>div:last-child{
+            @include mixin.container-style(240px, 15%, center, center);
+            // border: #000 solid 1px;
+          font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+
+  
+footer{
+  @include mixin.container-style(1080px, 50vh, space-between, center, column);
+  color: var.$col-3;
+
+  &>div:first-child{
+    @include mixin.container-style(30%, 10%, center, center, column);
+    margin-top: 2vh;
+    // border: solid black 1px;
+
+    &>h2{
+      @include mixin.container-style(100%, 40%, center, center);
+    }
+    &>h4{
+      @include mixin.container-style(100%, 40%, center, center);
+    }
+  }
+  &>div:last-child{
+    @include mixin.container-style(100vw, 15%, center, center, column);
+    background-color: var.$col-1;
+    font-size: 0.8rem;
+  }
+}
+
+#mobile-guid-menu{
+  display: none;
+}
+
+#guid-menu{
+  @include mixin.container-style(100%, 70%, space-around, center, column);
+  // background-color: burlywood;
+
+  &>div{
+    @include mixin.container-style(100%, 40%, space-around, center);
+    // border: solid black 1px;
+
+    &>a{
+      @include mixin.container-style(30%, 40%, space-between, center);
+      background-color: var.$col-1;
+      border: solid 1px var.$col-2;
+      
+      &>div:first-child{
+        @include mixin.container-style(70%, 100%, flex-start, center);
+        padding-left: 2vw;
+      }
+
+      &>div:last-child{
+        @include mixin.container-style(20%,100%, center,center);
+        // border: solid 2px black;
+
+        &>img{
+          @include mixin.size(20px, 20px);
+        }
+      }
+    }
+  }
+}
+}
