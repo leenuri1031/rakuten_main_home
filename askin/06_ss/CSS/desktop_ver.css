@@ -23,7 +23,7 @@
 @media (min-width: 600px) {
   #root {
     width: 100vw;
-    height: 450vh;
+    height: 520vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -129,7 +129,7 @@
     background-color: white;
     border-bottom: 3px solid #c2c2c2;
     position: absolute;
-    top: 210px;
+    top: 214px;
     left: 0;
     z-index: 100;
   }
@@ -236,99 +236,294 @@
   }
   main {
     width: 1080px;
-    height: 370vh;
+    height: 450vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #title {
+    width: 100%;
+    height: 12%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.1rem;
+  }
+  #title > div:first-child {
+    width: 95%;
+    height: 55%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+  }
+  #title > div:first-child > div:nth-child(1) {
+    width: 25%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    top: 0%;
+    left: 25%;
+    z-index: 0;
+    text-align: center;
+  }
+  #title > div:first-child > div:nth-child(2) {
+    width: 18%;
+    height: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 100px;
+    position: relative;
+    top: 10%;
+    left: 5%;
+    z-index: 0;
+  }
+  #title > div:last-child {
+    width: 95%;
+    height: 35%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+  }
+  #title > div:last-child > div:nth-child(1) {
+    width: 22%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 200px;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    z-index: 0;
+  }
+  #title > div:last-child > div:nth-child(2) {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    top: 0%;
+    left: 20%;
+    z-index: 0;
+    text-align: right;
+  }
+  #content-mb {
+    display: none;
+  }
+  #content-pc {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    background-color: aliceblue;
+  }
+  #content-pc > div:nth-child(1) {
+    width: 95%;
+    height: 15%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+  }
+  #content-pc > div:nth-child(1) > div:nth-child(1) {
+    width: 40%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #content-pc > div:nth-child(1) > div:nth-child(1) > h3 {
+    width: 60%;
+    height: 30%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    font-size: 1.5rem;
+  }
+  #content-pc > div:nth-child(1) > div:nth-child(1) > div {
+    width: 60%;
+    height: 60%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    font-size: 1.1rem;
+  }
+  #content-pc > div:nth-child(1) > div:nth-child(2) {
+    width: 200px;
+    height: 200px;
+    background-color: #FFF27F;
+    border-radius: 100%;
+    position: relative;
+    top: -15%;
+    left: 15%;
+    z-index: 0;
+  }
+  #content-pc > div:nth-child(2) {
+    width: 100%;
+    height: 70%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
   }
-  main > div:first-child {
-    height: 25%;
-  }
-  main > div:first-child > div:nth-child(1) {
-    width: 100%;
-    height: 50%;
+  #content-pc > div:nth-child(2) > div:nth-child(1) {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: row;
+  }
+  .item-part > div:nth-child(1) {
+    width: 100%;
+    height: 25%;
+    border: #000 solid 1px;
+  }
+  .item-part > div:nth-child(1) > div:nth-child(1) {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    border: #000 solid 1px;
+  }
+  .item-part > div:nth-child(2) {
+    width: 100%;
+    height: 25%;
+    border: #000 solid 1px;
+  }
+  .item-part > div:nth-child(2) > div:nth-child(1) {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    border: #000 solid 1px;
+  }
+  .content1 {
+    width: 100%;
+    height: 14%;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
   }
-  main > div:first-child > div:nth-child(1) > img {
+  .content1 > div:first-child {
     width: 100%;
-    height: 80%;
-    content: url(https://image.rakuten.co.jp/smartforyou/cabinet/09728902/spring_special.jpg);
+    height: 45%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
   }
-  main > div:first-child > div:nth-child(1) > div:last-child {
-    width: 80%;
-    height: 25%;
+  .content1 > div:first-child > div:nth-child(1) {
+    width: 60%;
+    height: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    text-align: center;
-    line-height: 2;
+    border-radius: 0 120px 120px 0;
+    position: relative;
+    top: 0%;
+    left: -10%;
+    z-index: 0;
   }
-  main > div:first-child > div:nth-child(2) {
-    width: 100%;
-    height: 40%;
+  .content1 > div:first-child > div:nth-child(2) {
+    width: 40%;
+    height: 75%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: 0%;
+    left: -5%;
+    z-index: 0;
+  }
+  .content1 > div:first-child > div:nth-child(2) > h3 {
+    width: 85%;
+    height: 20%;
+    display: flex;
+    justify-content: flex-end;
     align-items: center;
     flex-direction: row;
   }
-  main > div:first-child > div:nth-child(2) > div {
-    width: 30%;
+  .content1 > div:first-child > div:nth-child(2) > div {
+    width: 85%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .content1 > div:last-child {
+    width: 100%;
+    height: 45%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+  }
+  .content1 > div:last-child > div:nth-child(1) {
+    width: 50%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
-  main > div:first-child > div:nth-child(2) .scroll1 > img {
-    content: url(https://image.rakuten.co.jp/smartforyou/cabinet/09728902/spring_bn_1_pc_2.jpg);
-  }
-  main > div:first-child > div:nth-child(2) .scroll2 > img {
-    content: url(https://image.rakuten.co.jp/smartforyou/cabinet/09728902/spring_bn_2_pc.jpg);
-  }
-  main > div:first-child > div:nth-child(2) .scroll3 > img {
-    content: url(https://image.rakuten.co.jp/smartforyou/cabinet/09728902/spring_bn_3_pc.jpg);
-  }
-  main > div:last-child {
-    height: 70%;
-  }
-  .prod > div:nth-child(1) {
-    height: 6%;
-    padding-left: 1.5rem;
-  }
-  .prod > div:nth-child(2) {
-    width: 100%;
-    height: 85%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .prod > div:nth-child(2) > div {
+  .content1 > div:last-child > div:nth-child(1) > div:nth-child(1) {
     width: 30%;
-    height: 45%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-  }
-  .prod > div:nth-child(2) > div > a > img {
-    width: 250px;
-    height: 250px;
-  }
-  .prod > div:nth-child(2) > div > a > div:last-child {
-    width: 240px;
     height: 15%;
+    background-color: #FFF27F;
+    border-radius: 50px;
+    margin-bottom: 0;
+  }
+  .content1 > div:last-child > div:nth-child(1) > div:nth-child(2) {
+    width: 50%;
+    height: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+  }
+  .content1 > div:last-child > div:nth-child(2) {
+    width: 240px;
+    height: 240px;
+    background-color: #E8D5DA;
+    border-radius: 100%;
+  }
+  .content2 {
+    display: none;
+  }
+  .content2-pc {
+    width: 100%;
+    height: 35%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: aliceblue;
   }
   footer {
     width: 1080px;
