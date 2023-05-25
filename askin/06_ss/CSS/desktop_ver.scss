@@ -159,40 +159,50 @@
   }
 
   #title{
-    @include mixin.container-style(100%, 12%, center, center, column );
+    @include mixin.container-style(100%, 10%, center, center, column );
     font-size: 1.1rem;
 
-    &>div:first-child{
+    &>img{
+      @include mixin.container-style(100%, 100%, center, center);
+      mix-blend-mode: multiply;
+      opacity: 0.6;
+      @include mixin.posi(absolute,0,0,-1);
+  
+    }
+    
+    &>div:nth-child(2){
       @include mixin.container-style(95%, 55%, space-around, center);
   
       &>div:nth-child(1){
-        @include mixin.container-style(25%, 50%, center, center);
-        @include mixin.posi(relative,0%,25%,0);
-        text-align: center;
+        @include mixin.container-style(25%, 50%, flex-start, center);
+        @include mixin.posi(relative,5%,25%,0);
+        line-height: 2;
       }
   
       &>div:nth-child(2){
-        @include mixin.container-style(18%, 95%, center, center);
+        @include mixin.container-style(15%, 95%, center, center);
         border-radius: 100px;
-        @include mixin.posi(relative,10%,5%,0);
+        @include mixin.posi(relative,10%,-5%,0);
       }
     }
   
-    &>div:last-child{
+    &>div:nth-child(3){
       @include mixin.container-style(95%, 35%, space-around, center);
   
       &>div:nth-child(1){
-        @include mixin.container-style(22%, 70%, center, center);
+        @include mixin.container-style(20%, 75%, center, center);
         border-radius: 200px;
-        @include mixin.posi(absolute, 20%, 10%,0);
+        @include mixin.posi(absolute, 16%, 12%,0);
       }
   
       &>div:nth-child(2){
-        @include mixin.container-style(50%, 50%, center, center);
+        @include mixin.container-style(50%, 80%, flex-end, center);
         @include mixin.posi(relative,0%,20%,0);
         text-align: right;
+        line-height: 2;
       }
     }
+  
   }
 
   #content-mb{
@@ -201,32 +211,32 @@
 
   #content-pc{
     @include mixin.container-style(100%, 30%, space-around, center, column);
-    background-color: aliceblue;
+    // background-color: aliceblue;
 
     &>div:nth-child(1){
-      @include mixin.container-style(95%, 15%, space-evenly, center);
+      @include mixin.container-style(100%, 15%, space-between, center);
       // background-color: beige;
     // border: #000 solid 1px;
   
       &>div:nth-child(1){
-        @include mixin.container-style(40%, 70%, center, center, column );
+        @include mixin.container-style(40%, 90%, center, center, column );
         // border: #000 solid 1px;
   
         &>h3{
-          @include mixin.container-style(60%, 30%, flex-start, center);
+          @include mixin.container-style(95%, 40%, flex-start, center);
           // background-color: aliceblue;
           font-size: 1.5rem;
         }
   
         &>div{
-          @include mixin.container-style(60%, 60%, flex-start, center);
+          @include mixin.container-style(95%, 60%, flex-start, center);
           font-size: 1.1rem;
         }
       }
   
       &>div:nth-child(2){
         @include mixin.box-style(200px, 200px, var.$col-0, 100%);
-        @include mixin.posi(relative, -15%, 15%,0);
+        @include mixin.posi(relative, -15%, 5%,0);
       }
     }
 
@@ -235,50 +245,115 @@
       
       &>div:nth-child(1){
         @include mixin.flex(flex-end, flex-end);
-      }
-    }
+
+        &>div:nth-child(2){
+          @include mixin.box-style(150px,150px, var.$col-0, 100%);
+          @include mixin.posi(absolute, -150%, 90%, 0);
+        }
+
+        &>div:nth-child(3){
+          @include mixin.box-style(180px,180px, var.$col-0, 100%);
+          @include mixin.posi(absolute, 2%, -5%, 0);
+        }
+
+        &>div:nth-child(4){
+          @include mixin.box-style(120px,120px, var.$col-0, 100%);
+          @include mixin.posi(absolute, -35%, 50%, 0);
+        }
+      } // => item-part1
+
+      &>div:nth-child(2){
+        @include mixin.flex(flex-start, flex-end);
+        position: relative;
+
+        &>div:nth-child(2){
+          @include mixin.box-style(180px,180px, var.$col-0, 100%);
+          @include mixin.posi(absolute, -50%, 23%, 0);
+        }
+
+        &>div:nth-child(3){
+          @include mixin.box-style(180px,180px, var.$col-0, 100%);
+          @include mixin.posi(absolute, 30%, 74%, 0);
+        }
+
+        &>div:nth-child(4){
+          @include mixin.box-style(100px,100px, var.$col-0, 100%);
+          @include mixin.posi(absolute, -80%, 70%, 0);
+        }
+
+      } // => item-part2
+
+    }    // => item-part
   }
 
   .item-part{
     @for $i from 1 through 2{
       &>div:nth-child(#{$i}){
         @include mixin.size(100%, 25%);
-
-        // @include mixin.container-style(100%, 30%, space-around, center);
-        border: #000 solid 1px;
+        // border: #000 solid 1px;
+        position: relative;
 
         &>div:nth-child(1){
           @include mixin.container-style(80%, 100%, space-around, center);
-          border: #000 solid 1px;
+          // border: #000 solid 1px;
+          background-color: var.$col-9;
+          z-index: 1;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+          &>div{
+            @include mixin.container-style(45%, 100%, space-around, center);
+
+            &>div:first-child{
+              @include mixin.container-style(50%, 100%, space-around, center, column);
+              position: relative;
+
+              &>div:nth-child(1){
+                @include mixin.box-style(100%, 100%, var.$col-4, 50% 50% 0 0);
+                @include mixin.flex(center, center);
+                border: var.$col-8 solid 2px;
+                @include mixin.posi(absolute, -35%, 0%,1);
+              }
+
+              &>div:nth-child(2){
+                @include mixin.box-style(80%, 20%, var.$col-0, 50px);
+                @include mixin.flex(center, center);
+                border: var.$col-3 solid 1px;
+                @include mixin.posi(absolute, 75%, 10%,1);
+                font-weight: 600;
+                font-size: 1.2rem;
+              }
+            }
+
+            &>div:last-child{
+              @include mixin.container-style(30%, 100%, center, center);
+            }
+          }
         }
       }
     }
   }
 
   .content1{
-    @include mixin.container-style(100%, 14%, space-around, center, column );
+    @include mixin.container-style(100%, 16%, space-around, center, column );
     // border: #000 1px solid;
   
     &>div:first-child{
       @include mixin.container-style(100%, 45%, space-between, center);
   
       &>div:nth-child(1){
-        @include mixin.container-style(60%, 80%, center, center);
+        @include mixin.container-style(60%, 75%, center, center);
         border-radius: 0 120px 120px 0;
-        @include mixin.posi(relative, 0%, -10%,0);
       }
   
       &>div:nth-child(2){
-        @include mixin.container-style(40%, 75%, center, center,column);
-        // background-color: #ffffff;
-        @include mixin.posi(relative, 0%, -5%,0);
-  
         &>h3{
           @include mixin.container-style(85%, 20%, flex-end, center);
+          font-size: 1.6rem;
         }
     
         &>div{
           @include mixin.container-style(85%, 30%, center, center);
+          font-size: 1.1rem;
         }
       }
     }
@@ -292,6 +367,8 @@
         &>div:nth-child(1){
           @include mixin.box-style(30%, 15%, var.$col-0, 50px);
           margin-bottom: 0;
+          font-weight: 600;
+          font-size: 1.2rem;
         }
   
         &>div:nth-child(2){
@@ -313,9 +390,124 @@
   }
 
   .content2-pc{
-    @include mixin.container-style(100%, 35%, space-between, center, column);
+    @include mixin.container-style(100%, 13%, space-between, center, column);
     background-color: aliceblue;
 
+    &>div:first-child{
+      @include mixin.container-style(100%, 70%, center, flex-start);
+      background-color: var.$col-0;
+
+      &>div{
+        @include mixin.box-style(45%, 95%, var.$col-4, 0 0 50% 50%);
+        @include mixin.flex(center, center);
+      }
+    }
+
+    &>div:last-child{
+      @include mixin.container-style(100%, 30%, center, center, column);
+      background-color:#F3F2E3;
+
+      &>h2{
+        @include mixin.container-style(60%, 20%, center, center);
+      }
+
+      &>div{
+        @include mixin.container-style(60%, 70%, center, center);
+        text-align: center;
+        // border: #2c2c2c solid 1px;
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  #item-part2{
+    @include mixin.container-style(100%, 22%, space-around, center, column);
+    // background-color: #F3F2E3;
+
+    &>div:nth-child(1){
+      @include mixin.flex(flex-end, flex-end);
+
+      &>div:nth-child(2){
+        @include mixin.box-style(100px,100px, var.$col-0, 100%);
+        @include mixin.posi(absolute, 105%, 80%, 0);
+      }
+
+      &>div:nth-child(3){
+        @include mixin.box-style(180px,180px, var.$col-0, 100%);
+        @include mixin.posi(absolute, 2%, -5%, 0);
+      }
+
+      &>div:nth-child(4){
+        @include mixin.box-style(120px,120px, var.$col-0, 100%);
+        @include mixin.posi(absolute, -35%, 50%, 0);
+      }
+    } // => item-part1
+
+    &>div:nth-child(2){
+      @include mixin.flex(flex-start, flex-end);
+      position: relative;
+
+      &>div:nth-child(2){
+        @include mixin.box-style(180px,180px, var.$col-0, 100%);
+        @include mixin.posi(absolute, -50%, 23%, 0);
+      }
+
+      &>div:nth-child(3){
+        @include mixin.box-style(180px,180px, var.$col-0, 100%);
+        @include mixin.posi(absolute, 60%, 74%, 0);
+      }
+
+      &>div:nth-child(4){
+        @include mixin.box-style(100px,100px, var.$col-0, 100%);
+        @include mixin.posi(absolute, 90%, 5%, 0);
+      }
+
+    } // => item-part2
+    
+    @for $i from 1 through 2{
+      &>div:nth-child(#{$i}){
+        @include mixin.size(100%, 25%);
+        // border: #000 solid 1px;
+        position: relative;
+
+        &>div:nth-child(1){
+          @include mixin.container-style(80%, 100%, space-around, center);
+          // border: #000 solid 1px;
+          background-color: var.$col-9;
+          z-index: 1;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+          &>div{
+            @include mixin.container-style(45%, 100%, space-around, center);
+
+            &>div:first-child{
+              @include mixin.container-style(50%, 100%, space-around, center, column);
+              position: relative;
+
+              &>div:nth-child(1){
+                @include mixin.box-style(100%, 100%, var.$col-4, 50% 50% 0 0);
+                @include mixin.flex(center, center);
+                border: var.$col-8 solid 2px;
+                @include mixin.posi(absolute, -35%, 0%,1);
+              }
+
+              &>div:nth-child(2){
+                @include mixin.box-style(80%, 20%, var.$col-0, 50px);
+                @include mixin.flex(center, center);
+                border: var.$col-3 solid 1px;
+                @include mixin.posi(absolute, 75%, 10%,1);
+                font-weight: 600;
+                font-size: 1.2rem;
+              }
+            }
+
+            &>div:last-child{
+              @include mixin.container-style(30%, 100%, center, center);
+            }
+          }
+        }
+      }
+    }
   }
 
   
