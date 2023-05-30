@@ -8,6 +8,14 @@
   position: relative;
 } 
 
+
+//col--------------------------------------
+.main-menu-col{
+  color: var.$col-3;
+}
+//col--------------------------------------
+
+
 //---header-----------------------------------
 header{
   @include mixin.container-style(100%, 223px, flex-end, center, column);
