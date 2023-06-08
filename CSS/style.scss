@@ -540,7 +540,7 @@ main{
     // background-color: antiquewhite;
 
     &>a{
-      @include mixin.container-style(100%, 100%, space-around, center, column);
+      @include mixin.container-style(100%, 100%, space-between, center, column);
 
       &>img{
         @include mixin.size(180px,180px);

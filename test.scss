@@ -1,0 +1,336 @@
+@use './CSS/var'as var;
+@use './CSS/mixin' as mixin;
+@use './CSS/basic';
+// ---------------
+
+#root{
+  @include mixin.container-style(100vw, auto, center, center, column);
+
+  &>img{
+    @include mixin.size(600px, auto);
+  }
+
+  &>a{
+    @include mixin.container-style(600px, auto, center, center, column);
+
+    &>img{
+      @include mixin.size(600px, auto);
+    }
+  }
+}
+
+@media(max-width:750px){
+  #root{
+    &>img{
+      @include mixin.size(100vw, auto);
+    }
+  
+    &>a{
+      @include mixin.container-style(100vw, auto, center, center, column);
+  
+      &>img{
+        @include mixin.size(100vw, auto);
+      }
+    }
+  }
+}
+
+
+
+
+
+// .cate-box{
+//   @include mixin.container-style(100%, 800px, space-around, center, column);
+//   background-color: var.$col-1;
+// }
+
+// .prd-part{
+//   @include mixin.container-style(100%, 70%, space-around, center, column);
+//   // border: solid black 1px;
+//     &>div:first-child{
+//       @include mixin.container-style(80%, 10%, flex-start, center);
+//       font-size: 1.1rem;
+//     }
+
+//     &>div:last-child{
+//       @include mixin.container-style(80%, 80%, space-between, center);
+//     }
+// }
+
+// .prd-part-mb{
+//   display: none;
+// }
+
+// .prd-part-btm{
+//   &>div{
+//     @include mixin.container-style(48%, 100%, space-around, center, column);
+
+//     &>a{
+//       @include mixin.container-style(100%, 33.3%, flex-start, center);
+//       // border:1px solid black ;
+//       &>img{
+//         @include mixin.size(145px, 100%);
+//         // margin-right: 50px;
+//       }
+
+//       &>div{
+//         @include mixin.container-style(100%, 50%, space-around, flex-start, column);
+//         padding-left: 30px;
+
+//         &>div:first-child{
+//           @include mixin.container-style(100%, 50%, flex-start, center);
+//           font-size: 1.2rem;
+//           color: var.$col-3;
+//         }
+
+//         &>div:last-child{
+//           @include mixin.container-style(100%, 50%, flex-start, center);
+//           font-size: 0.9rem;
+//         }
+//       }
+//     }
+
+    
+//     &>a:nth-child(1){
+//       border-bottom: 2px solid var.$col-2;
+//       border-top: 2px solid var.$col-2;
+//     }
+
+//     &>a:nth-child(2){
+//       border-bottom: 2px solid var.$col-2;
+//     }
+
+//     &>a:nth-child(3){
+//       border-bottom: 2px solid var.$col-2;
+//     }
+//   }
+// }
+
+// .skin-part{
+//   @include mixin.container-style(100%, 20%, space-evenly, center, column);
+//   // border: solid black 1px;
+  
+//   &>div:first-child{
+//     @include mixin.container-style(80%, 20%, flex-start, center);
+//     // background-color: aqua;
+//     font-size: 1.1rem;
+//   }
+
+//   &>div:last-child{
+//     @include mixin.container-style(80%, 50%, space-between, center);
+//     // background-color: aquamarine;
+
+//     &>a{
+//       @include mixin.container-style(15%, 70%, space-between, center);
+
+//       &>div{
+//         @include mixin.container-style(100%, 100%, center, center);
+//         background-color: white;
+//         border: 1px solid var.$col-2;
+//         letter-spacing: 3px;
+//       }
+//     }
+//   }
+// }
+
+// @media(max-width:767px){
+//   .cate-box{
+//     @include mixin.container-style(100%, 400px, space-around, center, column);
+//   }
+  
+//   .prd-part{
+//   display: none;
+//   }
+
+//   .prd-part-mb{
+//     @include mixin.container-style(100%, 70%, space-evenly, center, column);
+//     // border: 1px solid black;
+
+//     &>div:first-child{
+//       @include mixin.container-style(95%, 10%, flex-start, center);
+//       font-size: 0.8rem;
+//       // background-color: aliceblue;
+//     }
+
+//     &>div:last-child{
+//       @include mixin.container-style(95%, 80%, space-around, center,column);
+
+//       &>div{
+//         @include mixin.container-style(100%, 45%, space-around, center);
+//         // border: 1px solid black;
+
+//         &>a{
+//           @include mixin.container-style(30%, 100%, center, center,column);
+//           position: relative;
+//           // background-color: bisque;
+//           &>img{
+//             @include mixin.size(100px, 100%);
+//           }
+//         }
+//       }
+//     }
+//   }
+  
+//   .skin-part{
+//     @include mixin.container-style(100%, 30%, space-evenly, center, column);
+    
+//     &>div:first-child{
+//       @include mixin.container-style(95%, 30%, flex-start, center);
+//       // background-color: aqua;
+//       font-size: 0.8rem;
+//     }
+  
+//     &>div:last-child{
+//       @include mixin.container-style(95%, 50%, space-between, center);
+//       // background-color: aquamarine;
+  
+//       &>a{
+//         @include mixin.container-style(19%, 70%, space-between, center);
+  
+//         &>div{
+//           @include mixin.container-style(100%, 100%, center, center);
+//           font-size: 0.6rem;
+//           letter-spacing: 0px;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// @media(max-width:1024px){
+
+//   .cate-box{
+//     @include mixin.container-style(100%, 650px, space-around, center, column);
+//   }
+  
+//   .prd-part-btm{
+//     &>div{
+//       @include mixin.container-style(48%, 100%, center, center, column);
+  
+//       &>a{
+//         @include mixin.container-style(100%, 30%, flex-start, center);
+//         &>img{
+//           @include mixin.size(120px, 100%);
+//           // margin-right: 50px;
+//         }
+  
+//         &>div{
+//           padding-left: 20px;
+//           &>div:first-child{
+//             @include mixin.container-style(100%, 50%, flex-start, center);
+//             font-size: 1rem;
+//           }
+  
+//           &>div:last-child{
+//             font-size: 0.8rem;
+//           }
+//         }
+//       }
+//     }
+//   }
+  
+//   .skin-part{
+//     &>div:first-child{
+//       font-size: 1rem;
+//     }
+  
+//     &>div:last-child{
+//       &>a{
+//         &>div{
+//           letter-spacing: 0px;
+//           font-size: 0.9rem;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// footer{
+//   @include mixin.container-style(100%, 600px, space-between, center, column);
+//   color: var.$col-3;
+//   // border: solid 1px black;
+
+//   &>div:last-child{
+//     @include mixin.container-style(100%, 10%, center, center, column);
+//     background-color: var.$col-1;
+//   }
+// }
+
+// #guid-menu{
+//   @include mixin.container-style(80%, 70%, space-around, center, column);
+//   // background-color: burlywood;
+
+//   &>div{
+//     @include mixin.container-style(100%, 40%, space-around, center);
+//     // border: solid black 1px;
+
+//     &>a{
+//       @include mixin.container-style(30%, 35%, space-between, center);
+//       background-color: var.$col-1;
+//       border: solid 1px var.$col-2;
+      
+//       &>div:first-child{
+//         @include mixin.container-style(70%, 100%, flex-start, center);
+//         padding-left: 2vw;
+//       }
+
+//       &>div:last-child{
+//         @include mixin.container-style(20%,100%, center,center);
+//         // border: solid 2px black;
+
+//         &>img{
+//           @include mixin.size(20px, 20px);
+//         }
+//       }
+//     }
+//   }
+// }
+
+// #mobile-guid-menu{
+//   display: none;
+// }
+
+// @media(max-width:767px){
+
+//   footer{
+//     @include mixin.container-style(100%, 300px, space-between, center, column);
+  
+//     &>div:last-child{
+//       @include mixin.container-style(100%, 15%, center, center, column);
+//       font-size: 0.75rem;
+//     }
+//   }
+
+//   #guid-menu{
+//     display: none;
+//   }
+
+//   #mobile-guid-menu{
+//     @include mixin.container-style(100%, 80%, space-around, center);
+//     flex-wrap: wrap;
+//   &>a{
+//     @include mixin.container-style(45%, 25%, space-between, center);
+//     background-color: var.$col-1;
+//     border: solid 1px var.$col-2;
+//     font-size: 0.9rem;
+    
+//     &>div:first-child{
+//       @include mixin.container-style(70%, 100%, flex-start, center);
+//       padding-left: 2vw;
+//     }
+
+//     &>div:last-child{
+//       @include mixin.container-style(20%,100%, center,center);
+
+//       &>img{
+//         @include mixin.size(20px, 20px);
+//       }
+//     }
+//   }
+//   }
+// }
+
+// @media(max-width:1024px){}
+
+
+
